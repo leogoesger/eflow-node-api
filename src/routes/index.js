@@ -1,5 +1,5 @@
+const gaugesController = require('../controllers').gauges;
+
 module.exports = app => {
-  app.get('/api', (req, res) => {
-    res.status(200).send({message: 'hello'});
-  });
+  app.get('/api', gaugesController.show);
 };
