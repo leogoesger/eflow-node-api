@@ -1,6 +1,9 @@
 const express = require('express');
 const logger = require('morgan');
 const bodyParser = require('body-parser');
+const CronJob = require('cron').CronJob;
+
+const uploadToDatabase = require('./utils/uploadToDatabase').uploadToDatabase;
 
 const app = express();
 
@@ -20,6 +23,16 @@ app.use((req, res, next) => {
   next();
 });
 app.disable('etag');
+
+new CronJob( // eslint-disable-line
+  '1 * * * * *',
+  () => {
+    uploadToDatabase();
+  },
+  null,
+  true,
+  'America/Los_Angeles'
+);
 
 require('./routes')(app);
 
