@@ -8,36 +8,28 @@ module.exports = (sequelizeClient, DataTypes) => {
       primaryKey: true,
       type: DataTypes.INTEGER,
     },
-    name: {
-      type: DataTypes.TEXT,
-      allowNull: false,
-    },
-    description: {
-      type: DataTypes.TEXT,
-      allowNull: true,
-    },
     timing: {
-      type: DataTypes.ARRAY,
+      type: DataTypes.ARRAY(DataTypes.TEXT), // eslint-disable-line
       allowNull: true,
     },
     magnitude10: {
-      type: DataTypes.ARRAY,
+      type: DataTypes.ARRAY(DataTypes.TEXT), // eslint-disable-line
       allowNull: true,
     },
     magnitude50: {
-      type: DataTypes.ARRAY,
+      type: DataTypes.ARRAY(DataTypes.TEXT), // eslint-disable-line
       allowNull: true,
     },
     durationFlush: {
-      type: DataTypes.ARRAY,
+      type: DataTypes.ARRAY(DataTypes.TEXT), // eslint-disable-line
       allowNull: true,
     },
     durationWet: {
-      type: DataTypes.ARRAY,
+      type: DataTypes.ARRAY(DataTypes.TEXT), // eslint-disable-line
       allowNull: true,
     },
     noFlowCount: {
-      type: DataTypes.ARRAY,
+      type: DataTypes.ARRAY(DataTypes.TEXT), // eslint-disable-line
       allowNull: true,
     },
   });

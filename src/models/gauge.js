@@ -8,16 +8,24 @@ module.exports = (sequelize, DataTypes) => {
       primaryKey: true,
       type: DataTypes.INTEGER,
     },
-    name: {
+    stationName: {
       type: DataTypes.TEXT,
-      allowNull: false,
+      allowNull: true,
     },
     description: {
       type: DataTypes.TEXT,
       allowNull: true,
     },
     gps: {
-      type: DataTypes.JSON,
+      type: DataTypes.JSONB,
+      allowNull: true,
+    },
+    unimpairedStartYear: {
+      type: DataTypes.INTEGER,
+      allowNull: true,
+    },
+    unimpairedEndYear: {
+      type: DataTypes.INTEGER,
       allowNull: true,
     },
   });
@@ -45,6 +53,10 @@ module.exports = (sequelize, DataTypes) => {
     Gauge.hasMany(models.Winter, {
       foreignKey: 'gaugeId',
       as: 'winter',
+    });
+    Gauge.hasMany(models.Year, {
+      foreignKey: 'gaugeId',
+      as: 'year',
     });
   };
   return Gauge;

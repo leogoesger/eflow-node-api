@@ -42,7 +42,7 @@
     "chai": "^4.0.2",
     "chai-http": "^3.0.0",
     "coveralls": "^3.0.0",
-    "d3": "^4.13.0",
+    "csvtojson": "^1.1.9",
     "dotenv": "^4.0.0",
     "eslint": "^3.19.0",
     "eslint-plugin-prettier": "^2.0.1",

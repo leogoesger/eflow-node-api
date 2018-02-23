@@ -8,15 +8,25 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER,
       },
-      name: {
+      stationName: {
         type: Sequelize.TEXT,
-        allowNull: false,
+        allowNull: true,
       },
       description: {
         type: Sequelize.TEXT,
+        allowNull: true,
       },
       gps: {
-        type: Sequelize.JSON,
+        type: Sequelize.JSONB,
+        allowNull: true,
+      },
+      unimpairedStartYear: {
+        type: Sequelize.INTEGER,
+        allowNull: true,
+      },
+      unimpairedEndYear: {
+        type: Sequelize.INTEGER,
+        allowNull: true,
       },
       createdAt: {
         type: Sequelize.DATE,
