@@ -1,5 +1,4 @@
 import csv from 'csvtojson';
-import _ from 'lodash';
 import fs from 'fs';
 
 const Gauge = require('../models').Gauge;
@@ -14,18 +13,19 @@ const Year = require('../models').Year;
 import regular_gauges from '../public/gaugeReference';
 import metricReference from '../public/metricReference';
 
-export const dataHandling = () => {
+export const uploadToDatabase = () => {
+  console.log('Uploading to Database...'); // eslint-disable-line
   Gauge.destroy({where: {}}).then(() => {
-    Gauge.bulkCreate(regular_gauges).then(() => {
-      new Promise(resolve => {
-        return fs.readdir(
-          'src/public/annual_result_matrix',
-          (err, filenames) => {
-            resolve(filenames);
-          }
-        );
-      })
-        .then(filenames => {
+    Gauge.bulkCreate(regular_gauges)
+      .then(() => {
+        new Promise(resolve => {
+          return fs.readdir(
+            'src/public/annual_result_matrix',
+            (err, filenames) => {
+              resolve(filenames);
+            }
+          );
+        }).then(filenames => {
           filenames.forEach(file => {
             const csvFilePath = `src/public/annual_result_matrix/${file}`;
             const current_result = {
@@ -58,10 +58,10 @@ export const dataHandling = () => {
                 Winter.create(current_result.Winter);
               });
           });
-        })
-        .catch(err => {
-          return err;
         });
-    });
+      })
+      .catch(err => {
+        return err;
+      });
   });
 };
