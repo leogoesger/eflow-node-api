@@ -14,7 +14,7 @@ const AnnualFlow = require('../models').AnnualFlow;
 import regular_gauges from '../public/gaugeReference';
 import metricReference from '../public/metricReference';
 
-export const uploadFlowDataToDatabase = () => {
+export const uploadFlowDataToDatabase2 = () => {
   console.log('Uploading Flow Data to Database...'); // eslint-disable-line
   AnnualFlow.destroy({where: {}}).then(() => {
     let firstRow = true;
@@ -46,6 +46,52 @@ export const uploadFlowDataToDatabase = () => {
           });
         });
       });
+  });
+};
+
+export const uploadFlowDataToDatabase = () => {
+  console.log('Uploading Flow Data to Database...'); // eslint-disable-line
+  AnnualFlow.destroy({where: {}}).then(() => {
+    new Promise(resolve => {
+      fs.readdir('src/public/annual_flow_matrix', (err, filenames) => {
+        resolve(filenames);
+      });
+    }).then(filenames => {
+      filenames.forEach(filename => {
+        if (!filename.includes('.csv')) {
+          return;
+        }
+        let firstRow = true;
+        const result = {};
+        const mapping = {};
+        csv({
+          noheader: true,
+        })
+          .fromFile(`src/public/annual_flow_matrix/${filename}`)
+          .on('csv', csvRow => {
+            if (firstRow) {
+              csvRow.forEach((ele, index) => {
+                result[Number(ele)] = [];
+                mapping[index] = Number(ele);
+                firstRow = false;
+              });
+            } else {
+              csvRow.forEach((ele, index) => {
+                result[mapping[index]].push(ele);
+              });
+            }
+          })
+          .on('done', () => {
+            Object.keys(result).forEach(key => {
+              AnnualFlow.create({
+                year: key,
+                flowData: result[key],
+                gaugeId: Number(filename.slice(0, -4)),
+              });
+            });
+          });
+      });
+    });
   });
 };
 
