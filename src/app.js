@@ -3,7 +3,10 @@ const logger = require('morgan');
 const bodyParser = require('body-parser');
 const CronJob = require('cron').CronJob;
 
-const uploadToDatabase = require('./utils/uploadToDatabase').uploadToDatabase;
+const uploadResultToDatabase = require('./utils/uploadToDatabase')
+  .uploadResultToDatabase;
+const uploadFlowDataToDatabase = require('./utils/uploadToDatabase')
+  .uploadFlowDataToDatabase;
 
 const app = express();
 
@@ -25,9 +28,19 @@ app.use((req, res, next) => {
 app.disable('etag');
 
 new CronJob( // eslint-disable-line
-  '1 * * * * *',
+  '30 * * * * *',
   () => {
-    uploadToDatabase();
+    uploadResultToDatabase();
+  },
+  null,
+  true,
+  'America/Los_Angeles'
+);
+
+new CronJob( // eslint-disable-line
+  '0 * * * * *',
+  () => {
+    uploadFlowDataToDatabase();
   },
   null,
   true,

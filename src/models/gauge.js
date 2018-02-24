@@ -32,7 +32,7 @@ module.exports = (sequelize, DataTypes) => {
   Gauge.associate = models => {
     Gauge.belongsTo(models.Class, {
       foreignKey: 'classId',
-      as: 'class',
+      as: 'classes',
     });
     Gauge.hasMany(models.AllYear, {
       foreignKey: 'gaugeId',
@@ -40,23 +40,23 @@ module.exports = (sequelize, DataTypes) => {
     });
     Gauge.hasMany(models.Fall, {
       foreignKey: 'gaugeId',
-      as: 'fall',
+      as: 'falls',
     });
     Gauge.hasMany(models.Spring, {
       foreignKey: 'gaugeId',
-      as: 'spring',
+      as: 'springs',
     });
     Gauge.hasMany(models.Summer, {
       foreignKey: 'gaugeId',
-      as: 'summer',
+      as: 'summers',
     });
     Gauge.hasMany(models.Winter, {
       foreignKey: 'gaugeId',
-      as: 'winter',
+      as: 'winters',
     });
     Gauge.hasMany(models.Year, {
       foreignKey: 'gaugeId',
-      as: 'year',
+      as: 'years',
     });
   };
   return Gauge;

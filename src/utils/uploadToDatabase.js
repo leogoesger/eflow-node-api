@@ -9,12 +9,48 @@ const Spring = require('../models').Spring;
 const Summer = require('../models').Summer;
 const Winter = require('../models').Winter;
 const Year = require('../models').Year;
+const AnnualFlow = require('../models').AnnualFlow;
 
 import regular_gauges from '../public/gaugeReference';
 import metricReference from '../public/metricReference';
 
-export const uploadToDatabase = () => {
-  console.log('Uploading to Database...'); // eslint-disable-line
+export const uploadFlowDataToDatabase = () => {
+  console.log('Uploading Flow Data to Database...'); // eslint-disable-line
+  AnnualFlow.destroy({where: {}}).then(() => {
+    let firstRow = true;
+    const result = {};
+    const mapping = {};
+    csv({
+      noheader: true,
+    })
+      .fromFile('src/public/10255800_annual_result_matrix.csv')
+      .on('csv', csvRow => {
+        if (firstRow) {
+          csvRow.forEach((ele, index) => {
+            result[ele] = [];
+            mapping[index] = ele;
+            firstRow = false;
+          });
+        } else {
+          csvRow.forEach((ele, index) => {
+            result[mapping[index]].push(ele);
+          });
+        }
+      })
+      .on('done', () => {
+        Object.keys(result).forEach(key => {
+          AnnualFlow.create({
+            year: key,
+            flowData: result[key],
+            gaugeId: 10255800,
+          });
+        });
+      });
+  });
+};
+
+export const uploadResultToDatabase = () => {
+  console.log('Uploading Result to Database...'); // eslint-disable-line
   Gauge.destroy({where: {}}).then(() => {
     Gauge.bulkCreate(regular_gauges)
       .then(() => {
@@ -27,6 +63,9 @@ export const uploadToDatabase = () => {
           );
         }).then(filenames => {
           filenames.forEach(file => {
+            if (!file.includes('.csv')) {
+              return;
+            }
             const csvFilePath = `src/public/annual_result_matrix/${file}`;
             const current_result = {
               Year: {},
