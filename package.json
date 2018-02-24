@@ -28,6 +28,8 @@
   },
   "dependencies": {
     "assert": "^1.4.1",
+    "aws-sdk": "^2.202.0",
+    "axios": "^0.18.0",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
     "babel-eslint": "^7.2.3",
