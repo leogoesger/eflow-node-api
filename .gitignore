@@ -2,5 +2,3 @@ node_modules/
 .nyc_output/
 coverage/
 .coveralls.yml
-src/public/annual_flow_matrix/*.csv
-src/public/annual_result_matrix/*.csv
