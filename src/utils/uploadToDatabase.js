@@ -12,19 +12,18 @@ const Winter = require('../models').Winter;
 const Year = require('../models').Year;
 const AnnualFlow = require('../models').AnnualFlow;
 
-import metricReference from '../staic/metricReference';
+import metricReference from '../static/metricReference';
 
 const _getFileKeys = async (url, folder) => {
   const responseXML = await axios.get(url);
   return new Promise(resolve => {
     parseString(responseXML.data, (err, result) => {
       const fileNames = result.ListBucketResult.Contents.map(ele => ele.Key[0]);
-      resolve(
-        fileNames.filter(name => {
-          const splitted = name.split('/');
-          return Boolean(splitted[0].includes(folder) && splitted[1]);
-        })
-      );
+      const filtered = fileNames.filter(name => {
+        const splitted = name.split('/');
+        return Boolean(splitted[0].includes(folder) && splitted[1]);
+      });
+      resolve(filtered);
     });
   });
 };
@@ -40,13 +39,12 @@ const _inputFlowToDatabase = (result, file) => {
 };
 
 export const uploadFlowDataToDatabase = async () => {
-  const new_url = 'https://eflow.nyc3.digitaloceanspaces.com/';
-  console.log('Uploading Flow Data to Database...'); // eslint-disable-line
+  console.log('flow matrix');
+  const new_url = process.env.S3_URL;
   try {
     await AnnualFlow.destroy({where: {}});
     const fileNames = await _getFileKeys(new_url, 'annual_flow_matrix');
     fileNames.forEach(file => {
-      // if (file.includes('11525500')) {
       const csvFilePath = `${new_url}${file}`;
       let firstRow = true;
       const result = {};
@@ -69,7 +67,6 @@ export const uploadFlowDataToDatabase = async () => {
           }
         })
         .on('done', () => _inputFlowToDatabase(result, file));
-      // }
     });
   } catch (e) {
     throw e;
@@ -77,8 +74,8 @@ export const uploadFlowDataToDatabase = async () => {
 };
 
 export const uploadResultToDatabase = async () => {
-  const new_url = 'https://eflow.nyc3.digitaloceanspaces.com/';
-  console.log('Uploading Result to Database...'); // eslint-disable-line
+  console.log('result matrix');
+  const new_url = process.env.S3_URL;
   try {
     await Year.destroy({where: {}});
     await AllYear.destroy({where: {}});
