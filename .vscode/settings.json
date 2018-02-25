@@ -1,0 +1,10 @@
+{
+  "prettier.eslintIntegration": true,
+  "prettier.trailingComma": "es5",
+  "prettier.singleQuote": true,
+  "terminal.integrated.cursorStyle": "line",
+  "editor.formatOnSave": true,
+  "editor.formatOnType": false,
+  "eslint.run": "onSave",
+  "javascript.validate.enable": false
+}

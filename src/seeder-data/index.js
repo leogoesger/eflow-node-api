@@ -1,5 +1,6 @@
 /* eslint-disable */
 
 module.exports = {
-  classes: require('./classes')
+  classes: require('./classes'),
+  gauges: require('./gauges'),
 };

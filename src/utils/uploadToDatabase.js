@@ -1,7 +1,8 @@
 import csv from 'csvtojson';
-import fs from 'fs';
+import axios from 'axios';
+import {parseString} from 'xml2js';
+import request from 'request';
 
-const Gauge = require('../models').Gauge;
 const Fall = require('../models').Fall;
 const AllYear = require('../models').AllYear;
 const FallWinter = require('../models').FallWinter;
@@ -11,57 +12,64 @@ const Winter = require('../models').Winter;
 const Year = require('../models').Year;
 const AnnualFlow = require('../models').AnnualFlow;
 
-import regular_gauges from '../public/gaugeReference';
-import metricReference from '../public/metricReference';
+import metricReference from '../staic/metricReference';
 
-const _getFileNameList = dir => {
+const _getFileKeys = async (url, folder) => {
+  const responseXML = await axios.get(url);
   return new Promise(resolve => {
-    fs.readdir(dir, (err, filenames) => {
-      const nameList = filenames.reduce(filename => filename.includes('.csv'));
-      resolve(nameList);
+    parseString(responseXML.data, (err, result) => {
+      const fileNames = result.ListBucketResult.Contents.map(ele => ele.Key[0]);
+      resolve(
+        fileNames.filter(name => {
+          const splitted = name.split('/');
+          return Boolean(splitted[0].includes(folder) && splitted[1]);
+        })
+      );
+    });
+  });
+};
+
+const _inputFlowToDatabase = (result, file) => {
+  Object.keys(result).forEach(key => {
+    AnnualFlow.create({
+      year: key,
+      flowData: result[key],
+      gaugeId: Number(file.slice(19, -4)),
     });
   });
 };
 
 export const uploadFlowDataToDatabase = async () => {
+  const new_url = 'https://eflow.nyc3.digitaloceanspaces.com/';
   console.log('Uploading Flow Data to Database...'); // eslint-disable-line
   try {
     await AnnualFlow.destroy({where: {}});
-    fs.readdir('src/public/annual_flow_matrix', (err, filenames) => {
-      filenames.forEach(filename => {
-        if (!filename.includes('.csv')) {
-          return;
-        }
-        let firstRow = true;
-        const result = {};
-        const mapping = {};
-        csv({
-          noheader: true,
-        })
-          .fromFile(`src/public/annual_flow_matrix/${filename}`)
-          .on('csv', csvRow => {
-            if (firstRow) {
-              csvRow.forEach((ele, index) => {
-                result[Number(ele)] = [];
-                mapping[index] = Number(ele);
-                firstRow = false;
-              });
-            } else {
-              csvRow.forEach((ele, index) => {
-                result[mapping[index]].push(ele);
-              });
-            }
-          })
-          .on('done', () => {
-            Object.keys(result).forEach(key => {
-              AnnualFlow.create({
-                year: key,
-                flowData: result[key],
-                gaugeId: Number(filename.slice(0, -4)),
-              });
+    const fileNames = await _getFileKeys(new_url, 'annual_flow_matrix');
+    fileNames.forEach(file => {
+      // if (file.includes('11525500')) {
+      const csvFilePath = `${new_url}${file}`;
+      let firstRow = true;
+      const result = {};
+      const mapping = {};
+      csv({
+        noheader: true,
+      })
+        .fromStream(request.get(csvFilePath))
+        .on('csv', csvRow => {
+          if (firstRow) {
+            csvRow.forEach((ele, index) => {
+              result[Number(ele)] = [];
+              mapping[index] = Number(ele);
+              firstRow = false;
             });
-          });
-      });
+          } else {
+            csvRow.forEach((ele, index) => {
+              result[mapping[index]].push(ele);
+            });
+          }
+        })
+        .on('done', () => _inputFlowToDatabase(result, file));
+      // }
     });
   } catch (e) {
     throw e;
@@ -69,45 +77,50 @@ export const uploadFlowDataToDatabase = async () => {
 };
 
 export const uploadResultToDatabase = async () => {
+  const new_url = 'https://eflow.nyc3.digitaloceanspaces.com/';
   console.log('Uploading Result to Database...'); // eslint-disable-line
   try {
-    await Gauge.destroy({where: {}});
-    await Gauge.bulkCreate(regular_gauges);
-    fs.readdir('src/public/annual_result_matrix', (err, filenames) => {
-      filenames.forEach(file => {
-        if (!file.includes('.csv')) {
-          return;
-        }
-        const csvFilePath = `src/public/annual_result_matrix/${file}`;
-        const current_result = {
-          Year: {},
-          AllYear: {},
-          Spring: {},
-          Summer: {},
-          Fall: {},
-          FallWinter: {},
-          Winter: {},
-        };
-        csv({
-          noheader: true,
+    await Year.destroy({where: {}});
+    await AllYear.destroy({where: {}});
+    await Fall.destroy({where: {}});
+    await Winter.destroy({where: {}});
+    await Summer.destroy({where: {}});
+    await Spring.destroy({where: {}});
+    await FallWinter.destroy({where: {}});
+    const fileNames = await _getFileKeys(new_url, 'annual_flow_result');
+    fileNames.forEach(file => {
+      const csvFilePath = `${new_url}${file}`;
+      const current_result = {
+        Year: {},
+        AllYear: {},
+        Spring: {},
+        Summer: {},
+        Fall: {},
+        FallWinter: {},
+        Winter: {},
+      };
+      csv({
+        noheader: true,
+      })
+        .fromStream(request.get(csvFilePath))
+        .on('csv', csvRow => {
+          if (!metricReference[`${csvRow[0]}`]) {
+            return;
+          }
+          const seasonName = metricReference[`${csvRow[0]}`][0];
+          const dataEntryName = metricReference[`${csvRow[0]}`][1];
+          current_result[seasonName][dataEntryName] = csvRow.slice(1);
+          current_result[seasonName].gaugeId = Number(file.slice(19, -25));
         })
-          .fromFile(csvFilePath)
-          .on('csv', csvRow => {
-            const seasonName = metricReference[`${csvRow[0]}`][0];
-            const dataEntryName = metricReference[`${csvRow[0]}`][1];
-            current_result[seasonName][dataEntryName] = csvRow.slice(1);
-            current_result[seasonName].gaugeId = Number(file.slice(0, -25));
-          })
-          .on('done', () => {
-            Year.create(current_result.Year);
-            AllYear.create(current_result.AllYear);
-            Spring.create(current_result.Spring);
-            Summer.create(current_result.Summer);
-            Fall.create(current_result.Fall);
-            FallWinter.create(current_result.FallWinter);
-            Winter.create(current_result.Winter);
-          });
-      });
+        .on('done', () => {
+          Year.create(current_result.Year);
+          AllYear.create(current_result.AllYear);
+          Spring.create(current_result.Spring);
+          Summer.create(current_result.Summer);
+          Fall.create(current_result.Fall);
+          FallWinter.create(current_result.FallWinter);
+          Winter.create(current_result.Winter);
+        });
     });
   } catch (e) {
     throw e;
