@@ -39,7 +39,6 @@ const _inputFlowToDatabase = (result, file) => {
 };
 
 export const uploadFlowDataToDatabase = async () => {
-  console.log('flow matrix');
   const new_url = process.env.S3_URL;
   try {
     await AnnualFlow.destroy({where: {}});
@@ -74,7 +73,6 @@ export const uploadFlowDataToDatabase = async () => {
 };
 
 export const uploadResultToDatabase = async () => {
-  console.log('result matrix');
   const new_url = process.env.S3_URL;
   try {
     await Year.destroy({where: {}});
