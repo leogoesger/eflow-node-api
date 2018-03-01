@@ -9,19 +9,19 @@ module.exports = (sequelizeClient, DataTypes) => {
       type: DataTypes.INTEGER,
     },
     timing: {
-      type: DataTypes.ARRAY(DataTypes.TEXT), // eslint-disable-line
+      type: DataTypes.ARRAY(DataTypes.DECIMAL(10, 2)), // eslint-disable-line
       allowNull: true,
     },
     magnitude: {
-      type: DataTypes.ARRAY(DataTypes.TEXT), // eslint-disable-line
+      type: DataTypes.ARRAY(DataTypes.DECIMAL(10, 2)), // eslint-disable-line
       allowNull: true,
     },
     timingWet: {
-      type: DataTypes.ARRAY(DataTypes.TEXT), // eslint-disable-line
+      type: DataTypes.ARRAY(DataTypes.DECIMAL(10, 2)), // eslint-disable-line
       allowNull: true,
     },
     duration: {
-      type: DataTypes.ARRAY(DataTypes.TEXT), // eslint-disable-line
+      type: DataTypes.ARRAY(DataTypes.DECIMAL(10, 2)), // eslint-disable-line
       allowNull: true,
     },
   });

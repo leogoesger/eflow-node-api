@@ -9,15 +9,15 @@ module.exports = (sequelizeClient, DataTypes) => {
       type: DataTypes.INTEGER,
     },
     average: {
-      type: DataTypes.ARRAY(DataTypes.TEXT), // eslint-disable-line
+      type: DataTypes.ARRAY(DataTypes.DECIMAL(10, 2)), // eslint-disable-line
       allowNull: true,
     },
     standardDeviation: {
-      type: DataTypes.ARRAY(DataTypes.TEXT), // eslint-disable-line
+      type: DataTypes.ARRAY(DataTypes.DECIMAL(10, 2)), // eslint-disable-line
       allowNull: true,
     },
     coeffientVariance: {
-      type: DataTypes.ARRAY(DataTypes.TEXT), // eslint-disable-line
+      type: DataTypes.ARRAY(DataTypes.DECIMAL(10, 2)), // eslint-disable-line
       allowNull: true,
     },
   });
