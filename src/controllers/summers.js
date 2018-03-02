@@ -1,4 +1,4 @@
-const Summer = require('../models').Summer;
+import {Summer} from '../models';
 
 module.exports = {
   show(req, res) {

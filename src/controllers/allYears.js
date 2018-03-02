@@ -1,4 +1,4 @@
-const AllYear = require('../models').AllYear;
+import {AllYear} from '../models';
 
 module.exports = {
   show(req, res) {

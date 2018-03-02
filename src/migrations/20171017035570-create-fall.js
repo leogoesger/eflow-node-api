@@ -9,19 +9,19 @@ module.exports = {
         type: Sequelize.INTEGER,
       },
       timing: {
-        type: Sequelize.ARRAY(Sequelize.TEXT), // eslint-disable-line
+        type: Sequelize.ARRAY(Sequelize.DECIMAL(10, 2)), // eslint-disable-line
         allowNull: true,
       },
       magnitude: {
-        type: Sequelize.ARRAY(Sequelize.TEXT), // eslint-disable-line
+        type: Sequelize.ARRAY(Sequelize.DECIMAL(10, 2)), // eslint-disable-line
         allowNull: true,
       },
       timingWet: {
-        type: Sequelize.ARRAY(Sequelize.TEXT), // eslint-disable-line
+        type: Sequelize.ARRAY(Sequelize.DECIMAL(10, 2)), // eslint-disable-line
         allowNull: true,
       },
       duration: {
-        type: Sequelize.ARRAY(Sequelize.TEXT), // eslint-disable-line
+        type: Sequelize.ARRAY(Sequelize.DECIMAL(10, 2)), // eslint-disable-line
         allowNull: true,
       },
       createdAt: {

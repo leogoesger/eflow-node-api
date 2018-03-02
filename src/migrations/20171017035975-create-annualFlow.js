@@ -13,7 +13,7 @@ module.exports = {
         allowNull: false,
       },
       flowData: {
-        type: Sequelize.ARRAY(Sequelize.TEXT), // eslint-disable-line
+        type: Sequelize.ARRAY(Sequelize.DECIMAL(10, 2)), // eslint-disable-line
         allowNull: true,
       },
       createdAt: {

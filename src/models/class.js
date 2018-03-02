@@ -22,6 +22,10 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: 'classId',
       as: 'gauges',
     });
+    Class.hasMany(models.GeoClass, {
+      foreignKey: 'classId',
+      as: 'geoclasses',
+    });
   };
   return Class;
 };

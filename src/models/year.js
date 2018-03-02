@@ -9,7 +9,7 @@ module.exports = (sequelizeClient, DataTypes) => {
       type: DataTypes.INTEGER,
     },
     year: {
-      type: DataTypes.ARRAY(DataTypes.TEXT), // eslint-disable-line
+      type: DataTypes.ARRAY(DataTypes.INTEGER), // eslint-disable-line
       allowNull: true,
     },
   });
