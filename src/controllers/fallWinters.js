@@ -1,4 +1,4 @@
-const FallWinter = require('../models').FallWinter;
+import {FallWinter} from '../models';
 
 module.exports = {
   show(req, res) {

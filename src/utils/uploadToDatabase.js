@@ -11,6 +11,9 @@ const Summer = require('../models').Summer;
 const Winter = require('../models').Winter;
 const Year = require('../models').Year;
 const AnnualFlow = require('../models').AnnualFlow;
+const GeoClass = require('../models').GeoClass;
+
+import geoData from '../static/classification';
 
 import metricReference from '../static/metricReference';
 
@@ -39,6 +42,7 @@ const _inputFlowToDatabase = (result, file) => {
 };
 
 export const uploadFlowDataToDatabase = async () => {
+  console.log('Flow Data updating...'); // eslint-disable-line
   const new_url = process.env.S3_URL;
   try {
     await AnnualFlow.destroy({where: {}});
@@ -73,6 +77,7 @@ export const uploadFlowDataToDatabase = async () => {
 };
 
 export const uploadResultToDatabase = async () => {
+  console.log('Result Data updating...'); // eslint-disable-line
   const new_url = process.env.S3_URL;
   try {
     await Year.destroy({where: {}});
@@ -116,6 +121,22 @@ export const uploadResultToDatabase = async () => {
           FallWinter.create(current_result.FallWinter);
           Winter.create(current_result.Winter);
         });
+    });
+  } catch (e) {
+    throw e;
+  }
+};
+
+export const uploadGeoClassToDatabase = async () => {
+  console.log('GeoClass Data updating...'); // eslint-disable-line
+  try {
+    await GeoClass.destroy({where: {}});
+
+    geoData.features.forEach(data => {
+      GeoClass.create({
+        geometry: data.geometry,
+        classId: data.properties.CLASS,
+      });
     });
   } catch (e) {
     throw e;

@@ -1,4 +1,4 @@
-const Fall = require('../models').Fall;
+import {Fall} from '../models';
 
 module.exports = {
   show(req, res) {

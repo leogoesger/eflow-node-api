@@ -1,5 +1,5 @@
-const Gauge = require('../models').Gauge;
-const Year = require('../models').Year;
+import {Gauge} from '../models';
+import {Year} from '../models';
 
 module.exports = {
   create(req, res) {
@@ -8,7 +8,7 @@ module.exports = {
       .catch(err => res.status(400).send(err));
   },
 
-  list(req, res) {
+  index(req, res) {
     return Gauge.findAll({
       include: [{modal: Year, as: 'years'}],
     })

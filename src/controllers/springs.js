@@ -1,4 +1,4 @@
-const Spring = require('../models').Spring;
+import {Spring} from '../models';
 
 module.exports = {
   show(req, res) {
