@@ -12,12 +12,8 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.TEXT,
       allowNull: true,
     },
-    description: {
-      type: DataTypes.TEXT,
-      allowNull: true,
-    },
-    gps: {
-      type: DataTypes.JSONB,
+    geometry: {
+      type: DataTypes.JSONB, // eslint-disable-line
       allowNull: true,
     },
     unimpairedStartYear: {

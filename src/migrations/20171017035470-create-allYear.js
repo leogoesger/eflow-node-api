@@ -9,15 +9,15 @@ module.exports = {
         type: Sequelize.INTEGER,
       },
       average: {
-        type: Sequelize.ARRAY(Sequelize.TEXT), // eslint-disable-line
+        type: Sequelize.ARRAY(Sequelize.DECIMAL(10, 2)), // eslint-disable-line
         allowNull: true,
       },
       standardDeviation: {
-        type: Sequelize.ARRAY(Sequelize.TEXT), // eslint-disable-line
+        type: Sequelize.ARRAY(Sequelize.DECIMAL(10, 2)), // eslint-disable-line
         allowNull: true,
       },
       coeffientVariance: {
-        type: Sequelize.ARRAY(Sequelize.TEXT), // eslint-disable-line
+        type: Sequelize.ARRAY(Sequelize.DECIMAL(10, 2)), // eslint-disable-line
         allowNull: true,
       },
       createdAt: {

@@ -9,27 +9,27 @@ module.exports = {
         type: Sequelize.INTEGER,
       },
       timing: {
-        type: Sequelize.ARRAY(Sequelize.TEXT), // eslint-disable-line
+        type: Sequelize.ARRAY(Sequelize.DECIMAL(10, 2)), // eslint-disable-line
         allowNull: true,
       },
       magnitude10: {
-        type: Sequelize.ARRAY(Sequelize.TEXT), // eslint-disable-line
+        type: Sequelize.ARRAY(Sequelize.DECIMAL(10, 2)), // eslint-disable-line
         allowNull: true,
       },
       magnitude50: {
-        type: Sequelize.ARRAY(Sequelize.TEXT), // eslint-disable-line
+        type: Sequelize.ARRAY(Sequelize.DECIMAL(10, 2)), // eslint-disable-line
         allowNull: true,
       },
       durationFlush: {
-        type: Sequelize.ARRAY(Sequelize.TEXT), // eslint-disable-line
+        type: Sequelize.ARRAY(Sequelize.DECIMAL(10, 2)), // eslint-disable-line
         allowNull: true,
       },
       durationWet: {
-        type: Sequelize.ARRAY(Sequelize.TEXT), // eslint-disable-line
+        type: Sequelize.ARRAY(Sequelize.DECIMAL(10, 2)), // eslint-disable-line
         allowNull: true,
       },
       noFlowCount: {
-        type: Sequelize.ARRAY(Sequelize.TEXT), // eslint-disable-line
+        type: Sequelize.ARRAY(Sequelize.DECIMAL(10, 2)), // eslint-disable-line
         allowNull: true,
       },
       createdAt: {
