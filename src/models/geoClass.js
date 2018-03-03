@@ -12,6 +12,10 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.JSONB, // eslint-disable-line
       allowNull: true,
     },
+    zoom: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
   });
   GeoClass.associate = models => {
     GeoClass.belongsTo(models.Class, {

@@ -49,15 +49,25 @@ app.disable('etag');
 //   'America/Los_Angeles'
 // );
 
-// new CronJob( // eslint-disable-line
-//   '30 * * * * *',
-//   () => {
-//     uploadGeoClassToDatabase();
-//   },
-//   null,
-//   true,
-//   'America/Los_Angeles'
-// );
+new CronJob( // eslint-disable-line
+  '30 * * * * *',
+  () => {
+    uploadGeoClassToDatabase();
+  },
+  null,
+  true,
+  'America/Los_Angeles'
+);
+
+new CronJob( // eslint-disable-line
+  '0 * * * * *',
+  () => {
+    uploadGeoClassToDatabase();
+  },
+  null,
+  true,
+  'America/Los_Angeles'
+);
 
 require('./routes')(app);
 

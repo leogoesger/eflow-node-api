@@ -12,6 +12,10 @@ module.exports = {
         type: Sequelize.JSONB, // eslint-disable-line
         allowNull: true,
       },
+      zoom: {
+        type: Sequelize.INTEGER,
+        allowNull: false,
+      },
       createdAt: {
         type: Sequelize.DATE,
         allowNull: false,

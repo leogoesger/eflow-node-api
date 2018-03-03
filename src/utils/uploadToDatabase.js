@@ -129,15 +129,34 @@ export const uploadResultToDatabase = async () => {
 
 export const uploadGeoClassToDatabase = async () => {
   console.log('GeoClass Data updating...'); // eslint-disable-line
+  const counts = {};
+  for (let i = 0; i <= 100; i++) {
+    counts[i] = 0;
+  }
+
   try {
     await GeoClass.destroy({where: {}});
 
     geoData.features.forEach(data => {
-      GeoClass.create({
-        geometry: data.geometry,
-        classId: data.properties.CLASS,
-      });
+      console.log(data);
+      if (data.geometry) {
+        counts[data.geometry.coordinates.length]++;
+      }
+      // const geo = {};
+      // zoomLevel.forEach(zoom => {
+      //   geo[zoom] = [];
+      //   geo[zoom] = data.geometry.coordinates.filter(
+      //     (ele, index) => index % zoom === 0
+      //   );
+      //
+      //   GeoClass.create({
+      //     geometry: {geometry: {type: 'LineString', coordinates: geo[zoom]}},
+      //     classId: data.properties.CLASS,
+      //     zoom,
+      //   });
+      // });
     });
+    console.log(counts);
   } catch (e) {
     throw e;
   }
