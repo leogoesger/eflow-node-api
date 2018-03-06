@@ -27,7 +27,7 @@ module.exports = {
   production: {
     username: 'production',
     password: 'production123',
-    database: 'gutsy_production',
+    database: 'eflow_production',
     host: '127.0.0.1',
     post: 5432,
     dialect: 'postgres',
