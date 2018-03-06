@@ -13,8 +13,6 @@ const Year = require('../models').Year;
 const AnnualFlow = require('../models').AnnualFlow;
 const GeoClass = require('../models').GeoClass;
 
-import geoData from '../static/classification';
-
 import metricReference from '../static/metricReference';
 
 const _getFileKeys = async (url, folder) => {
@@ -37,6 +35,9 @@ const _inputFlowToDatabase = (result, file) => {
       year: key,
       flowData: result[key],
       gaugeId: Number(file.slice(19, -4)),
+    }).catch(e => {
+      console.log(file, result[key]);
+      throw e;
     });
   });
 };
@@ -69,7 +70,9 @@ export const uploadFlowDataToDatabase = async () => {
             });
           }
         })
-        .on('done', () => _inputFlowToDatabase(result, file));
+        .on('done', () => {
+          _inputFlowToDatabase(result, file);
+        });
     });
   } catch (e) {
     throw e;
@@ -129,34 +132,18 @@ export const uploadResultToDatabase = async () => {
 
 export const uploadGeoClassToDatabase = async () => {
   console.log('GeoClass Data updating...'); // eslint-disable-line
-  const counts = {};
-  for (let i = 0; i <= 100; i++) {
-    counts[i] = 0;
-  }
-
   try {
     await GeoClass.destroy({where: {}});
 
-    geoData.features.forEach(data => {
-      console.log(data);
-      if (data.geometry) {
-        counts[data.geometry.coordinates.length]++;
-      }
-      // const geo = {};
-      // zoomLevel.forEach(zoom => {
-      //   geo[zoom] = [];
-      //   geo[zoom] = data.geometry.coordinates.filter(
-      //     (ele, index) => index % zoom === 0
-      //   );
-      //
-      //   GeoClass.create({
-      //     geometry: {geometry: {type: 'LineString', coordinates: geo[zoom]}},
-      //     classId: data.properties.CLASS,
-      //     zoom,
-      //   });
-      // });
+    const {data} = await axios.get(
+      'https://eflow.nyc3.digitaloceanspaces.com/class_geo_data/classGeo.json'
+    );
+    data.features.forEach(classData => {
+      GeoClass.create({
+        geometry: classData,
+        classId: classData.properties.CLASS,
+      });
     });
-    console.log(counts);
   } catch (e) {
     throw e;
   }
