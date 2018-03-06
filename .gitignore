@@ -4,3 +4,4 @@ coverage/
 .coveralls.yml
 annual_flow_matrix/
 annual_result_matrix/
+classGeo.json

@@ -16,7 +16,7 @@ app.use(logger('tiny'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 app.use((req, res, next) => {
-  const allowed_header = ['http://localhost:4000'];
+  const allowed_header = ['http://localhost:3000'];
   const origin = req.headers.origin;
   if (allowed_header.indexOf(origin) > -1) {
     res.header('Access-Control-Allow-Origin', origin);
@@ -29,30 +29,10 @@ app.use((req, res, next) => {
 });
 app.disable('etag');
 
-// new CronJob( // eslint-disable-line
-//   '0 * * * * *',
-//   () => {
-//     uploadResultToDatabase();
-//   },
-//   null,
-//   true,
-//   'America/Los_Angeles'
-// );
-
-// new CronJob( // eslint-disable-line
-//   '15 * * * * *',
-//   () => {
-//     uploadFlowDataToDatabase();
-//   },
-//   null,
-//   true,
-//   'America/Los_Angeles'
-// );
-
 new CronJob( // eslint-disable-line
-  '30 * * * * *',
+  '0 * * * * *',
   () => {
-    uploadGeoClassToDatabase();
+    uploadResultToDatabase();
   },
   null,
   true,
@@ -60,7 +40,17 @@ new CronJob( // eslint-disable-line
 );
 
 new CronJob( // eslint-disable-line
-  '0 * * * * *',
+  '15 * * * * *',
+  () => {
+    uploadFlowDataToDatabase();
+  },
+  null,
+  true,
+  'America/Los_Angeles'
+);
+
+new CronJob( // eslint-disable-line
+  '30 * * * * *',
   () => {
     uploadGeoClassToDatabase();
   },
