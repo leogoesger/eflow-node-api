@@ -36,7 +36,6 @@ const _inputFlowToDatabase = (result, file) => {
       flowData: result[key],
       gaugeId: Number(file.slice(19, -4)),
     }).catch(e => {
-      console.log(file, result[key]);
       throw e;
     });
   });
