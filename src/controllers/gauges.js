@@ -9,7 +9,7 @@ module.exports = {
   },
 
   index(req, res) {
-    return Gauge.findAll({include: [{model: Year, as: 'years'}]})
+    return Gauge.findAll()
       .then(gauge => res.status(200).send(gauge))
       .catch(err => res.status(400).send(err));
   },

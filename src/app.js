@@ -17,7 +17,10 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 app.use((req, res, next) => {
   const allowed_header = [
+    'http://localhost:3000',
     'http://localhost:4000',
+    'https://eflows.ucdavis.edu/',
+    'https://environmentalflows.ucdavis.edu',
     'http://eflows.ucdavis.edu/',
     'http://environmentalflows.ucdavis.edu',
   ];
