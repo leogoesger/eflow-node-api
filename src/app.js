@@ -34,7 +34,7 @@ app.use((req, res, next) => {
 app.disable('etag');
 
 new CronJob( // eslint-disable-line
-  '0 * * * * *',
+  '0 30 2 * * *',
   () => {
     uploadResultToDatabase();
   },
@@ -44,7 +44,7 @@ new CronJob( // eslint-disable-line
 );
 
 new CronJob( // eslint-disable-line
-  '15 * * * * *',
+  '0 35 2 * * *',
   () => {
     uploadFlowDataToDatabase();
   },
@@ -54,7 +54,7 @@ new CronJob( // eslint-disable-line
 );
 
 new CronJob( // eslint-disable-line
-  '30 * * * * *',
+  '0 40 2 * * *',
   () => {
     uploadGeoClassToDatabase();
   },
