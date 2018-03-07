@@ -16,7 +16,11 @@ app.use(logger('tiny'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 app.use((req, res, next) => {
-  const allowed_header = ['http://localhost:3000'];
+  const allowed_header = [
+    'http://localhost:4000',
+    'http://eflows.ucdavis.edu/',
+    'http://environmentalflows.ucdavis.edu',
+  ];
   const origin = req.headers.origin;
   if (allowed_header.indexOf(origin) > -1) {
     res.header('Access-Control-Allow-Origin', origin);
