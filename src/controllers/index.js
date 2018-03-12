@@ -1,5 +1,5 @@
 const allYears = require('./allYears');
-const classes = require('./classes');
+const classifications = require('./classifications');
 const falls = require('./falls');
 const fallWinters = require('./fallWinters');
 const gauges = require('./gauges');
@@ -11,7 +11,7 @@ const years = require('./years');
 
 module.exports = {
   allYears,
-  classes,
+  classifications,
   falls,
   fallWinters,
   gauges,

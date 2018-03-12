@@ -18,6 +18,7 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use((req, res, next) => {
   const allowed_header = [
     'http://localhost:4000',
+    'http://localhost:3000',
     'http://eflows.ucdavis.edu/',
     'http://environmentalflows.ucdavis.edu',
   ];
@@ -33,35 +34,35 @@ app.use((req, res, next) => {
 });
 app.disable('etag');
 
-new CronJob( // eslint-disable-line
-  '0 30 2 * * *',
-  () => {
-    uploadResultToDatabase();
-  },
-  null,
-  true,
-  'America/Los_Angeles'
-);
-
-new CronJob( // eslint-disable-line
-  '0 35 2 * * *',
-  () => {
-    uploadFlowDataToDatabase();
-  },
-  null,
-  true,
-  'America/Los_Angeles'
-);
-
-new CronJob( // eslint-disable-line
-  '0 40 2 * * *',
-  () => {
-    uploadGeoClassToDatabase();
-  },
-  null,
-  true,
-  'America/Los_Angeles'
-);
+// new CronJob( // eslint-disable-line
+//   '0 * * * * *',
+//   () => {
+//     uploadResultToDatabase();
+//   },
+//   null,
+//   true,
+//   'America/Los_Angeles'
+// );
+//
+// new CronJob( // eslint-disable-line
+//   '15 * * * * *',
+//   () => {
+//     uploadFlowDataToDatabase();
+//   },
+//   null,
+//   true,
+//   'America/Los_Angeles'
+// );
+//
+// new CronJob( // eslint-disable-line
+//   '30 * * * * *',
+//   () => {
+//     uploadGeoClassToDatabase();
+//   },
+//   null,
+//   true,
+//   'America/Los_Angeles'
+// );
 
 require('./routes')(app);
 

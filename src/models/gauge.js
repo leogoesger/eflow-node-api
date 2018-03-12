@@ -26,7 +26,7 @@ module.exports = (sequelize, DataTypes) => {
     },
   });
   Gauge.associate = models => {
-    Gauge.belongsTo(models.Class, {
+    Gauge.belongsTo(models.Classification, {
       foreignKey: 'classId',
       as: 'classes',
     });

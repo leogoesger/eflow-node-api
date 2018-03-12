@@ -1,24 +1,36 @@
 'use strict';
 module.exports = {
   up: (queryInterface, Sequelize) => {
-    return queryInterface.createTable('GeoClasses', {
+    return queryInterface.createTable('Hydrographs', {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER,
       },
-      geometry: {
-        type: Sequelize.JSONB, // eslint-disable-line
+      data: {
+        type: Sequelize.ARRAY(Sequelize.DECIMAL(10, 2)), // eslint-disable-line
         allowNull: true,
+      },
+      type: {
+        type: Sequelize.ENUM,
+        values: ['TEN', 'TWENTYFIVE', 'FIFTY', 'SEVENTYFIVE', 'NINTY'],
       },
       createdAt: {
         type: Sequelize.DATE,
         allowNull: false,
       },
       updatedAt: {
-        allowNull: false,
         type: Sequelize.DATE,
+        allowNull: false,
+      },
+      gaugeId: {
+        type: Sequelize.INTEGER,
+        onDelete: 'CASCADE',
+        references: {
+          model: 'Gauges',
+          key: 'id',
+        },
       },
       classId: {
         type: Sequelize.INTEGER,
@@ -31,6 +43,6 @@ module.exports = {
     });
   },
   down: queryInterface => {
-    return queryInterface.dropTable('GeoClasses');
+    return queryInterface.dropTable('Hydrographs');
   },
 };
