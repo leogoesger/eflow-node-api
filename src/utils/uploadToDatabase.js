@@ -12,6 +12,7 @@ const Winter = require('../models').Winter;
 const Year = require('../models').Year;
 const AnnualFlow = require('../models').AnnualFlow;
 const GeoClass = require('../models').GeoClass;
+const Hydrograph = require('../models').Hydrograph;
 
 import metricReference from '../static/metricReference';
 
@@ -142,6 +143,59 @@ export const uploadGeoClassToDatabase = async () => {
         geometry: classData,
         classId: classData.properties.CLASS,
       });
+    });
+  } catch (e) {
+    throw e;
+  }
+};
+
+const PERCENTILLE = ['TEN', 'TWENTYFIVE', 'FIFTY', 'SEVENTYFIVE', 'NINTY'];
+export const uploadClassHydrographToDatabase = async () => {
+  console.log('Class Hydrograph Data updating...'); // eslint-disable-line
+  const new_url = process.env.S3_URL;
+  try {
+    await Hydrograph.destroy({where: {type: 'CLASS'}});
+    const fileNames = await _getFileKeys(new_url, 'DRH_Class');
+    fileNames.forEach(file => {
+      const csvFilePath = `${new_url}${file}`;
+      csv({
+        noheader: true,
+      })
+        .fromStream(request.get(csvFilePath))
+        .on('csv', (csvRow, rowIndex) => {
+          Hydrograph.create({
+            data: csvRow,
+            classId: Number(file.slice(15, -4)),
+            percentille: PERCENTILLE[rowIndex],
+            type: 'CLASS',
+          });
+        });
+    });
+  } catch (e) {
+    throw e;
+  }
+};
+
+export const uploadGaugeHydrographToDatabase = async () => {
+  console.log('Gauge Hydrograph Data updating...'); // eslint-disable-line
+  const new_url = process.env.S3_URL;
+  try {
+    await Hydrograph.destroy({where: {type: 'GAUGE'}});
+    const fileNames = await _getFileKeys(new_url, 'DRH_Gauge');
+    fileNames.forEach(file => {
+      const csvFilePath = `${new_url}${file}`;
+      csv({
+        noheader: true,
+      })
+        .fromStream(request.get(csvFilePath))
+        .on('csv', (csvRow, rowIndex) => {
+          Hydrograph.create({
+            data: csvRow,
+            gaugeId: Number(file.slice(10, -4)),
+            percentille: PERCENTILLE[rowIndex],
+            type: 'GAUGE',
+          });
+        });
     });
   } catch (e) {
     throw e;

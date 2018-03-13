@@ -12,9 +12,13 @@ module.exports = {
         type: Sequelize.ARRAY(Sequelize.DECIMAL(10, 2)), // eslint-disable-line
         allowNull: true,
       },
-      type: {
+      percentille: {
         type: Sequelize.ENUM,
         values: ['TEN', 'TWENTYFIVE', 'FIFTY', 'SEVENTYFIVE', 'NINTY'],
+      },
+      type: {
+        type: Sequelize.ENUM,
+        values: ['GAUGE', 'CLASS'],
       },
       createdAt: {
         type: Sequelize.DATE,

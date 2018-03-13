@@ -1,4 +1,4 @@
-import {Classification} from '../models';
+import {Classification, Hydrograph} from '../models';
 
 module.exports = {
   create(req, res) {
@@ -14,7 +14,9 @@ module.exports = {
   },
 
   show(req, res) {
-    return Classification.findById(req.params.classId)
+    return Classification.findById(req.params.classId, {
+      include: [{model: Hydrograph, as: 'hydrographs'}],
+    })
       .then(classInfo => res.status(200).send(classInfo))
       .catch(err => res.status(400).send(err));
   },

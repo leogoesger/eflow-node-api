@@ -157,6 +157,10 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: 'classId',
       as: 'geoclasses',
     });
+    Classification.hasMany(models.Hydrograph, {
+      foreignKey: 'classId',
+      as: 'hydrographs',
+    });
   };
   return Classification;
 };

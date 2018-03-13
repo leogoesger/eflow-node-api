@@ -54,6 +54,10 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: 'gaugeId',
       as: 'years',
     });
+    Gauge.hasMany(models.Hydrograph, {
+      foreignKey: 'gaugeId',
+      as: 'hydrographs',
+    });
   };
   return Gauge;
 };

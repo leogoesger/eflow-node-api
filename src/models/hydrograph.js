@@ -12,9 +12,13 @@ module.exports = (sequelizeClient, DataTypes) => {
       type: DataTypes.ARRAY(DataTypes.DECIMAL(10, 2)), // eslint-disable-line
       allowNull: true,
     },
-    type: {
+    percentille: {
       type: DataTypes.ENUM,
       values: ['TEN', 'TWENTYFIVE', 'FIFTY', 'SEVENTYFIVE', 'NINTY'],
+    },
+    type: {
+      type: DataTypes.ENUM,
+      values: ['GAUGE', 'CLASS'],
     },
   });
   Hydrograph.associate = models => {

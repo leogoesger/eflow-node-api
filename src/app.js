@@ -3,12 +3,12 @@ const logger = require('morgan');
 const bodyParser = require('body-parser');
 const CronJob = require('cron').CronJob;
 
-const uploadResultToDatabase = require('./utils/uploadToDatabase')
-  .uploadResultToDatabase;
-const uploadFlowDataToDatabase = require('./utils/uploadToDatabase')
-  .uploadFlowDataToDatabase;
-const uploadGeoClassToDatabase = require('./utils/uploadToDatabase')
-  .uploadGeoClassToDatabase;
+const {
+  uploadResultToDatabase,
+  uploadFlowDataToDatabase,
+  uploadClassHydrographToDatabase,
+  uploadGaugeHydrographToDatabase,
+} = require('./utils/uploadToDatabase');
 
 const app = express();
 
@@ -54,10 +54,21 @@ app.disable('etag');
 //   'America/Los_Angeles'
 // );
 //
+
 // new CronJob( // eslint-disable-line
 //   '30 * * * * *',
 //   () => {
-//     uploadGeoClassToDatabase();
+//     uploadClassHydrographToDatabase();
+//   },
+//   null,
+//   true,
+//   'America/Los_Angeles'
+// );
+//
+// new CronJob( // eslint-disable-line
+//   '0 * * * * *',
+//   () => {
+//     uploadGaugeHydrographToDatabase();
 //   },
 //   null,
 //   true,
