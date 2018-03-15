@@ -2,7 +2,9 @@ module.exports = [
   {
     id: 1,
     name: 'Snowmelt',
-    description: 'Snowmelt',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+    abbreviation: 'SM',
     Avg: [1.1, 3.202459016, 2.368767123],
     Std: [10.33161377, 5.058366382, 0.555579286],
     CV: [3.051249314, 1.57952572, 0.23454365],
@@ -42,7 +44,9 @@ module.exports = [
   {
     id: 2,
     name: 'High-volume snowmelt and rain',
-    description: 'The happiest place on earth!',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+    abbreviation: 'HSR',
     Avg: [2.1, 3.202459016, 2.368767123],
     Std: [10.33161377, 5.058366382, 0.555579286],
     CV: [3.051249314, 1.57952572, 0.23454365],
@@ -82,7 +86,9 @@ module.exports = [
   {
     id: 3,
     name: 'Low-volume snowmetl and rain',
-    description: 'The happiest place on earth!',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+    abbreviation: 'LSR',
     Avg: [3.1, 3.202459016, 2.368767123],
     Std: [10.33161377, 5.058366382, 0.555579286],
     CV: [3.051249314, 1.57952572, 0.23454365],
@@ -122,7 +128,9 @@ module.exports = [
   {
     id: 4,
     name: 'Winter storms',
-    description: 'The happiest place on earth!',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+    abbreviation: 'WS',
     Avg: [4.1, 3.202459016, 2.368767123],
     Std: [10.33161377, 5.058366382, 0.555579286],
     CV: [3.051249314, 1.57952572, 0.23454365],
@@ -162,7 +170,9 @@ module.exports = [
   {
     id: 5,
     name: 'Groundwater',
-    description: 'The happiest place on earth!',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+    abbreviation: 'GW',
     Avg: [5.1, 3.202459016, 2.368767123],
     Std: [10.33161377, 5.058366382, 0.555579286],
     CV: [3.051249314, 1.57952572, 0.23454365],
@@ -202,7 +212,9 @@ module.exports = [
   {
     id: 6,
     name: 'Perenial groundwater and rain',
-    description: 'The happiest place on earth!',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+    abbreviation: 'PGR',
     Avg: [6.1, 3.202459016, 2.368767123],
     Std: [10.33161377, 5.058366382, 0.555579286],
     CV: [3.051249314, 1.57952572, 0.23454365],
@@ -242,7 +254,9 @@ module.exports = [
   {
     id: 7,
     name: 'Flashy, ephemeral rain',
-    description: 'The happiest place on earth!',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+    abbreviation: 'FER',
     Avg: [7.1, 3.202459016, 2.368767123],
     Std: [10.33161377, 5.058366382, 0.555579286],
     CV: [3.051249314, 1.57952572, 0.23454365],
@@ -282,7 +296,9 @@ module.exports = [
   {
     id: 8,
     name: 'Rain and seasonal groundwater',
-    description: 'The happiest place on earth!',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+    abbreviation: 'RSG',
     Avg: [8.1, 3.202459016, 2.368767123],
     Std: [10.33161377, 5.058366382, 0.555579286],
     CV: [3.051249314, 1.57952572, 0.23454365],
@@ -322,6 +338,9 @@ module.exports = [
   {
     id: 9,
     name: 'High elevation low precipitation',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+    abbreviation: 'HLP',
     Avg: [9.1, 3.202459016, 2.368767123],
     Std: [10.33161377, 5.058366382, 0.555579286],
     CV: [3.051249314, 1.57952572, 0.23454365],
@@ -355,7 +374,6 @@ module.exports = [
     WIN_Tim_50: [274, 274, 70.5],
     WIN_Dur_50: [365, 365, 179],
     WIN_Fre_50: [1, 1, 2],
-    description: 'HLP',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },

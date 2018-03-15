@@ -16,24 +16,8 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.TEXT,
       allowNull: true,
     },
-    hydrograph_10: {
-      type: DataTypes.ARRAY(DataTypes.DECIMAL(10, 2)), //eslint-disable-line
-      allowNull: true,
-    },
-    hydrograph_25: {
-      type: DataTypes.ARRAY(DataTypes.DECIMAL(10, 2)), //eslint-disable-line
-      allowNull: true,
-    },
-    hydrograph_50: {
-      type: DataTypes.ARRAY(DataTypes.DECIMAL(10, 2)), //eslint-disable-line
-      allowNull: true,
-    },
-    hydrograph_75: {
-      type: DataTypes.ARRAY(DataTypes.DECIMAL(10, 2)), //eslint-disable-line
-      allowNull: true,
-    },
-    hydrograph_90: {
-      type: DataTypes.ARRAY(DataTypes.DECIMAL(10, 2)), //eslint-disable-line
+    abbreviation: {
+      type: DataTypes.TEXT,
       allowNull: true,
     },
     Avg: {type: DataTypes.ARRAY(DataTypes.DECIMAL(10, 2)), allowNull: true}, //eslint-disable-line

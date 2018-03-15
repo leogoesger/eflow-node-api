@@ -182,6 +182,7 @@ export const uploadGaugeHydrographToDatabase = async () => {
   try {
     await Hydrograph.destroy({where: {type: 'GAUGE'}});
     const fileNames = await _getFileKeys(new_url, 'DRH_Gauge');
+
     fileNames.forEach(file => {
       const csvFilePath = `${new_url}${file}`;
       csv({

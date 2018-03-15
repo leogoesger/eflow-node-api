@@ -14,25 +14,10 @@ module.exports = {
       },
       description: {
         type: Sequelize.TEXT,
-      },
-      hydrograph_10: {
-        type: Sequelize.ARRAY(Sequelize.DECIMAL(10, 2)), // eslint-disable-line
         allowNull: true,
       },
-      hydrograph_25: {
-        type: Sequelize.ARRAY(Sequelize.DECIMAL(10, 2)), // eslint-disable-line
-        allowNull: true,
-      },
-      hydrograph_50: {
-        type: Sequelize.ARRAY(Sequelize.DECIMAL(10, 2)), // eslint-disable-line
-        allowNull: true,
-      },
-      hydrograph_75: {
-        type: Sequelize.ARRAY(Sequelize.DECIMAL(10, 2)), // eslint-disable-line
-        allowNull: true,
-      },
-      hydrograph_90: {
-        type: Sequelize.ARRAY(Sequelize.DECIMAL(10, 2)), // eslint-disable-line
+      abbreviation: {
+        type: Sequelize.TEXT,
         allowNull: true,
       },
       Avg: {type: Sequelize.ARRAY(Sequelize.DECIMAL(10, 2)), allowNull: true}, // eslint-disable-line
