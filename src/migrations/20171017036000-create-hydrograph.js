@@ -1,36 +1,40 @@
 'use strict';
 module.exports = {
   up: (queryInterface, Sequelize) => {
-    return queryInterface.createTable('Gauges', {
+    return queryInterface.createTable('Hydrographs', {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER,
       },
-      stationName: {
-        type: Sequelize.TEXT,
+      data: {
+        type: Sequelize.ARRAY(Sequelize.DECIMAL(10, 2)), // eslint-disable-line
         allowNull: true,
       },
-      geometry: {
-        type: Sequelize.JSONB, // eslint-disable-line
-        allowNull: true,
+      percentille: {
+        type: Sequelize.ENUM,
+        values: ['TEN', 'TWENTYFIVE', 'FIFTY', 'SEVENTYFIVE', 'NINTY'],
       },
-      unimpairedStartYear: {
-        type: Sequelize.INTEGER,
-        allowNull: true,
-      },
-      unimpairedEndYear: {
-        type: Sequelize.INTEGER,
-        allowNull: true,
+      type: {
+        type: Sequelize.ENUM,
+        values: ['GAUGE', 'CLASS'],
       },
       createdAt: {
         type: Sequelize.DATE,
         allowNull: false,
       },
       updatedAt: {
-        allowNull: false,
         type: Sequelize.DATE,
+        allowNull: false,
+      },
+      gaugeId: {
+        type: Sequelize.INTEGER,
+        onDelete: 'CASCADE',
+        references: {
+          model: 'Gauges',
+          key: 'id',
+        },
       },
       classId: {
         type: Sequelize.INTEGER,
@@ -43,6 +47,6 @@ module.exports = {
     });
   },
   down: queryInterface => {
-    return queryInterface.dropTable('Gauges');
+    return queryInterface.dropTable('Hydrographs');
   },
 };

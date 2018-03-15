@@ -1,11 +1,11 @@
 'use strict';
-const {classes} = require('../seeder-data');
+const {classifications} = require('../seeder-data');
 
 module.exports = {
   up: (queryInterface, _Sequelize) => {
-    return queryInterface.bulkInsert('Classes', classes);
+    return queryInterface.bulkInsert('Classifications', classifications);
   },
   down: (queryInterface, _Sequelize) => {
-    return queryInterface.bulkDelete('Classes');
+    return queryInterface.bulkDelete('Classifications');
   },
 };

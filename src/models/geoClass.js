@@ -14,7 +14,7 @@ module.exports = (sequelize, DataTypes) => {
     },
   });
   GeoClass.associate = models => {
-    GeoClass.belongsTo(models.Class, {
+    GeoClass.belongsTo(models.Classification, {
       foreignKey: 'classId',
       as: 'classes',
     });

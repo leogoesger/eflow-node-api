@@ -1,5 +1,5 @@
 import {Gauge} from '../models';
-import {Year} from '../models';
+import {Hydrograph} from '../models';
 
 module.exports = {
   create(req, res) {
@@ -9,13 +9,22 @@ module.exports = {
   },
 
   index(req, res) {
-    return Gauge.findAll({include: [{model: Year, as: 'years'}]})
+    return Gauge.findAll({
+      attributes: {
+        exclude: ['createdAt', 'updatedAt'],
+      },
+    })
       .then(gauge => res.status(200).send(gauge))
       .catch(err => res.status(400).send(err));
   },
 
   show(req, res) {
-    return Gauge.findAll({include: [{model: Year, as: 'years'}]})
+    return Gauge.findById(req.params.gaugeId, {
+      attributes: {
+        exclude: ['createdAt', 'updatedAt', 'geometry'],
+      },
+      include: [{model: Hydrograph, as: 'hydrographs'}],
+    })
       .then(gauge => res.status(200).send(gauge))
       .catch(err => res.status(400).send(err));
   },

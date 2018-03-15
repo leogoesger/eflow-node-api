@@ -26,7 +26,7 @@ module.exports = (sequelize, DataTypes) => {
     },
   });
   Gauge.associate = models => {
-    Gauge.belongsTo(models.Class, {
+    Gauge.belongsTo(models.Classification, {
       foreignKey: 'classId',
       as: 'classes',
     });
@@ -53,6 +53,10 @@ module.exports = (sequelize, DataTypes) => {
     Gauge.hasMany(models.Year, {
       foreignKey: 'gaugeId',
       as: 'years',
+    });
+    Gauge.hasMany(models.Hydrograph, {
+      foreignKey: 'gaugeId',
+      as: 'hydrographs',
     });
   };
   return Gauge;
