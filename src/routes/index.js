@@ -7,7 +7,9 @@ const springsController = require('../controllers').springs;
 const summersController = require('../controllers').summers;
 const wintersController = require('../controllers').winters;
 const yearsController = require('../controllers').years;
-const hydrographController = require('../controllers').hydrographs;
+const hydrographsController = require('../controllers').hydrographs;
+const papersController = require('../controllers').papers;
+const membersController = require('../controllers').members;
 
 module.exports = app => {
   app.post('/api/allyears', allYearsController.show);
@@ -31,5 +33,8 @@ module.exports = app => {
 
   app.post('/api/years', yearsController.show);
 
-  app.get('/api/hydrographs/:featureId', hydrographController.show);
+  app.get('/api/hydrographs/:featureId', hydrographsController.show);
+
+  app.get('/api/papers', papersController.index);
+  app.get('/api/members', membersController.index);
 };

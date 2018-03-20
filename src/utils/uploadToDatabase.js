@@ -176,7 +176,7 @@ export const uploadClassHydrographToDatabase = async () => {
   }
 };
 
-export const uploadGaugeHydrographToDatabase = async () => {
+export const uploadGaugeHydrographToDatabase2 = async () => {
   console.log('Gauge Hydrograph Data updating...'); // eslint-disable-line
   const new_url = process.env.S3_URL;
   try {
@@ -196,6 +196,37 @@ export const uploadGaugeHydrographToDatabase = async () => {
             percentille: PERCENTILLE[rowIndex],
             type: 'GAUGE',
           });
+        });
+    });
+  } catch (e) {
+    throw e;
+  }
+};
+
+export const uploadGaugeHydrographToDatabase = async () => {
+  console.log('Gauge Hydrograph Data updating...'); // eslint-disable-line
+  const new_url = process.env.S3_URL;
+  try {
+    await Hydrograph.destroy({where: {type: 'GAUGE'}});
+    const fileNames = await _getFileKeys(new_url, 'DRH_Gauge');
+
+    fileNames.forEach(file => {
+      const bulkHydrograph = [];
+      const csvFilePath = `${new_url}${file}`;
+      csv({
+        noheader: true,
+      })
+        .fromStream(request.get(csvFilePath))
+        .on('csv', (csvRow, rowIndex) => {
+          bulkHydrograph.push({
+            data: csvRow,
+            gaugeId: Number(file.slice(10, -4)),
+            percentille: PERCENTILLE[rowIndex],
+            type: 'GAUGE',
+          });
+        })
+        .on('done', () => {
+          Hydrograph.bulkCreate(bulkHydrograph);
         });
     });
   } catch (e) {
