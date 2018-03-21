@@ -1,10 +1,10 @@
 module.exports = [
   {
     id: 1,
-    name: 'Herve Guillon',
+    name: 'Hervé Guillon',
     title: 'Postdoctoral Researcher',
     description:
-      'Herve is a Postdoctoral Scholar at the University of California, Davis working with Dr. Lane and Dr. Samuel Sandoval (UC Davis) to derive a hydro-geomorphic stream classification for multiple hydrologic basins in California. He is using data mining and machine learning techniques to understand landscape and near-stream controls on channel geomorphic settings. Herve completed his PhD in the Institut des Sciences de la Terre in France on present-day erosion processes in a glaciated catchment in the Mont-Blanc massif. Before coming to UC Davis, Herve joined the hydrology and glaciology laboratory Institut des Géosciences de l’Environnement in France to discriminate suspended sediment origin from in-situ settling behaviour with optical methods.',
+      'Hervé is a Postdoctoral Scholar at the University of California, Davis working with Dr. Lane and Dr. Samuel Sandoval (UC Davis) to derive a hydro-geomorphic stream classification for multiple hydrologic basins in California. He is using data mining and machine learning techniques to understand landscape and near-stream controls on channel geomorphic settings. Hervé completed his PhD in the Institut des Sciences de la Terre in France on present-day erosion processes in a glaciated catchment in the Mont-Blanc massif. Before coming to UC Davis, Hervé joined the hydrology and glaciology laboratory Institut des Géosciences de l’Environnement in France to discriminate suspended sediment origin from in-situ settling behaviour with optical methods.',
     image: 'http://s3.amazonaws.com/37assets/svn/765-default-avatar.png',
     location: 'University of California, Davis',
     researchGate: 'https://www.researchgate.net/profile/Herve_Guillon2',
