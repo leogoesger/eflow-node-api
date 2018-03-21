@@ -64,7 +64,7 @@ app.disable('etag');
 //   true,
 //   'America/Los_Angeles'
 // );
-
+//
 // new CronJob( // eslint-disable-line
 //   '30 * * * * *',
 //   () => {
@@ -75,16 +75,6 @@ app.disable('etag');
 //   'America/Los_Angeles'
 // );
 //
-// new CronJob( // eslint-disable-line
-//   '0 * * * * *',
-//   () => {
-//     uploadGaugeHydrographToDatabase();
-//   },
-//   null,
-//   true,
-//   'America/Los_Angeles'
-// );
-
 require('./routes')(app);
 
 module.exports = app;
