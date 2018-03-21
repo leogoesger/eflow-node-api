@@ -9,6 +9,8 @@ const springs = require('./springs');
 const summers = require('./summers');
 const winters = require('./winters');
 const years = require('./years');
+const papers = require('./papers');
+const members = require('./members');
 
 module.exports = {
   allYears,
@@ -22,4 +24,6 @@ module.exports = {
   summers,
   winters,
   years,
+  papers,
+  members,
 };

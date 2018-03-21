@@ -55,26 +55,26 @@ app.disable('etag');
 // );
 //
 
-new CronJob( // eslint-disable-line
-  '0 * * * * *',
-  () => {
-    uploadClassHydrographToDatabase();
-  },
-  null,
-  true,
-  'America/Los_Angeles'
-);
-
-new CronJob( // eslint-disable-line
-  '30 * * * * *',
-  () => {
-    uploadGaugeHydrographToDatabase();
-  },
-  null,
-  true,
-  'America/Los_Angeles'
-);
-
+// new CronJob( // eslint-disable-line
+//   '0 * * * * *',
+//   () => {
+//     uploadClassHydrographToDatabase();
+//   },
+//   null,
+//   true,
+//   'America/Los_Angeles'
+// );
+//
+// new CronJob( // eslint-disable-line
+//   '30 * * * * *',
+//   () => {
+//     uploadGaugeHydrographToDatabase();
+//   },
+//   null,
+//   true,
+//   'America/Los_Angeles'
+// );
+//
 require('./routes')(app);
 
 module.exports = app;
