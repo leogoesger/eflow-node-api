@@ -2,8 +2,10 @@ module.exports = [
   {
     id: 1,
     name: 'Hervé Guillon',
-    description: 'Researcher at this and that!',
-    image: 'https://eflow.nyc3.digitaloceanspaces.com/resources/belize.PNG',
+    title: 'Postdoctoral Researcher',
+    description:
+      'Hervé is a Postdoctoral Scholar at the University of California, Davis working with Dr. Lane and Dr. Samuel Sandoval (UC Davis) to derive a hydro-geomorphic stream classification for multiple hydrologic basins in California. He is using data mining and machine learning techniques to understand landscape and near-stream controls on channel geomorphic settings. Hervé completed his PhD in the Institut des Sciences de la Terre in France on present-day erosion processes in a glaciated catchment in the Mont-Blanc massif. Before coming to UC Davis, Hervé joined the hydrology and glaciology laboratory Institut des Géosciences de l’Environnement in France to discriminate suspended sediment origin from in-situ settling behaviour with optical methods.',
+    image: 'https://eflow.nyc3.digitaloceanspaces.com/resources/belize.png',
     location: 'University of California, Davis',
     researchGate: 'https://www.researchgate.net/profile/Herve_Guillon2',
     website: 'https://guillon.xyz',
@@ -14,8 +16,10 @@ module.exports = [
   {
     id: 2,
     name: 'Belize A. Lane',
-    description: 'Researcher at this and that!',
-    image: 'https://eflow.nyc3.digitaloceanspaces.com/resources/belize.PNG',
+    title: 'Assistant Professor',
+    description:
+      "Belize's research is at the intersection of hydrology, river science, and water resources management, with an emphasis on improving river management for both human and environmental objectives. She is interested in linking hydrology, fluvial geomorphology, and river ecology to improve basic scientific understanding of river systems. Belize received her B.S. in Ecology with a minor in Mathematics from the University of California San Diego and M.S. in Water Resources Management from the University of California Davis. Her Ph.D. is in Hydrologic Sciences from UC Davis working with Dr. Samuel Sandoval, Dr. Greg Pasternack, and Dr. Helen Dahlke.",
+    image: 'https://eflow.nyc3.digitaloceanspaces.com/resources/belize.png',
     location: 'Utah State University',
     researchGate: 'https://www.researchgate.net/profile/Belize_Lane',
     website: 'https://belizelane.wixsite.com/wetlab',
@@ -26,8 +30,9 @@ module.exports = [
   {
     id: 3,
     name: 'Jose Pablo Ortiz Partida',
+    title: 'Ph.D. Candidate',
     description: 'Researcher at this and that!',
-    image: 'https://eflow.nyc3.digitaloceanspaces.com/resources/belize.PNG',
+    image: 'https://eflow.nyc3.digitaloceanspaces.com/resources/pablo.png',
     location: 'University of California, Davis',
     researchGate:
       'https://www.researchgate.net/profile/Jose_Pablo_Ortiz_Partida',
@@ -38,8 +43,9 @@ module.exports = [
   {
     id: 4,
     name: 'Gregory B. Pasternack',
+    title: 'Assistant Professor',
     description: 'Researcher at this and that!',
-    image: 'https://eflow.nyc3.digitaloceanspaces.com/resources/belize.PNG',
+    image: 'https://eflow.nyc3.digitaloceanspaces.com/resources/greg.png',
     location: 'University of California, Davis',
     researchGate: 'https://www.researchgate.net/profile/Gregory_Pasternack',
     email: 'gpast@ucdavis.edu',
@@ -51,8 +57,10 @@ module.exports = [
   {
     id: 5,
     name: 'Noelle Patterson',
-    description: 'Researcher at this and that!',
-    image: 'https://eflow.nyc3.digitaloceanspaces.com/resources/belize.PNG',
+    title: 'MS Hydrologic Sciences',
+    description:
+      'Noelle is pursuing a Masters in Hydrologic Sciences at the University of California, Davis, co-advised with Dr. Sandoval. After two years of working in water quality policy at the California State Water Board, Noelle was eager to join in research that helps inform sustainable management of water resources. Her research primarily focuses on flow requirements to preserve ecological function of regulated rivers. Noelle received her bachelor’s degree in Biological Systems Engineering from UC Davis.',
+    image: 'https://eflow.nyc3.digitaloceanspaces.com/resources/belize.png',
     location: 'University of California, Davis',
     linkedin: 'https://www.linkedin.com/in/noelle-patterson-8311b0b0/',
     email: 'nkpatterson@ucdavis.edu',
@@ -64,7 +72,7 @@ module.exports = [
     name: 'Leo Qiu',
     title: 'Software Engineer',
     description: 'Researcher at this and that!',
-    image: 'https://avatars2.githubusercontent.com/u/16042023?s=460&v=4',
+    image: 'https://eflow.nyc3.digitaloceanspaces.com/resources/leo.png',
     location: 'University of California, Davis',
     linkedin: 'https://www.linkedin.com/in/leo-qiu/',
     github: 'https://github.com/leogoesger/',
@@ -75,8 +83,9 @@ module.exports = [
   {
     id: 7,
     name: 'Samuel Sandoval-Solis',
+    title: 'Assistant Professor',
     description: 'Researcher at this and that!',
-    image: 'https://eflow.nyc3.digitaloceanspaces.com/resources/belize.PNG',
+    image: 'https://eflow.nyc3.digitaloceanspaces.com/resources/sam.png',
     location: 'University of California, Davis',
     researchGate: 'https://www.researchgate.net/profile/Samuel_Sandoval-Solis',
     email: 'samsandoval@ucdavis.edu',
