@@ -211,22 +211,18 @@ export const uploadGaugeHydrographToDatabase = async () => {
     const fileNames = await _getFileKeys(new_url, 'DRH_Gauge');
 
     fileNames.forEach(file => {
-      const bulkHydrograph = [];
       const csvFilePath = `${new_url}${file}`;
       csv({
         noheader: true,
       })
         .fromStream(request.get(csvFilePath))
         .on('csv', (csvRow, rowIndex) => {
-          bulkHydrograph.push({
+          Hydrograph.create({
             data: csvRow,
             gaugeId: Number(file.slice(10, -4)),
             percentille: PERCENTILLE[rowIndex],
             type: 'GAUGE',
           });
-        })
-        .on('done', () => {
-          Hydrograph.bulkCreate(bulkHydrograph);
         });
     });
   } catch (e) {
