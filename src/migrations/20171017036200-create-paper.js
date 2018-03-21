@@ -18,7 +18,7 @@ module.exports = {
       },
       type: {
         type: Sequelize.ENUM,
-        values: ['HYDROLOGY', 'MORPHOLOGY', 'ECHOLOGY', 'GENERAL'],
+        values: ['HYDROLOGY', 'MORPHOLOGY', 'ECOLOGY', 'GENERAL'],
       },
       authors: {
         type: Sequelize.ARRAY(Sequelize.TEXT), // eslint-disable-line
