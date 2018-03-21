@@ -59,4 +59,21 @@ module.exports = [
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
+  {
+    id: 4,
+    title:
+      'Integrated analysis of flow, form, and function for river management and design testing',
+    description:
+      "The extent and timing of many river ecosystem functions is controlled by the interplay of streamflow dynamics with the river corridor shape and structure. However, most river management studies evaluate the role of either flow or form without regard to their dynamic interactions. This study develops an integrated modeling approach to assess changes in ecosystem functions resulting from different river flow and form configurations. Moreover, it investigates the role of temporal variability in such flow-form-function tradeoffs. The use of synthetic, archetypal channel forms in lieu of high-resolution topographic data reduces time and financial requirements, overcomes site-specific topographic features, and allows for evaluation of any morphological structure of interest. In an application to California's Mediterranean-montane streams, the interacting roles of channel form, water year type, and hydrologic impairment were evaluated across a suite of ecosystem functions related to hydrogeomorphic processes and aquatic habitat. Channel form acted as the dominant control on hydrogeomorphic processes, while water year type controlled salmonid habitat functions. Streamflow alteration for hydropower increased redd dewatering risk and altered aquatic habitat availability. Study results highlight critical tradeoffs in ecosystem function performance and emphasize the significance of spatiotemporal diversity of flow and form at multiple scales for maintaining river ecosystem integrity. The proposed approach is broadly applicable and extensible to other systems and ecosystem functions, where findings can be used to inform river management and design testing.",
+    type: 'ECOLOGY',
+    authors: [
+      'Belize A. Lane',
+      'Gregory B. Pasternack',
+      'Samuel Sandoval-Solis',
+    ],
+    publishedDate: '10 March 2018',
+    paperUrl: 'https://onlinelibrary.wiley.com/doi/10.1002/eco.1969',
+    updatedAt: '2017-11-19T17:25:28.445Z',
+    createdAt: '2017-11-19T17:25:28.445Z',
+  },
 ];

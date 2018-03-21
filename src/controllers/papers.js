@@ -1,16 +1,8 @@
-import {Member, Paper} from '../models';
+import {Paper} from '../models';
 
 module.exports = {
   index(req, res) {
-    return Paper.findAll({
-      include: [
-        {
-          model: Member,
-          foreignKey: 'paperId',
-          as: 'members',
-        },
-      ],
-    })
+    return Paper.findAll()
       .then(papers => {
         res.status(200).send(papers);
       })
