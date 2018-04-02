@@ -11,7 +11,6 @@ const Summer = require('../models').Summer;
 const Winter = require('../models').Winter;
 const Year = require('../models').Year;
 const AnnualFlow = require('../models').AnnualFlow;
-const GeoClass = require('../models').GeoClass;
 const Hydrograph = require('../models').Hydrograph;
 
 import metricReference from '../static/metricReference';
@@ -124,25 +123,6 @@ export const uploadResultToDatabase = async () => {
           FallWinter.create(current_result.FallWinter);
           Winter.create(current_result.Winter);
         });
-    });
-  } catch (e) {
-    throw e;
-  }
-};
-
-export const uploadGeoClassToDatabase = async () => {
-  console.log('GeoClass Data updating...'); // eslint-disable-line
-  try {
-    await GeoClass.destroy({where: {}});
-
-    const {data} = await axios.get(
-      'https://eflow.nyc3.digitaloceanspaces.com/class_geo_data/classGeo.json'
-    );
-    data.features.forEach(classData => {
-      GeoClass.create({
-        geometry: classData,
-        classId: classData.properties.CLASS,
-      });
     });
   } catch (e) {
     throw e;

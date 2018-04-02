@@ -3,7 +3,6 @@ const classifications = require('./classifications');
 const falls = require('./falls');
 const fallWinters = require('./fallWinters');
 const gauges = require('./gauges');
-const geoClasses = require('./geoClasses');
 const hydrographs = require('./hydrographs');
 const springs = require('./springs');
 const summers = require('./summers');
@@ -18,7 +17,6 @@ module.exports = {
   falls,
   fallWinters,
   gauges,
-  geoClasses,
   hydrographs,
   springs,
   summers,
