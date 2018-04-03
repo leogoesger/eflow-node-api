@@ -79,7 +79,7 @@ export const uploadFlowDataToDatabase = async () => {
 };
 
 export const uploadResultToDatabase = async () => {
-  console.log('Result Data updating...'); // eslint-disable-line
+  console.log('Metric Result Data updating...'); // eslint-disable-line
   const new_url = process.env.S3_URL;
   try {
     await Year.destroy({where: {}});

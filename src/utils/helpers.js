@@ -65,6 +65,7 @@ export class ClassBoxPlot {
     });
 
     Object.keys(boxPlot).forEach(key => {
+      boxPlot[key].sort();
       attributeData[key] = {
         quartile: [
           d3.quantile(boxPlot[key], 0.25),
@@ -74,6 +75,7 @@ export class ClassBoxPlot {
         whiskers: [Number(d3.min(boxPlot[key])), Number(d3.max(boxPlot[key]))],
       };
     });
+    attributeData.metricName = this.metricName;
     return attributeData;
   }
 }
