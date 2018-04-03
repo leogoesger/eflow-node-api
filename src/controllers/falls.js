@@ -28,7 +28,7 @@ module.exports = {
             },
           ],
         });
-        const boxPlotClass = new ClassBoxPlot(metrics, req.body.metric)
+        const boxPlotClass = new ClassBoxPlot(metrics, req.body.metric, 'Fall')
           .boxPlotDataGetter;
 
         return res.status(200).send(boxPlotClass);
@@ -43,7 +43,8 @@ module.exports = {
         }),
         boxPlotAttributes = getGaugeBoxPlotObject(
           metric[0][req.body.metric],
-          req.body.metric
+          req.body.metric,
+          'Fall'
         );
 
       return res.status(200).send(boxPlotAttributes);

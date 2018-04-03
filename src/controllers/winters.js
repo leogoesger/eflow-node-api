@@ -28,8 +28,11 @@ module.exports = {
             },
           ],
         });
-        const boxPlotClass = new ClassBoxPlot(metrics, req.body.metric)
-          .boxPlotDataGetter;
+        const boxPlotClass = new ClassBoxPlot(
+          metrics,
+          req.body.metric,
+          'Winter'
+        ).boxPlotDataGetter;
 
         return res.status(200).send(boxPlotClass);
       }
@@ -43,7 +46,8 @@ module.exports = {
         }),
         boxPlotAttributes = getGaugeBoxPlotObject(
           metric[0][req.body.metric],
-          req.body.metric
+          req.body.metric,
+          'Winter'
         );
 
       return res.status(200).send(boxPlotAttributes);

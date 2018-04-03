@@ -1,16 +1,17 @@
 import * as d3 from 'd3';
+import {sortBy} from 'lodash';
 
 export const removeNaN = array => {
-  const filteredArray = array.filter(ele => !isNaN(Number(ele))).sort();
-  return filteredArray;
+  const filteredArray = array.filter(ele => !isNaN(Number(ele)));
+  return sortBy(filteredArray.map(Number));
 };
 
-export const getGaugeBoxPlotObject = (metricArray, metricName) => {
+export const getGaugeBoxPlotObject = (metricArray, metricName, category) => {
   const filteredMetricArray = removeNaN(metricArray),
     boxPlotAttributes = {
       metricName,
-      count: metricArray.length,
-      filteredCount: filteredMetricArray.length,
+      type: 'Gauge',
+      category,
       quartile: [
         d3.quantile(filteredMetricArray, 0.25),
         d3.quantile(filteredMetricArray, 0.5),
@@ -25,11 +26,12 @@ export const getGaugeBoxPlotObject = (metricArray, metricName) => {
 };
 
 export class ClassBoxPlot {
-  constructor(rawData, metricName) {
+  constructor(rawData, metricName, category) {
     this.rawData = rawData;
     this.metricName = metricName;
     this.filteredData = null;
     this.quantileData = null;
+    this.category = category;
     this.getFilteredData();
     this.getQuantiles();
   }
@@ -65,8 +67,10 @@ export class ClassBoxPlot {
     });
 
     Object.keys(boxPlot).forEach(key => {
-      boxPlot[key].sort();
+      boxPlot[key] = sortBy(boxPlot[key]);
       attributeData[key] = {
+        type: 'Class',
+        category: this.category,
         quartile: [
           d3.quantile(boxPlot[key], 0.25),
           d3.quantile(boxPlot[key], 0.5),
