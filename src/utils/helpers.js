@@ -9,17 +9,18 @@ export const removeNaN = array => {
 export const getGaugeBoxPlotObject = (metricArray, metricName, category) => {
   const filteredMetricArray = removeNaN(metricArray),
     boxPlotAttributes = {
-      metricName,
       type: 'Gauge',
-      category,
+      metricName: `${category.toLowerCase()}${metricName[0].toUpperCase()}${metricName.slice(
+        1
+      )}`,
       quartile: [
         d3.quantile(filteredMetricArray, 0.25),
         d3.quantile(filteredMetricArray, 0.5),
         d3.quantile(filteredMetricArray, 0.75),
       ],
       whiskers: [
-        Number(d3.min(filteredMetricArray)),
-        Number(d3.max(filteredMetricArray)),
+        d3.quantile(filteredMetricArray, 0.1),
+        d3.quantile(filteredMetricArray, 0.9),
       ],
     };
   return boxPlotAttributes;
@@ -70,13 +71,18 @@ export class ClassBoxPlot {
       boxPlot[key] = sortBy(boxPlot[key]);
       attributeData[key] = {
         type: 'Class',
-        category: this.category,
+        metricName: `${this.category.toLowerCase()}${this.metricName[0].toUpperCase()}${this.metricName.slice(
+          1
+        )}`,
         quartile: [
           d3.quantile(boxPlot[key], 0.25),
           d3.quantile(boxPlot[key], 0.5),
           d3.quantile(boxPlot[key], 0.75),
         ],
-        whiskers: [Number(d3.min(boxPlot[key])), Number(d3.max(boxPlot[key]))],
+        whiskers: [
+          d3.quantile(boxPlot[key], 0.1),
+          d3.quantile(boxPlot[key], 0.9),
+        ],
       };
     });
     attributeData.metricName = this.metricName;
