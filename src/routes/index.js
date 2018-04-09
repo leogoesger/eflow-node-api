@@ -12,29 +12,52 @@ const papersController = require('../controllers').papers;
 const membersController = require('../controllers').members;
 
 module.exports = app => {
-  app.post('/api/allyears', allYearsController.show);
+  app.post('/api/years', yearsController.show);
+  app.get('/api/hydrographs/:featureId', hydrographsController.show);
+
+  app.get('/api/papers', papersController.index);
+  app.get('/api/members', membersController.index);
 
   app.get('/api/classes', classesController.index);
   app.get('/api/classes/:classId', classesController.show);
-
-  app.post('/api/falls', fallsController.show);
-
-  app.post('/api/fallwinters', fallWintersController.show);
 
   app.post('/api/gauges', gaugesController.create);
   app.get('/api/gauges', gaugesController.index);
   app.get('/api/gauges/:gaugeId', gaugesController.show);
 
+  app.post('/api/allyears', allYearsController.show);
+  app.post(
+    '/api/allyears/getBoxPlotAttributes',
+    allYearsController.getBoxPlotAttributes
+  );
+
   app.post('/api/springs', springsController.show);
+  app.post(
+    '/api/springs/getBoxPlotAttributes',
+    springsController.getBoxPlotAttributes
+  );
+
+  app.post('/api/falls', fallsController.show);
+  app.post(
+    '/api/falls/getBoxPlotAttributes',
+    fallsController.getBoxPlotAttributes
+  );
+
+  app.post('/api/fallwinters', fallWintersController.show);
+  app.post(
+    '/api/fallwinters/getBoxPlotAttributes',
+    fallWintersController.getBoxPlotAttributes
+  );
 
   app.post('/api/summers', summersController.show);
+  app.post(
+    '/api/summers/getBoxPlotAttributes',
+    summersController.getBoxPlotAttributes
+  );
 
   app.post('/api/winters', wintersController.show);
-
-  app.post('/api/years', yearsController.show);
-
-  app.get('/api/hydrographs/:featureId', hydrographsController.show);
-
-  app.get('/api/papers', papersController.index);
-  app.get('/api/members', membersController.index);
+  app.post(
+    '/api/winters/getBoxPlotAttributes',
+    wintersController.getBoxPlotAttributes
+  );
 };

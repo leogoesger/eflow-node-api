@@ -43,7 +43,7 @@ app.disable('etag');
 //   true,
 //   'America/Los_Angeles'
 // );
-//
+
 // new CronJob( // eslint-disable-line
 //   '15 * * * * *',
 //   () => {
@@ -53,10 +53,9 @@ app.disable('etag');
 //   true,
 //   'America/Los_Angeles'
 // );
-//
 
 // new CronJob( // eslint-disable-line
-//   '0 * * * * *',
+//   '15 * * * * *',
 //   () => {
 //     uploadClassHydrographToDatabase();
 //   },
@@ -64,7 +63,7 @@ app.disable('etag');
 //   true,
 //   'America/Los_Angeles'
 // );
-//
+
 // new CronJob( // eslint-disable-line
 //   '30 * * * * *',
 //   () => {
