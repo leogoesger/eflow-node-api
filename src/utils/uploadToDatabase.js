@@ -14,6 +14,7 @@ const AnnualFlow = require('../models').AnnualFlow;
 const Hydrograph = require('../models').Hydrograph;
 
 import metricReference from '../static/metricReference';
+import gaugeReference from '../static/gaugeReference';
 
 const _getFileKeys = async (url, folder) => {
   const responseXML = await axios.get(url);

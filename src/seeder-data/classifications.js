@@ -85,7 +85,7 @@ module.exports = [
   },
   {
     id: 3,
-    name: 'Low-volume snowmetl and rain',
+    name: 'Low-volume snowmelt and rain',
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
     abbreviation: 'LSR',
@@ -298,7 +298,7 @@ module.exports = [
     name: 'Rain and seasonal groundwater',
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-    abbreviation: 'RSG',
+    abbreviation: 'RGW',
     Avg: [8.1, 3.202459016, 2.368767123],
     Std: [10.33161377, 5.058366382, 0.555579286],
     CV: [3.051249314, 1.57952572, 0.23454365],
