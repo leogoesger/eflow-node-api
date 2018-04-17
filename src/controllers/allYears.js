@@ -1,5 +1,9 @@
 import {AllYear, Gauge} from '../models';
-import {getGaugeBoxPlotObject, ClassBoxPlot} from '../utils/helpers';
+import {
+  getGaugeBoxPlotObject,
+  ClassBoxPlot,
+  nonDimValues,
+} from '../utils/helpers';
 
 module.exports = {
   show(req, res) {
@@ -15,7 +19,7 @@ module.exports = {
     try {
       //Search based on classId
       if (req.body.classId) {
-        const metrics = await AllYear.findAll({
+        let allYearMetric = await AllYear.findAll({
           attributes: [req.body.metric],
           where: {
             '$gauge.classId$': req.body.classId,
@@ -28,8 +32,13 @@ module.exports = {
             },
           ],
         });
+
+        if (!req.body.metric.includes('timing')) {
+          allYearMetric = await nonDimValues(req, allYearMetric);
+        }
+
         const boxPlotClass = new ClassBoxPlot(
-          metrics,
+          allYearMetric,
           req.body.metric,
           'All Year'
         ).boxPlotDataGetter;

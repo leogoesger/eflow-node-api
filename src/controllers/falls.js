@@ -1,5 +1,9 @@
 import {Fall, Gauge} from '../models';
-import {getGaugeBoxPlotObject, ClassBoxPlot} from '../utils/helpers';
+import {
+  getGaugeBoxPlotObject,
+  ClassBoxPlot,
+  nonDimValues,
+} from '../utils/helpers';
 
 module.exports = {
   show(req, res) {
@@ -15,7 +19,7 @@ module.exports = {
     try {
       //Search based on classId
       if (req.body.classId) {
-        const metrics = await Fall.findAll({
+        let fallMetric = await Fall.findAll({
           attributes: [req.body.metric],
           where: {
             '$gauge.classId$': req.body.classId,
@@ -28,8 +32,17 @@ module.exports = {
             },
           ],
         });
-        const boxPlotClass = new ClassBoxPlot(metrics, req.body.metric, 'Fall')
-          .boxPlotDataGetter;
+
+        //Non dimensionalize all metrics except timings ones
+        if (!req.body.metric.includes('timing')) {
+          fallMetric = await nonDimValues(req, fallMetric);
+        }
+
+        const boxPlotClass = new ClassBoxPlot(
+          fallMetric,
+          req.body.metric,
+          'Fall'
+        ).boxPlotDataGetter;
 
         return res.status(200).send(boxPlotClass);
       }
