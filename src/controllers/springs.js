@@ -37,7 +37,6 @@ module.exports = {
         if (!req.body.metric.includes('timing')) {
           metrics = await nonDimValues(req, metrics);
         }
-
         const boxPlotClass = new ClassBoxPlot(
           metrics,
           req.body.metric,
