@@ -68,6 +68,26 @@ module.exports = (sequelizeClient, DataTypes) => {
       type: DataTypes.ARRAY(DataTypes.DECIMAL(10, 2)), // eslint-disable-line
       allowNull: true,
     },
+    magnitude2: {
+      type: DataTypes.ARRAY(DataTypes.DECIMAL(10, 2)), // eslint-disable-line
+      allowNull: true,
+    },
+    magnitude5: {
+      type: DataTypes.ARRAY(DataTypes.DECIMAL(10, 2)), // eslint-disable-line
+      allowNull: true,
+    },
+    magnitude10: {
+      type: DataTypes.ARRAY(DataTypes.DECIMAL(10, 2)), // eslint-disable-line
+      allowNull: true,
+    },
+    magnitude20: {
+      type: DataTypes.ARRAY(DataTypes.DECIMAL(10, 2)), // eslint-disable-line
+      allowNull: true,
+    },
+    magnitude50: {
+      type: DataTypes.ARRAY(DataTypes.DECIMAL(10, 2)), // eslint-disable-line
+      allowNull: true,
+    },
   });
   Winter.associate = models => {
     Winter.belongsTo(models.Gauge, {
