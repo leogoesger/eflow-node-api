@@ -7,26 +7,6 @@ export const removeNaN = array => {
   return sortBy(filteredArray.map(Number));
 };
 
-export const getGaugeBoxPlotObject = (metricArray, metricName, category) => {
-  const filteredMetricArray = removeNaN(metricArray),
-    boxPlotAttributes = {
-      type: 'Gauge',
-      metricName: `${category.toLowerCase()}${metricName[0].toUpperCase()}${metricName.slice(
-        1
-      )}`,
-      quartile: [
-        d3.quantile(filteredMetricArray, 0.25),
-        d3.quantile(filteredMetricArray, 0.5),
-        d3.quantile(filteredMetricArray, 0.75),
-      ],
-      whiskers: [
-        d3.quantile(filteredMetricArray, 0.1),
-        d3.quantile(filteredMetricArray, 0.9),
-      ],
-    };
-  return boxPlotAttributes;
-};
-
 export class ClassBoxPlot {
   constructor(rawData, metricName, category) {
     this.rawData = rawData;
@@ -109,4 +89,40 @@ export const nonDimValues = async (req, metrics) => {
     });
   });
   return nonDimArray;
+};
+
+export const getGaugeBoxPlotObject = (metricArray, metricName, category) => {
+  const filteredMetricArray = removeNaN(metricArray),
+    boxPlotAttributes = {
+      type: 'Gauge',
+      metricName: `${category.toLowerCase()}${metricName[0].toUpperCase()}${metricName.slice(
+        1
+      )}`,
+      quartile: [
+        d3.quantile(filteredMetricArray, 0.25),
+        d3.quantile(filteredMetricArray, 0.5),
+        d3.quantile(filteredMetricArray, 0.75),
+      ],
+      whiskers: [
+        d3.quantile(filteredMetricArray, 0.1),
+        d3.quantile(filteredMetricArray, 0.9),
+      ],
+    };
+  return boxPlotAttributes;
+};
+
+export const gaugeNonDimValues = async (req, metric) => {
+  const nonDimArray = [],
+    avgFlow = await AllYear.findAll({
+      attributes: ['average'],
+      where: {
+        gaugeId: req.body.gaugeId,
+      },
+    });
+  metric[0][req.body.metric].forEach((v, i) => {
+    if (!isNaN(Number(v)) && !isNaN(Number(avgFlow[0].average[i]))) {
+      nonDimArray.push(Number(v) / Number(avgFlow[0].average[i]));
+    }
+  });
+  return [{[req.body.metric]: nonDimArray}];
 };

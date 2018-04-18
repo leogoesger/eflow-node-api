@@ -3,6 +3,7 @@ import {
   getGaugeBoxPlotObject,
   ClassBoxPlot,
   nonDimValues,
+  gaugeNonDimValues,
 } from '../utils/helpers';
 
 module.exports = {
@@ -48,17 +49,20 @@ module.exports = {
       }
 
       //Search based on gaugeId
-      const metric = await Fall.findAll({
-          attributes: [req.body.metric],
-          where: {
-            gaugeId: req.body.gaugeId,
-          },
-        }),
-        boxPlotAttributes = getGaugeBoxPlotObject(
-          metric[0][req.body.metric],
-          req.body.metric,
-          'Fall'
-        );
+      let metric = await Fall.findAll({
+        attributes: [req.body.metric],
+        where: {
+          gaugeId: req.body.gaugeId,
+        },
+      });
+      if (!req.body.metric.includes('timing')) {
+        metric = await gaugeNonDimValues(req, metric);
+      }
+      const boxPlotAttributes = getGaugeBoxPlotObject(
+        metric[0][req.body.metric],
+        req.body.metric,
+        'Fall'
+      );
 
       return res.status(200).send(boxPlotAttributes);
     } catch (e) {
