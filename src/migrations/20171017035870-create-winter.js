@@ -68,6 +68,26 @@ module.exports = {
         type: Sequelize.ARRAY(Sequelize.DECIMAL(10, 2)), // eslint-disable-line
         allowNull: true,
       },
+      magnitude2: {
+        type: Sequelize.ARRAY(Sequelize.DECIMAL(10, 2)), // eslint-disable-line
+        allowNull: true,
+      },
+      magnitude5: {
+        type: Sequelize.ARRAY(Sequelize.DECIMAL(10, 2)), // eslint-disable-line
+        allowNull: true,
+      },
+      magnitude10: {
+        type: Sequelize.ARRAY(Sequelize.DECIMAL(10, 2)), // eslint-disable-line
+        allowNull: true,
+      },
+      magnitude20: {
+        type: Sequelize.ARRAY(Sequelize.DECIMAL(10, 2)), // eslint-disable-line
+        allowNull: true,
+      },
+      magnitude50: {
+        type: Sequelize.ARRAY(Sequelize.DECIMAL(10, 2)), // eslint-disable-line
+        allowNull: true,
+      },
       createdAt: {
         type: Sequelize.DATE,
         allowNull: false,

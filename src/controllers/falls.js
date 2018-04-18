@@ -1,5 +1,10 @@
 import {Fall, Gauge} from '../models';
-import {getGaugeBoxPlotObject, ClassBoxPlot} from '../utils/helpers';
+import {
+  getGaugeBoxPlotObject,
+  ClassBoxPlot,
+  nonDimValues,
+  gaugeNonDimValues,
+} from '../utils/helpers';
 
 module.exports = {
   show(req, res) {
@@ -15,7 +20,7 @@ module.exports = {
     try {
       //Search based on classId
       if (req.body.classId) {
-        const metrics = await Fall.findAll({
+        let fallMetric = await Fall.findAll({
           attributes: [req.body.metric],
           where: {
             '$gauge.classId$': req.body.classId,
@@ -28,24 +33,36 @@ module.exports = {
             },
           ],
         });
-        const boxPlotClass = new ClassBoxPlot(metrics, req.body.metric, 'Fall')
-          .boxPlotDataGetter;
+
+        //Non dimensionalize all metrics except timings ones
+        if (!req.body.metric.includes('timing')) {
+          fallMetric = await nonDimValues(req, fallMetric);
+        }
+
+        const boxPlotClass = new ClassBoxPlot(
+          fallMetric,
+          req.body.metric,
+          'Fall'
+        ).boxPlotDataGetter;
 
         return res.status(200).send(boxPlotClass);
       }
 
       //Search based on gaugeId
-      const metric = await Fall.findAll({
-          attributes: [req.body.metric],
-          where: {
-            gaugeId: req.body.gaugeId,
-          },
-        }),
-        boxPlotAttributes = getGaugeBoxPlotObject(
-          metric[0][req.body.metric],
-          req.body.metric,
-          'Fall'
-        );
+      let metric = await Fall.findAll({
+        attributes: [req.body.metric],
+        where: {
+          gaugeId: req.body.gaugeId,
+        },
+      });
+      if (!req.body.metric.includes('timing')) {
+        metric = await gaugeNonDimValues(req, metric);
+      }
+      const boxPlotAttributes = getGaugeBoxPlotObject(
+        metric[0][req.body.metric],
+        req.body.metric,
+        'Fall'
+      );
 
       return res.status(200).send(boxPlotAttributes);
     } catch (e) {

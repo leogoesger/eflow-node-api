@@ -55,7 +55,7 @@ app.disable('etag');
 // );
 
 // new CronJob( // eslint-disable-line
-//   '15 * * * * *',
+//   '30 * * * * *',
 //   () => {
 //     uploadClassHydrographToDatabase();
 //   },
@@ -65,7 +65,7 @@ app.disable('etag');
 // );
 
 // new CronJob( // eslint-disable-line
-//   '30 * * * * *',
+//   '0 * * * * *',
 //   () => {
 //     uploadGaugeHydrographToDatabase();
 //   },

@@ -1,5 +1,10 @@
 import {Spring, Gauge} from '../models';
-import {getGaugeBoxPlotObject, ClassBoxPlot} from '../utils/helpers';
+import {
+  getGaugeBoxPlotObject,
+  ClassBoxPlot,
+  nonDimValues,
+  gaugeNonDimValues,
+} from '../utils/helpers';
 
 module.exports = {
   show(req, res) {
@@ -15,7 +20,7 @@ module.exports = {
     try {
       //Search based on classId
       if (req.body.classId) {
-        const metrics = await Spring.findAll({
+        let metrics = await Spring.findAll({
           attributes: [req.body.metric],
           where: {
             '$gauge.classId$': req.body.classId,
@@ -28,6 +33,10 @@ module.exports = {
             },
           ],
         });
+
+        if (!req.body.metric.includes('timing')) {
+          metrics = await nonDimValues(req, metrics);
+        }
         const boxPlotClass = new ClassBoxPlot(
           metrics,
           req.body.metric,
@@ -38,17 +47,22 @@ module.exports = {
       }
 
       //Search based on gaugeId
-      const metric = await Spring.findAll({
-          attributes: [req.body.metric],
-          where: {
-            gaugeId: req.body.gaugeId,
-          },
-        }),
-        boxPlotAttributes = getGaugeBoxPlotObject(
-          metric[0][req.body.metric],
-          req.body.metric,
-          'Spring'
-        );
+      let metric = await Spring.findAll({
+        attributes: [req.body.metric],
+        where: {
+          gaugeId: req.body.gaugeId,
+        },
+      });
+
+      if (!req.body.metric.includes('timing')) {
+        metric = await gaugeNonDimValues(req, metric);
+      }
+
+      const boxPlotAttributes = getGaugeBoxPlotObject(
+        metric[0][req.body.metric],
+        req.body.metric,
+        'Spring'
+      );
 
       return res.status(200).send(boxPlotAttributes);
     } catch (e) {
