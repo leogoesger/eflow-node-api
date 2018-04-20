@@ -19,6 +19,7 @@ module.exports = app => {
   app.get('/api/members', membersController.index);
 
   app.get('/api/classes', classesController.index);
+  app.post('/api/classes', classesController.update);
   app.get('/api/classes/:classId', classesController.show);
 
   app.post('/api/gauges', gaugesController.create);

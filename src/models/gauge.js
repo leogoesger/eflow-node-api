@@ -149,6 +149,10 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: 'gaugeId',
       as: 'falls',
     });
+    Gauge.hasMany(models.FallWinter, {
+      foreignKey: 'gaugeId',
+      as: 'fallWinters',
+    });
     Gauge.hasMany(models.Spring, {
       foreignKey: 'gaugeId',
       as: 'springs',

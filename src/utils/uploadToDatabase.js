@@ -13,8 +13,7 @@ const Year = require('../models').Year;
 const AnnualFlow = require('../models').AnnualFlow;
 const Hydrograph = require('../models').Hydrograph;
 
-import metricReference from '../static/metricReference';
-import gaugeReference from '../static/gaugeReference';
+import {metricReference} from '../static/metricReference';
 
 const _getFileKeys = async (url, folder) => {
   const responseXML = await axios.get(url);
@@ -90,7 +89,7 @@ export const uploadResultToDatabase = async () => {
     await Summer.destroy({where: {}});
     await Spring.destroy({where: {}});
     await FallWinter.destroy({where: {}});
-    const fileNames = await _getFileKeys(new_url, 'annual_flow_result');
+    const fileNames = await _getFileKeys(new_url, 'annual_flow_result_2');
     fileNames.forEach(file => {
       const csvFilePath = `${new_url}${file}`;
       const current_result = {
@@ -113,7 +112,7 @@ export const uploadResultToDatabase = async () => {
           const seasonName = metricReference[`${csvRow[0]}`][0];
           const dataEntryName = metricReference[`${csvRow[0]}`][1];
           current_result[seasonName][dataEntryName] = csvRow.slice(1);
-          current_result[seasonName].gaugeId = Number(file.slice(19, -25));
+          current_result[seasonName].gaugeId = Number(file.slice(21, -25));
         })
         .on('done', () => {
           Year.create(current_result.Year);
