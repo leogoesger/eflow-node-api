@@ -20,7 +20,9 @@ app.use((req, res, next) => {
     'http://localhost:4000',
     'http://localhost:3000',
     'http://eflows.ucdavis.edu/',
+    'https://eflows.ucdavis.edu/',
     'http://environmentalflows.ucdavis.edu',
+    'https://environmentalflows.ucdavis.edu',
   ];
   const origin = req.headers.origin;
   if (allowed_header.indexOf(origin) > -1) {
