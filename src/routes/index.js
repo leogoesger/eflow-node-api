@@ -10,6 +10,7 @@ const yearsController = require('../controllers').years;
 const hydrographsController = require('../controllers').hydrographs;
 const papersController = require('../controllers').papers;
 const membersController = require('../controllers').members;
+const annualFlowsController = require('../controllers').annualFlows;
 
 module.exports = app => {
   app.post('/api/years', yearsController.show);
@@ -61,4 +62,6 @@ module.exports = app => {
     '/api/winters/getBoxPlotAttributes',
     wintersController.getBoxPlotAttributes
   );
+
+  app.post('/api/annualFlows', annualFlowsController.show);
 };

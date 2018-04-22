@@ -10,6 +10,7 @@ const winters = require('./winters');
 const years = require('./years');
 const papers = require('./papers');
 const members = require('./members');
+const annualFlows = require('./annualFlows');
 
 module.exports = {
   allYears,
@@ -24,4 +25,5 @@ module.exports = {
   years,
   papers,
   members,
+  annualFlows,
 };
