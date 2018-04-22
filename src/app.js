@@ -45,16 +45,6 @@ app.disable('etag');
 //   true,
 //   'America/Los_Angeles'
 // );
-//
-// new CronJob( // eslint-disable-line
-//   '30 * * * * *',
-//   () => {
-//     uploadResultToDatabase();
-//   },
-//   null,
-//   true,
-//   'America/Los_Angeles'
-// );
 
 // new CronJob( // eslint-disable-line
 //   '15 * * * * *',
