@@ -12,6 +12,12 @@ module.exports = {
     post: 5432,
     dialect: 'postgres',
     logging: false,
+    pool: {
+      max: 5,
+      min: 0,
+      idle: 20000,
+      acquire: 20000,
+    },
     operatorsAliases: Op,
   },
   test: {
@@ -32,6 +38,12 @@ module.exports = {
     post: 5432,
     dialect: 'postgres',
     logging: false,
+    pool: {
+      max: 5,
+      min: 0,
+      idle: 20000,
+      acquire: 20000,
+    },
     operatorsAliases: Op,
   },
 };

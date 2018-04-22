@@ -46,15 +46,15 @@ app.disable('etag');
 //   'America/Los_Angeles'
 // );
 
-// new CronJob( // eslint-disable-line
-//   '15 * * * * *',
-//   () => {
-//     uploadFlowDataToDatabase();
-//   },
-//   null,
-//   true,
-//   'America/Los_Angeles'
-// );
+new CronJob( // eslint-disable-line
+  '15 * * * * *',
+  () => {
+    uploadFlowDataToDatabase();
+  },
+  null,
+  true,
+  'America/Los_Angeles'
+);
 
 // new CronJob( // eslint-disable-line
 //   '30 * * * * *',
