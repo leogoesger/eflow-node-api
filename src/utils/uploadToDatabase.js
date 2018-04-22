@@ -1,6 +1,4 @@
 import csv from 'csvtojson';
-import axios from 'axios';
-import {parseString} from 'xml2js';
 import request from 'request';
 
 const Fall = require('../models').Fall;
@@ -14,27 +12,14 @@ const AnnualFlow = require('../models').AnnualFlow;
 const Hydrograph = require('../models').Hydrograph;
 
 import {metricReference} from '../static/metricReference';
-
-const _getFileKeys = async (url, folder) => {
-  const responseXML = await axios.get(url);
-  return new Promise(resolve => {
-    parseString(responseXML.data, (err, result) => {
-      const fileNames = result.ListBucketResult.Contents.map(ele => ele.Key[0]);
-      const filtered = fileNames.filter(name => {
-        const splitted = name.split('/');
-        return Boolean(splitted[0].includes(folder) && splitted[1]);
-      });
-      resolve(filtered);
-    });
-  });
-};
+import gaugeReference from '../static/gaugeReference';
 
 const _inputFlowToDatabase = (result, file) => {
   Object.keys(result).forEach(key => {
     AnnualFlow.create({
       year: key,
       flowData: result[key],
-      gaugeId: Number(file.slice(19, -4)),
+      gaugeId: file,
     }).catch(e => {
       throw e;
     });
@@ -43,12 +28,11 @@ const _inputFlowToDatabase = (result, file) => {
 
 export const uploadFlowDataToDatabase = async () => {
   console.log('Flow Data updating...'); // eslint-disable-line
-  const new_url = process.env.S3_URL;
+  const new_url = `${process.env.S3_BUCKET}annual_flow_matrix/`;
   try {
     await AnnualFlow.destroy({where: {}});
-    const fileNames = await _getFileKeys(new_url, 'annual_flow_matrix');
-    fileNames.forEach(file => {
-      const csvFilePath = `${new_url}${file}`;
+    gaugeReference.forEach(gauge => {
+      const csvFilePath = `${new_url}${gauge.id}.csv`;
       let firstRow = true;
       const result = {};
       const mapping = {};
@@ -70,7 +54,7 @@ export const uploadFlowDataToDatabase = async () => {
           }
         })
         .on('done', () => {
-          _inputFlowToDatabase(result, file);
+          _inputFlowToDatabase(result, gauge.id);
         });
     });
   } catch (e) {
@@ -80,7 +64,7 @@ export const uploadFlowDataToDatabase = async () => {
 
 export const uploadResultToDatabase = async () => {
   console.log('Metric Result Data updating...'); // eslint-disable-line
-  const new_url = process.env.S3_URL;
+  const new_url = `${process.env.S3_BUCKET}annual_flow_result/`;
   try {
     await Year.destroy({where: {}});
     await AllYear.destroy({where: {}});
@@ -89,9 +73,9 @@ export const uploadResultToDatabase = async () => {
     await Summer.destroy({where: {}});
     await Spring.destroy({where: {}});
     await FallWinter.destroy({where: {}});
-    const fileNames = await _getFileKeys(new_url, 'annual_flow_result_2');
-    fileNames.forEach(file => {
-      const csvFilePath = `${new_url}${file}`;
+
+    gaugeReference.forEach(gauge => {
+      const csvFilePath = `${new_url}${gauge.id}_annual_result_matrix.csv`;
       const current_result = {
         Year: {},
         AllYear: {},
@@ -112,7 +96,7 @@ export const uploadResultToDatabase = async () => {
           const seasonName = metricReference[`${csvRow[0]}`][0];
           const dataEntryName = metricReference[`${csvRow[0]}`][1];
           current_result[seasonName][dataEntryName] = csvRow.slice(1);
-          current_result[seasonName].gaugeId = Number(file.slice(21, -25));
+          current_result[seasonName].gaugeId = gauge.id;
         })
         .on('done', () => {
           Year.create(current_result.Year);
@@ -132,12 +116,12 @@ export const uploadResultToDatabase = async () => {
 const PERCENTILLE = ['TEN', 'TWENTYFIVE', 'FIFTY', 'SEVENTYFIVE', 'NINTY'];
 export const uploadClassHydrographToDatabase = async () => {
   console.log('Class Hydrograph Data updating...'); // eslint-disable-line
-  const new_url = process.env.S3_URL;
+  const new_url = `${process.env.S3_BUCKET}DRH_Class/`;
   try {
     await Hydrograph.destroy({where: {type: 'CLASS'}});
-    const fileNames = await _getFileKeys(new_url, 'DRH_Class');
-    fileNames.forEach(file => {
-      const csvFilePath = `${new_url}${file}`;
+    const classNames = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+    classNames.forEach(classNumber => {
+      const csvFilePath = `${new_url}Class_${classNumber}_aggregate.csv`;
       csv({
         noheader: true,
       })
@@ -145,7 +129,7 @@ export const uploadClassHydrographToDatabase = async () => {
         .on('csv', (csvRow, rowIndex) => {
           Hydrograph.create({
             data: csvRow,
-            classId: Number(file.slice(15, -4)),
+            classId: classNumber,
             percentille: PERCENTILLE[rowIndex],
             type: 'CLASS',
           });
@@ -156,42 +140,13 @@ export const uploadClassHydrographToDatabase = async () => {
   }
 };
 
-export const uploadGaugeHydrographToDatabase2 = async () => {
-  console.log('Gauge Hydrograph Data updating...'); // eslint-disable-line
-  const new_url = process.env.S3_URL;
-  try {
-    await Hydrograph.destroy({where: {type: 'GAUGE'}});
-    const fileNames = await _getFileKeys(new_url, 'DRH_Gauge');
-
-    fileNames.forEach(file => {
-      const csvFilePath = `${new_url}${file}`;
-      csv({
-        noheader: true,
-      })
-        .fromStream(request.get(csvFilePath))
-        .on('csv', (csvRow, rowIndex) => {
-          Hydrograph.create({
-            data: csvRow,
-            gaugeId: Number(file.slice(10, -4)),
-            percentille: PERCENTILLE[rowIndex],
-            type: 'GAUGE',
-          });
-        });
-    });
-  } catch (e) {
-    throw e;
-  }
-};
-
 export const uploadGaugeHydrographToDatabase = async () => {
   console.log('Gauge Hydrograph Data updating...'); // eslint-disable-line
-  const new_url = process.env.S3_URL;
+  const new_url = `${process.env.S3_BUCKET}DRH_Gauge/`;
   try {
     await Hydrograph.destroy({where: {type: 'GAUGE'}});
-    const fileNames = await _getFileKeys(new_url, 'DRH_Gauge');
-
-    fileNames.forEach(file => {
-      const csvFilePath = `${new_url}${file}`;
+    gaugeReference.forEach(gauge => {
+      const csvFilePath = `${new_url}plot_data_${gauge.id}.csv`;
       csv({
         noheader: true,
       })
@@ -199,7 +154,7 @@ export const uploadGaugeHydrographToDatabase = async () => {
         .on('csv', (csvRow, rowIndex) => {
           Hydrograph.create({
             data: csvRow,
-            gaugeId: Number(file.slice(10, -4)),
+            gaugeId: gauge.id,
             percentille: PERCENTILLE[rowIndex],
             type: 'GAUGE',
           });
