@@ -1,3 +1,5 @@
+const cache = require('../middlewares/cache').cache;
+
 const allYearsController = require('../controllers').allYears;
 const classesController = require('../controllers').classifications;
 const fallsController = require('../controllers').falls;
@@ -30,36 +32,42 @@ module.exports = app => {
   app.post('/api/allyears', allYearsController.show);
   app.post(
     '/api/allyears/getBoxPlotAttributes',
+    cache,
     allYearsController.getBoxPlotAttributes
   );
 
   app.post('/api/springs', springsController.show);
   app.post(
     '/api/springs/getBoxPlotAttributes',
+    cache,
     springsController.getBoxPlotAttributes
   );
 
   app.post('/api/falls', fallsController.show);
   app.post(
     '/api/falls/getBoxPlotAttributes',
+    cache,
     fallsController.getBoxPlotAttributes
   );
 
   app.post('/api/fallwinters', fallWintersController.show);
   app.post(
     '/api/fallwinters/getBoxPlotAttributes',
+    cache,
     fallWintersController.getBoxPlotAttributes
   );
 
   app.post('/api/summers', summersController.show);
   app.post(
     '/api/summers/getBoxPlotAttributes',
+    cache,
     summersController.getBoxPlotAttributes
   );
 
   app.post('/api/winters', wintersController.show);
   app.post(
     '/api/winters/getBoxPlotAttributes',
+    cache,
     wintersController.getBoxPlotAttributes
   );
 

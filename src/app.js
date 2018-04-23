@@ -1,13 +1,13 @@
 const express = require('express');
 const logger = require('morgan');
 const bodyParser = require('body-parser');
-const CronJob = require('cron').CronJob;
+const CronJob = require('cron').CronJob; //eslint-disable-line
 
 const {
-  uploadResultToDatabase,
-  uploadFlowDataToDatabase,
-  uploadClassHydrographToDatabase,
-  uploadGaugeHydrographToDatabase,
+  uploadResultToDatabase, //eslint-disable-line
+  uploadFlowDataToDatabase, //eslint-disable-line
+  uploadClassHydrographToDatabase, //eslint-disable-line
+  uploadGaugeHydrographToDatabase, //eslint-disable-line
 } = require('./utils/uploadToDatabase');
 
 const app = express();
@@ -46,15 +46,15 @@ app.disable('etag');
 //   'America/Los_Angeles'
 // );
 
-new CronJob( // eslint-disable-line
-  '15 * * * * *',
-  () => {
-    uploadFlowDataToDatabase();
-  },
-  null,
-  true,
-  'America/Los_Angeles'
-);
+// new CronJob( // eslint-disable-line
+//   '15 * * * * *',
+//   () => {
+//     uploadFlowDataToDatabase();
+//   },
+//   null,
+//   true,
+//   'America/Los_Angeles'
+// );
 
 // new CronJob( // eslint-disable-line
 //   '30 * * * * *',
