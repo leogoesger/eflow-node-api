@@ -17,6 +17,22 @@ export const removeNaN = array => {
   return sortBy(filteredArray.map(Number));
 };
 
+export const round = (number, precision) => {
+  const shift = (number2, precision2, reverseShift) => {
+    let cPercision = precision2;
+    if (reverseShift) {
+      cPercision = -cPercision;
+    }
+    const numArray = String(number2).split('e');
+    return Number(
+      numArray[0] +
+        'e' +
+        (numArray[1] ? Number(numArray[1]) + cPercision : cPercision)
+    );
+  };
+  return shift(Math.round(shift(number, precision, false)), precision, true);
+};
+
 export class ClassBoxPlot {
   constructor(rawData, metricName, category) {
     this.rawData = rawData;
@@ -52,13 +68,23 @@ export class ClassBoxPlot {
         1
       )}`,
       quartile: [
-        d3.quantile(this.quantileData, 0.25),
-        d3.quantile(this.quantileData, 0.5),
-        d3.quantile(this.quantileData, 0.75),
+        round(d3.quantile(this.quantileData, 0.25), 4) === 0
+          ? 0.0001
+          : round(d3.quantile(this.quantileData, 0.25), 4),
+        round(d3.quantile(this.quantileData, 0.5), 4) === 0
+          ? 0.0001
+          : round(d3.quantile(this.quantileData, 0.5), 4),
+        round(d3.quantile(this.quantileData, 0.75), 4) === 0
+          ? 0.0001
+          : round(d3.quantile(this.quantileData, 0.75), 4),
       ],
       whiskers: [
-        d3.quantile(this.quantileData, 0.1),
-        d3.quantile(this.quantileData, 0.9),
+        round(d3.quantile(this.quantileData, 0.1), 4) === 0
+          ? 0.0001
+          : round(d3.quantile(this.quantileData, 0.1), 4),
+        round(d3.quantile(this.quantileData, 0.9), 4) === 0
+          ? 0.0001
+          : round(d3.quantile(this.quantileData, 0.9), 4),
       ],
     };
 
@@ -109,13 +135,23 @@ export const getGaugeBoxPlotObject = (metricArray, metricName, category) => {
         1
       )}`,
       quartile: [
-        d3.quantile(filteredMetricArray, 0.25),
-        d3.quantile(filteredMetricArray, 0.5),
-        d3.quantile(filteredMetricArray, 0.75),
+        round(d3.quantile(filteredMetricArray, 0.25), 4) === 0
+          ? 0.0001
+          : round(d3.quantile(filteredMetricArray, 0.25), 4),
+        round(d3.quantile(filteredMetricArray, 0.5), 4) === 0
+          ? 0.0001
+          : round(d3.quantile(filteredMetricArray, 0.5), 4),
+        round(d3.quantile(filteredMetricArray, 0.75), 4) === 0
+          ? 0.0001
+          : round(d3.quantile(filteredMetricArray, 0.75), 4),
       ],
       whiskers: [
-        d3.quantile(filteredMetricArray, 0.1),
-        d3.quantile(filteredMetricArray, 0.9),
+        round(d3.quantile(filteredMetricArray, 0.1), 4) === 0
+          ? 0.0001
+          : round(d3.quantile(filteredMetricArray, 0.1), 4),
+        round(d3.quantile(filteredMetricArray, 0.9), 4) === 0
+          ? 0.0001
+          : round(d3.quantile(filteredMetricArray, 0.9), 4),
       ],
     };
   return boxPlotAttributes;
