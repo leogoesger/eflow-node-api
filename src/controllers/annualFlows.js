@@ -12,6 +12,7 @@ module.exports = {
         },
         attributes: ['year', 'flowData', 'gaugeId'],
       });
+      req.client.set(req.body.cacheKey, JSON.stringify(annualFlows));
       res.status(200).send(annualFlows);
     } catch (e) {
       res.status(400).send(e.toString());
