@@ -1,4 +1,5 @@
-const cache = require('../middlewares/cache').cache;
+import {cache} from '../middlewares';
+import {annualFlowCache} from '../middlewares';
 
 const allYearsController = require('../controllers').allYears;
 const classesController = require('../controllers').classifications;
@@ -71,5 +72,5 @@ module.exports = app => {
     wintersController.getBoxPlotAttributes
   );
 
-  app.post('/api/annualFlows', annualFlowsController.show);
+  app.post('/api/annualFlows', annualFlowCache, annualFlowsController.show);
 };

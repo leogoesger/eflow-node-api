@@ -29,4 +29,4 @@ const cache = async (req, res, next) => {
   });
 };
 
-module.exports = {cache};
+export default cache;
