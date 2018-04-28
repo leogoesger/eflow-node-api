@@ -48,7 +48,9 @@ module.exports = {
 
               columns.forEach(column => {
                 annualFlowData[metric.tableName][column.columnName] =
-                  d[column.columnName][yearIndex];
+                  d[column.columnName][yearIndex] === 0
+                    ? 0.01
+                    : d[column.columnName][yearIndex];
               });
             })
         );
@@ -78,8 +80,12 @@ module.exports = {
             year: years.year[yearIndex],
           },
           attributes: ['year', 'flowData', 'gaugeId'],
-        }).then(d => {
-          annualFlowData.AnnualFlows = d;
+        }).then(result => {
+          const newData = result.flowData.map(d => {
+            return Number(d) === 0 ? 0.01 : d;
+          });
+          result.flowData = newData;
+          annualFlowData.AnnualFlows = result;
           annualFlowData.Years = years;
         })
       );

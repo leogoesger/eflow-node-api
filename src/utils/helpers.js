@@ -69,21 +69,21 @@ export class ClassBoxPlot {
       )}`,
       quartile: [
         round(d3.quantile(this.quantileData, 0.25), 4) === 0
-          ? 0.0001
+          ? 0.01
           : round(d3.quantile(this.quantileData, 0.25), 4),
         round(d3.quantile(this.quantileData, 0.5), 4) === 0
-          ? 0.0001
+          ? 0.01
           : round(d3.quantile(this.quantileData, 0.5), 4),
         round(d3.quantile(this.quantileData, 0.75), 4) === 0
-          ? 0.0001
+          ? 0.01
           : round(d3.quantile(this.quantileData, 0.75), 4),
       ],
       whiskers: [
         round(d3.quantile(this.quantileData, 0.1), 4) === 0
-          ? 0.0001
+          ? 0.01
           : round(d3.quantile(this.quantileData, 0.1), 4),
         round(d3.quantile(this.quantileData, 0.9), 4) === 0
-          ? 0.0001
+          ? 0.01
           : round(d3.quantile(this.quantileData, 0.9), 4),
       ],
     };
