@@ -5,7 +5,7 @@ module.exports = [
     title: 'Postdoctoral Researcher',
     description:
       'Hervé is a Postdoctoral Scholar at the University of California, Davis working with Dr. Lane and Dr. Samuel Sandoval (UC Davis) to derive a hydro-geomorphic stream classification for multiple hydrologic basins in California. He is using data mining and machine learning techniques to understand landscape and near-stream controls on channel geomorphic settings. Hervé completed his PhD in the Institut des Sciences de la Terre in France on present-day erosion processes in a glaciated catchment in the Mont-Blanc massif. Before coming to UC Davis, Hervé joined the hydrology and glaciology laboratory Institut des Géosciences de l’Environnement in France to discriminate suspended sediment origin from in-situ settling behaviour with optical methods.',
-    image: 'https://s3-us-west-1.amazonaws.com/funcflow/resources/default.png',
+    image: 'https://s3-us-west-1.amazonaws.com/funcflow/resources/hrvg.png',
     location: 'University of California, Davis',
     researchGate: 'https://www.researchgate.net/profile/Herve_Guillon2',
     website: 'https://guillon.xyz',
@@ -99,4 +99,18 @@ module.exports = [
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
+  // {
+  //   id: 8,
+  //   name: 'Sarah M. Yarnell',
+  //   title: 'Senior Researcher',
+  //   description:
+  //     'Sarah is an Associate Project Scientist at the Center for Watershed Sciences.  Her studies focus on integrating the traditional fields of hydrology, ecology and geomorphology in the river environment.  She is currently conducting research that applies understanding of river ecosystem processes to managed systems in the Sierra Nevada, with a focus on the development and maintenance of riverine habitat.  She is a recognized expert in the ecology of the Foothill yellow-legged frog (Rana boylii), a California species of special concern, and she is the first researcher to apply sediment transport and two-dimensional hydrodynamic modeling techniques to the evaluation of instream amphibian habitat.  Her experience includes consultation as a technical expert for various hydroelectric power relicensing projects (Big Creek Project, Desabla-Centerville Project, Middle Fork American Project, Yuba-Bear/Drum-Spaulding Project, Spring Gap-Stanislaus), where she has work closely with government resource agencies and the private sector to assess the impacts of environmental flows on aquatic biota and provide recommendations for developing flows that improve the functioning of river ecosystems. More recently, her experience has expanded to include evaluation and restoration of headwater systems, particularly montane meadows in the Sierra Nevada and Cascade ranges.',
+  //   image: 'https://s3-us-west-1.amazonaws.com/funcflow/resources/default.png',
+  //   location: 'University of California, Davis',
+  //   researchGate:
+  //     'https://www.researchgate.net/scientific-contributions/2004963786_Sarah_M_Yarnell',
+  //   email: 'smyarnell@ucdavis.edu',
+  //   updatedAt: '2017-11-19T17:25:28.445Z',
+  //   createdAt: '2017-11-19T17:25:28.445Z',
+  // },
 ];
