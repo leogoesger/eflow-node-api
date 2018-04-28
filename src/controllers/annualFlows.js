@@ -48,7 +48,7 @@ module.exports = {
 
               columns.forEach(column => {
                 annualFlowData[metric.tableName][column.columnName] =
-                  d[column.columnName][yearIndex] === 0
+                  Number(d[column.columnName][yearIndex]) === 0
                     ? 0.01
                     : d[column.columnName][yearIndex];
               });
