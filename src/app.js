@@ -11,6 +11,7 @@ const {
 } = require('./utils/uploadToDatabase');
 
 const app = express();
+app.io = require('socket.io')();
 
 app.use(logger('tiny'));
 app.use(bodyParser.json());

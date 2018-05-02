@@ -11,6 +11,7 @@ const years = require('./years');
 const papers = require('./papers');
 const members = require('./members');
 const annualFlows = require('./annualFlows');
+const users = require('./users');
 
 module.exports = {
   allYears,
@@ -26,4 +27,5 @@ module.exports = {
   papers,
   members,
   annualFlows,
+  users,
 };

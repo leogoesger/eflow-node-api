@@ -14,6 +14,7 @@ const hydrographsController = require('../controllers').hydrographs;
 const papersController = require('../controllers').papers;
 const membersController = require('../controllers').members;
 const annualFlowsController = require('../controllers').annualFlows;
+const usersController = require('../controllers').users;
 
 module.exports = app => {
   app.post('/api/years', yearsController.show);
@@ -23,7 +24,6 @@ module.exports = app => {
   app.get('/api/members', membersController.index);
 
   app.get('/api/classes', classesController.index);
-  app.get('/api/renewClasses', classesController.update);
   app.get('/api/classes/:classId', classesController.show);
 
   app.post('/api/gauges', gaugesController.create);
@@ -73,4 +73,9 @@ module.exports = app => {
   );
 
   app.post('/api/annualFlows', annualFlowCache, annualFlowsController.show);
+
+  app.get('/api/renewClasses', classesController.update);
+  app.post('/api/downServer', (req, res) =>
+    usersController.downServer(req, res, app.io)
+  );
 };
