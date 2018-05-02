@@ -20,8 +20,7 @@ const allowed_header = [
 ];
 
 const app = express();
-app.io = require('socket.io')();
-app.io.set('origins', allowed_header);
+app.io = require('socket.io')({origins: '*:*'});
 
 app.use(logger('tiny'));
 app.use(bodyParser.json());
