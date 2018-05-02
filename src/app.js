@@ -20,7 +20,6 @@ const allowed_header = [
 ];
 
 const app = express();
-app.io = require('socket.io')({origins: '*:*'});
 
 app.use(logger('tiny'));
 app.use(bodyParser.json());
@@ -36,6 +35,7 @@ app.use((req, res, next) => {
   );
   next();
 });
+app.io = require('socket.io')({origins: allowed_header});
 app.disable('etag');
 
 // new CronJob( // eslint-disable-line
