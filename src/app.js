@@ -10,21 +10,23 @@ const {
   uploadGaugeHydrographToDatabase, //eslint-disable-line
 } = require('./utils/uploadToDatabase');
 
+const allowed_header = [
+  'http://localhost:4000',
+  'http://localhost:3000',
+  'http://eflows.ucdavis.edu/',
+  'https://eflows.ucdavis.edu/',
+  'http://environmentalflows.ucdavis.edu',
+  'https://environmentalflows.ucdavis.edu',
+];
+
 const app = express();
 app.io = require('socket.io')();
+app.io.set('origins', allowed_header);
 
 app.use(logger('tiny'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 app.use((req, res, next) => {
-  const allowed_header = [
-    'http://localhost:4000',
-    'http://localhost:3000',
-    'http://eflows.ucdavis.edu/',
-    'https://eflows.ucdavis.edu/',
-    'http://environmentalflows.ucdavis.edu',
-    'https://environmentalflows.ucdavis.edu',
-  ];
   const origin = req.headers.origin;
   if (allowed_header.indexOf(origin) > -1) {
     res.header('Access-Control-Allow-Origin', origin);
