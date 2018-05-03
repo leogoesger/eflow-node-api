@@ -37,7 +37,11 @@ app.use((req, res, next) => {
 });
 
 app.io = require('socket.io')({
-  origins: allowed_header,
+  origins: [
+    'http://localhost:3000',
+    'http://localhost:4000',
+    'https://eflows.ucdavis.edu:*',
+  ],
 });
 
 app.io.on('connection', () => {
