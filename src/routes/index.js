@@ -78,4 +78,7 @@ module.exports = app => {
   app.post('/api/downServer', (req, res) =>
     usersController.downServer(req, res, app.io)
   );
+  app.post('/api/bugReport', (req, res) => {
+    usersController.emailReport(req, res);
+  });
 };
