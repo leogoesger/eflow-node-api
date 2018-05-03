@@ -40,10 +40,6 @@ app.io = require('socket.io')({
   origins: ['http://localhost:3000', 'http://localhost:4000', '*:*'],
 });
 
-app.io.on('connection', () => {
-  console.log('a user connected'); //eslint-disable-line
-});
-
 app.disable('etag');
 
 // new CronJob( // eslint-disable-line
