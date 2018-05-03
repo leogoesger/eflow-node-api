@@ -40,7 +40,11 @@ app.io = require('socket.io')({
   origins: allowed_header,
   transports: ['websocket'],
 });
-app.use(express.static('socket.io'));
+
+app.io.on('connection', () => {
+  console.log('a user connected'); //eslint-disable-line
+});
+
 app.disable('etag');
 
 // new CronJob( // eslint-disable-line
