@@ -35,10 +35,12 @@ app.use((req, res, next) => {
   );
   next();
 });
+
 app.io = require('socket.io')({
   origins: allowed_header,
   transports: ['websocket'],
 });
+app.use(express.static('socket.io'));
 app.disable('etag');
 
 // new CronJob( // eslint-disable-line
