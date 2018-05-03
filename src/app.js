@@ -38,7 +38,6 @@ app.use((req, res, next) => {
 
 app.io = require('socket.io')({
   origins: allowed_header,
-  transports: ['websocket'],
 });
 
 app.io.on('connection', () => {
