@@ -40,7 +40,7 @@ app.io = require('socket.io')({
   origins: [
     'http://localhost:3000',
     'http://localhost:4000',
-    'https://eflows.ucdavis.edu:*',
+    'https://eflows.ucdavis.edu:80',
   ],
 });
 
