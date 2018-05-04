@@ -13,6 +13,6 @@ module.exports = {
     if (!req.body.metric && Boolean(!req.body.gaugeId || !req.body.classId)) {
       res.status(400).send({message: 'Missing attributes'});
     }
-    getBoxPlotHelper(req, res, FallWinter, 'Fall Winter');
+    getBoxPlotHelper(req, res, FallWinter, 'FallWinter');
   },
 };

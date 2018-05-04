@@ -7,4 +7,4 @@
 7. `/api/renewClasses`
 
 Deployment:
-`/usr/local/stow/node-v8.9.4-linux-x64/lib/node_modules/pm2/bin/pm2 start eflow-api`
+`/usr/local/stow/node-v8.9.4-linux-x64/lib/node_modules/pm2/bin/pm2 start eflow-api --env production`
