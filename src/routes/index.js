@@ -19,6 +19,10 @@ const usersController = require('../controllers').users;
 module.exports = app => {
   app.post('/api/years', yearsController.show);
   app.get('/api/hydrographs/:featureId', hydrographsController.show);
+  app.get(
+    '/api/dimHydrographs/:gaugeId',
+    hydrographsController.getDimHydrograph
+  );
 
   app.get('/api/papers', papersController.index);
   app.get('/api/members', membersController.index);
