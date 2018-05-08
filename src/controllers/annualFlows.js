@@ -1,4 +1,5 @@
 import {indexOf} from 'lodash';
+
 import {
   AnnualFlow,
   AllYear,
@@ -12,6 +13,7 @@ import {
 } from '../models';
 
 import {metricReferenceAs} from '../static/metricReference';
+// import {round} from '../utils/helpers';
 
 const models = {
   Falls: Fall,
@@ -56,6 +58,7 @@ module.exports = {
         );
       });
 
+      // Add Gauge Info
       promises.push(
         Gauge.find({
           where: {
@@ -73,6 +76,7 @@ module.exports = {
         })
       );
 
+      // Add Annual Flow Info
       promises.push(
         AnnualFlow.find({
           where: {
