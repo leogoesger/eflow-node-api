@@ -37,7 +37,7 @@ module.exports = {
       annualFlowData.Year = years;
 
       const yearIndex = req.body.year
-        ? indexOf(years.allYears, Number(req.body.year))
+        ? indexOf(years.year, Number(req.body.year))
         : 0;
 
       if (yearIndex !== -1) {
