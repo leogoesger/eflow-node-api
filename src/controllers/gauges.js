@@ -35,7 +35,7 @@ module.exports = {
   search(req, res) {
     try {
       return Gauge.findAll({
-        attributes: ['id', 'stationName'],
+        attributes: ['id', 'stationName', 'classId'],
         where: {
           [Op.or]: [
             {stationName: {[Op.iLike]: `%${req.body.keyWord}%`}},
