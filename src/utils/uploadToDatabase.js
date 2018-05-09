@@ -20,14 +20,15 @@ const _inputFlowToDatabase = (result, file) => {
       gaugeId: file,
     },
   }).then(year => {
-    year.update({allYears: Object.keys(result)});
-    Object.keys(result).forEach(key => {
-      AnnualFlow.create({
-        year: key,
-        flowData: result[key],
-        gaugeId: file,
-      }).catch(e => {
-        throw e;
+    year.update({allYears: Object.keys(result)}).then(() => {
+      Object.keys(result).forEach(key => {
+        AnnualFlow.create({
+          year: key,
+          flowData: result[key],
+          gaugeId: file,
+        }).catch(e => {
+          throw e;
+        });
       });
     });
   });
