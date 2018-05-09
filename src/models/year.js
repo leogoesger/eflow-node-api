@@ -12,6 +12,10 @@ module.exports = (sequelizeClient, DataTypes) => {
       type: DataTypes.ARRAY(DataTypes.INTEGER), // eslint-disable-line
       allowNull: true,
     },
+    allYears: {
+      type: DataTypes.ARRAY(DataTypes.INTEGER), // eslint-disable-line
+      allowNull: true,
+    },
   });
   Year.associate = models => {
     Year.belongsTo(models.Gauge, {
