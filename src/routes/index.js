@@ -33,6 +33,7 @@ module.exports = app => {
   app.post('/api/gauges', gaugesController.create);
   app.get('/api/gauges', gaugesController.index);
   app.get('/api/gauges/:gaugeId', gaugesController.show);
+  app.post('/api/gauges/search', gaugesController.search);
 
   app.post('/api/allyears', allYearsController.show);
   app.post(
