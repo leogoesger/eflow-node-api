@@ -39,10 +39,10 @@ module.exports = {
     dialect: 'postgres',
     logging: false,
     pool: {
-      max: 5,
+      max: 30,
       min: 0,
-      idle: 20000,
-      acquire: 20000,
+      idle: 1000000,
+      acquire: 1000000,
     },
     operatorsAliases: Op,
   },
