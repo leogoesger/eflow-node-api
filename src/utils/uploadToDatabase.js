@@ -15,6 +15,13 @@ import {metricReference} from '../static/metricReference';
 import gaugeReference from '../static/gaugeReference';
 
 const _inputFlowToDatabase = (result, file) => {
+  Year.findOne({
+    where: {
+      gaugeId: file,
+    },
+  }).then(year => {
+    year.update({allYears: Object.keys(result)});
+  });
   Object.keys(result).forEach(key => {
     AnnualFlow.create({
       year: key,

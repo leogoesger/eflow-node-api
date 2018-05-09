@@ -12,6 +12,10 @@ module.exports = {
         type: Sequelize.ARRAY(Sequelize.INTEGER), // eslint-disable-line
         allowNull: true,
       },
+      allYears: {
+        type: Sequelize.ARRAY(Sequelize.INTEGER), // eslint-disable-line
+        allowNull: true,
+      },
       createdAt: {
         type: Sequelize.DATE,
         allowNull: false,

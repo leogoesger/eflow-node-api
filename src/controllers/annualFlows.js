@@ -34,29 +34,33 @@ module.exports = {
         promises = [],
         years = await Year.find({where: {gaugeId: req.body.gaugeId}});
 
+      annualFlowData.Year = years;
+
       const yearIndex = req.body.year
-        ? indexOf(years.year, Number(req.body.year))
+        ? indexOf(years.allYears, Number(req.body.year))
         : 0;
 
-      metricReferenceAs.forEach(metric => {
-        promises.push(
-          models[metric.tableName]
-            .find({where: {gaugeId: req.body.gaugeId}})
-            .then(d => {
-              annualFlowData[metric.tableName] = {};
-              const columns = metricReferenceAs.filter(
-                m => m.tableName === metric.tableName
-              );
+      if (yearIndex !== -1) {
+        metricReferenceAs.forEach(metric => {
+          promises.push(
+            models[metric.tableName]
+              .find({where: {gaugeId: req.body.gaugeId}})
+              .then(d => {
+                annualFlowData[metric.tableName] = {};
+                const columns = metricReferenceAs.filter(
+                  m => m.tableName === metric.tableName
+                );
 
-              columns.forEach(column => {
-                annualFlowData[metric.tableName][column.columnName] =
-                  Number(d[column.columnName][yearIndex]) === 0
-                    ? 0.01
-                    : d[column.columnName][yearIndex];
-              });
-            })
-        );
-      });
+                columns.forEach(column => {
+                  annualFlowData[metric.tableName][column.columnName] =
+                    Number(d[column.columnName][yearIndex]) === 0
+                      ? 0.01
+                      : d[column.columnName][yearIndex];
+                });
+              })
+          );
+        });
+      }
 
       // Add Gauge Info
       promises.push(
@@ -81,10 +85,13 @@ module.exports = {
         AnnualFlow.find({
           where: {
             gaugeId: req.body.gaugeId,
-            year: years.year[yearIndex],
+            year: req.body.year ? req.body.year : years.allYears[0],
           },
           attributes: ['year', 'flowData', 'gaugeId'],
         }).then(result => {
+          if (!result) {
+            throw 'No item found';
+          }
           const newData = result.flowData.map(d => {
             return Number(d) === 0 ? 0.01 : d;
           });
