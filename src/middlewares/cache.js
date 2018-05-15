@@ -1,4 +1,7 @@
 const redis = require('redis');
+if (process.env.NODE_ENV === 'test') {
+  process.env.REDIS_PORT = 6379;
+}
 const client = redis.createClient(process.env.REDIS_PORT);
 
 const cache = async (req, res, next) => {

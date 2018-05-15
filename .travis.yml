@@ -5,6 +5,7 @@ addons:
     postgresql: "9.6"
 services:
   - postgresql
+  - redis-server
 before_script:
   - psql -c 'CREATE DATABASE eflow_test;' -U postgres
   - yarn global add node-gyp
