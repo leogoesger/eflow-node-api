@@ -4,8 +4,12 @@ const bcrypt = require('bcrypt');
 
 const auth = {
   auth: {
-    api_key: process.env.MAILGUN_API_KEY,
-    domain: process.env.MAILGUN_DOMAIN,
+    api_key: process.env.MAILGUN_API_KEY
+      ? process.env.MAILGUN_API_KEY
+      : 'abcdefghi',
+    domain: process.env.MAILGUN_DOMAIN
+      ? process.env.MAILGUN_DOMAIN
+      : 'abcdefghi',
   },
 };
 

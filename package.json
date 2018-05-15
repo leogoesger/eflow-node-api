@@ -25,7 +25,7 @@
     "seed": "sequelize db:seed:all",
     "prod-prepare":
       "NODE_ENV=production sequelize db:migrate:undo:all ; NODE_ENV=production yarn run migrate ; NODE_ENV=production yarn run seed",
-    "test-prepare": "sequelize db:migrate:undo:all ; yarn run migrate ",
+    "test-prepare": "sequelize db:migrate:undo:all ; yarn run migrate",
     "dev-prepare":
       "sequelize db:migrate:undo:all ; yarn run migrate ; yarn run seed",
     "lint":

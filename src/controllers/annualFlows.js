@@ -106,8 +106,10 @@ module.exports = {
         Object.keys(req.body).forEach(key => {
           cacheKey = cacheKey + key + req.body[key];
         });
-        req.client.set(cacheKey, JSON.stringify(annualFlowData));
-        res.status(200).send(annualFlowData);
+        if (process.env.NODE_ENV !== 'test') {
+          req.client.set(cacheKey, JSON.stringify(annualFlowData));
+          res.status(200).send(annualFlowData);
+        }
       });
     } catch (e) {
       res.status(400).send(e.toString());

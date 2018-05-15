@@ -24,6 +24,11 @@ module.exports = {
         type: Sequelize.ARRAY(Sequelize.TEXT), // eslint-disable-line
         allowNull: true,
       },
+      journal: {
+        type: Sequelize.TEXT,
+        allowNull: true,
+      },
+
       imgUrl: {
         type: Sequelize.TEXT,
         allowNull: true,

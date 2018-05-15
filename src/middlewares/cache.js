@@ -1,4 +1,7 @@
 const redis = require('redis');
+if (process.env.NODE_ENV === 'test') {
+  process.env.REDIS_PORT = 6379;
+}
 const client = redis.createClient(process.env.REDIS_PORT);
 
 const cache = async (req, res, next) => {
@@ -16,6 +19,11 @@ const cache = async (req, res, next) => {
     cacheKey = req.body.nonDim
       ? `${req.body.gaugeId}_${tableName}_${req.body.metric}_nonDim_boxplot`
       : `${req.body.gaugeId}_${tableName}_${req.body.metric}_dim_boxplot`;
+  }
+  if (process.env.NODE_ENV === 'test') {
+    req.client = client;
+    req.tableName = tableName;
+    return next();
   }
   client.get(cacheKey, (err, value) => {
     if (value) {

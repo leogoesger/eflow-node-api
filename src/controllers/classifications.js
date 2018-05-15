@@ -2,12 +2,6 @@ import {Classification, Hydrograph, Gauge} from '../models';
 import {calculatePercentileClourse} from '../utils/helpers';
 
 module.exports = {
-  create(req, res) {
-    Classification.create(req.body)
-      .then(classInfo => res.status(201).send(classInfo))
-      .catch(err => res.status(400).send(err));
-  },
-
   index(req, res) {
     return Classification.findAll({
       attributes: ['id', 'name', 'description'],
