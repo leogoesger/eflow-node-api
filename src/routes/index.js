@@ -18,34 +18,74 @@ const usersController = require('../controllers').users;
 
 module.exports = app => {
   if (process.env.NODE_ENV === 'test') {
+    app.post('/api/years', yearsController.show);
+    app.get('/api/hydrographs/:featureId', hydrographsController.show);
+    app.get(
+      '/api/dimHydrographs/:gaugeId',
+      hydrographsController.getDimHydrograph
+    );
+
+    app.get('/api/papers', papersController.index);
+    app.get('/api/members', membersController.index);
+
+    app.get('/api/classes', classesController.index);
+    app.get('/api/classes/:classId', classesController.show);
+
+    app.get('/api/gauges', gaugesController.index);
+    app.get('/api/gauges/:gaugeId', gaugesController.show);
+    app.post('/api/gauges/search', gaugesController.search);
+
+    app.post('/api/allyears', allYearsController.show);
     app.post(
       '/api/allyears/getBoxPlotAttributes',
+
       allYearsController.getBoxPlotAttributes
     );
+
+    app.post('/api/springs', springsController.show);
     app.post(
       '/api/springs/getBoxPlotAttributes',
+
       springsController.getBoxPlotAttributes
     );
 
+    app.post('/api/falls', fallsController.show);
     app.post(
       '/api/falls/getBoxPlotAttributes',
+
       fallsController.getBoxPlotAttributes
     );
 
+    app.post('/api/fallwinters', fallWintersController.show);
     app.post(
       '/api/fallwinters/getBoxPlotAttributes',
+
       fallWintersController.getBoxPlotAttributes
     );
 
+    app.post('/api/summers', summersController.show);
     app.post(
       '/api/summers/getBoxPlotAttributes',
+
       summersController.getBoxPlotAttributes
     );
 
+    app.post('/api/winters', wintersController.show);
     app.post(
       '/api/winters/getBoxPlotAttributes',
+
       wintersController.getBoxPlotAttributes
     );
+
+    app.post('/api/annualFlows', annualFlowCache, annualFlowsController.show);
+
+    app.get('/api/renewClasses', classesController.update);
+    app.post('/api/downServer', (req, res) =>
+      usersController.downServer(req, res, app.io)
+    );
+    app.post('/api/bugReport', (req, res) => {
+      usersController.emailReport(req, res);
+    });
   }
 
   app.post('/api/years', yearsController.show);
