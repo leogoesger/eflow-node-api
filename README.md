@@ -39,13 +39,8 @@ For more information on all the things you can do with Sequelize CLI visit [sequ
 
 ```
 
-
-## Options
-
-[Postico](https://eggerapps.at/postico/): A Modern PostgreSQL Client for the Mac
-
 ## License
 
-Copyright (c) 2017
+Copyright (c) 2018
 
 Licensed under the [MIT license](LICENSE).
