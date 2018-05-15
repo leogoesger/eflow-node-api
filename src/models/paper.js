@@ -24,6 +24,10 @@ module.exports = (sequelizeClient, DataTypes) => {
       type: DataTypes.ARRAY(DataTypes.TEXT), // eslint-disable-line
       allowNull: true,
     },
+    journal: {
+      type: DataTypes.TEXT,
+      allowNull: true,
+    },
     publishedDate: {
       type: DataTypes.TEXT,
       allowNull: true,

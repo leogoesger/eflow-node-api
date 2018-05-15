@@ -17,6 +17,11 @@ const cache = async (req, res, next) => {
       ? `${req.body.gaugeId}_${tableName}_${req.body.metric}_nonDim_boxplot`
       : `${req.body.gaugeId}_${tableName}_${req.body.metric}_dim_boxplot`;
   }
+  if (process.env.NODE_ENV === 'test') {
+    req.client = client;
+    req.tableName = tableName;
+    return next();
+  }
   client.get(cacheKey, (err, value) => {
     if (value) {
       console.log('Cached Value!'); //eslint-disable-line

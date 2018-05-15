@@ -1,0 +1,14 @@
+language: node_js
+node_js:
+  - "node"
+addons:
+    postgresql: "9.6"
+services:
+  - postgresql
+before_script:
+  - psql -c 'CREATE DATABASE eflow_test;' -U postgres
+script:
+  - yarn lint
+  - yarn test-cover
+  - yarn test-coverage
+after_script: yarn run coveralls

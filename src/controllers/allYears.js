@@ -3,7 +3,7 @@ import {getBoxPlotHelper} from './shared';
 
 module.exports = {
   show(req, res) {
-    return AllYear.find({gaugeId: req.body.gaugeId})
+    return AllYear.find({where: {gaugeId: req.body.gaugeId}})
       .then(allYear => res.status(200).send(allYear))
       .catch(err => res.status(400).send(err));
   },
