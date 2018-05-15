@@ -17,6 +17,37 @@ const annualFlowsController = require('../controllers').annualFlows;
 const usersController = require('../controllers').users;
 
 module.exports = app => {
+  if (process.env.NODE_ENV === 'test') {
+    app.post(
+      '/api/allyears/getBoxPlotAttributes',
+      allYearsController.getBoxPlotAttributes
+    );
+    app.post(
+      '/api/springs/getBoxPlotAttributes',
+      springsController.getBoxPlotAttributes
+    );
+
+    app.post(
+      '/api/falls/getBoxPlotAttributes',
+      fallsController.getBoxPlotAttributes
+    );
+
+    app.post(
+      '/api/fallwinters/getBoxPlotAttributes',
+      fallWintersController.getBoxPlotAttributes
+    );
+
+    app.post(
+      '/api/summers/getBoxPlotAttributes',
+      summersController.getBoxPlotAttributes
+    );
+
+    app.post(
+      '/api/winters/getBoxPlotAttributes',
+      wintersController.getBoxPlotAttributes
+    );
+  }
+
   app.post('/api/years', yearsController.show);
   app.get('/api/hydrographs/:featureId', hydrographsController.show);
   app.get(

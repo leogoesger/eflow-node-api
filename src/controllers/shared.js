@@ -46,7 +46,9 @@ export const getBoxPlotHelper = async (req, res, classModel, tableName) => {
         tableName
       ).boxPlotDataGetter;
 
-      setRedis(req, req.body.nonDim, 'classId', boxPlotClass);
+      if (process.env.NODE_ENV !== 'test') {
+        setRedis(req, req.body.nonDim, 'classId', boxPlotClass);
+      }
 
       return res.status(200).send(boxPlotClass);
     }
