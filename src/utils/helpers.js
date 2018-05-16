@@ -33,6 +33,29 @@ export const round = (number, precision) => {
   return shift(Math.round(shift(number, precision, false)), precision, true);
 };
 
+export function getJulianOffsetDate(julianDate) {
+  let offsetJulianDate;
+  if (julianDate < 274) {
+    offsetJulianDate = julianDate + 365 - 274;
+  } else {
+    offsetJulianDate = julianDate - 274;
+  }
+  if (offsetJulianDate > 365) {
+    offsetJulianDate = offsetJulianDate - 365;
+  }
+  return offsetJulianDate;
+}
+
+export function getCalenderDate(offsetJulianDate) {
+  let julianDate;
+  if (offsetJulianDate < 365 - 274) {
+    julianDate = 274 + offsetJulianDate;
+  } else {
+    julianDate = offsetJulianDate - 365 + 274;
+  }
+  return julianDate;
+}
+
 export class ClassBoxPlot {
   constructor(rawData, metricName, category) {
     this.rawData = rawData;

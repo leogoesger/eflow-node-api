@@ -37,6 +37,9 @@ For more information on all the things you can do with Sequelize CLI visit [sequ
 ```
 /usr/local/stow/node-v8.9.4-linux-x64/lib/node_modules/pm2/bin/pm2 start eflow-api --env production
 
+\c eflow_production
+UPDATE "Members" SET image='' WHERE id=;
+
 ```
 
 ## License

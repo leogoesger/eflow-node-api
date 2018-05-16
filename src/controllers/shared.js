@@ -3,6 +3,7 @@ import {
   ClassBoxPlot,
   nonDimValues,
   gaugeNonDimValues,
+  getJulianOffsetDate,
 } from '../utils/helpers';
 import {Gauge} from '../models';
 
@@ -36,7 +37,17 @@ export const getBoxPlotHelper = async (req, res, classModel, tableName) => {
       });
 
       //Non dimensionalize all metrics except timings ones
-      if (!req.body.metric.includes('timing') && req.body.nonDim) {
+      if (req.body.metric.includes('timing')) {
+        fallMetric.forEach(metric => {
+          const arrayWithNull = metric[req.body.metric].map(d => {
+            if (!isNaN(Number(d))) {
+              return getJulianOffsetDate(Number(d));
+            }
+            return null;
+          });
+          metric[req.body.metric] = arrayWithNull.filter(d => d);
+        });
+      } else if (!req.body.metric.includes('timing') && req.body.nonDim) {
         fallMetric = await nonDimValues(req, fallMetric);
       }
 
@@ -60,9 +71,21 @@ export const getBoxPlotHelper = async (req, res, classModel, tableName) => {
         gaugeId: req.body.gaugeId,
       },
     });
+
+    if (req.body.metric.includes('timing')) {
+      const arrayWithNull = metric[0][req.body.metric].map(d => {
+        if (!isNaN(Number(d))) {
+          return getJulianOffsetDate(Number(d));
+        }
+        return null;
+      });
+      metric[0][req.body.metric] = arrayWithNull.filter(d => d);
+    }
+
     if (!req.body.metric.includes('timing')) {
       metric = await gaugeNonDimValues(req, metric);
     }
+
     const boxPlotAttributes = getGaugeBoxPlotObject(
       metric[0][req.body.metric],
       req.body.metric,
