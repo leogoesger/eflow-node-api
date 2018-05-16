@@ -1,6 +1,20 @@
 module.exports = [
   {
     id: 1,
+    name: 'Colin Byrne',
+    title: 'Postdoctoral Researcher',
+    description:
+      "Colin is a Postdoctoral Scholar at the University of California, Davis working under the guidance of Drs. Pasternack, Sandoval, and Lane. His research focuses on statistical classification of river forms and development of archetypical river morphologies to inform ecological flow management. Colin earned his PhD at the University of New Mexico where he studied flood wave hydrodynamics and hydrologic lateral surface connectivity between river channels and floodplains. Colin's research interests focus on interdisciplinary river science for improved ecological function of rivers and floodplains.",
+    image: 'https://s3-us-west-1.amazonaws.com/funcflow/resources/colin.png',
+    location: 'University of California, Davis',
+    website: 'http://www.byrneriverscience.com',
+    researchGate: 'https://www.researchgate.net/profile/Colin_Byrne5',
+    email: 'cfbyrne@ucdavis.edu',
+    updatedAt: '2017-11-19T17:25:28.445Z',
+    createdAt: '2017-11-19T17:25:28.445Z',
+  },
+  {
+    id: 2,
     name: 'Hervé Guillon',
     title: 'Postdoctoral Researcher',
     description:
@@ -14,7 +28,7 @@ module.exports = [
     createdAt: '2017-11-19T17:25:28.445Z',
   },
   {
-    id: 2,
+    id: 3,
     name: 'Belize A. Lane',
     title: 'Assistant Professor',
     description:
@@ -28,7 +42,7 @@ module.exports = [
     createdAt: '2017-11-19T17:25:28.445Z',
   },
   {
-    id: 3,
+    id: 4,
     name: 'Jose Pablo Ortiz Partida',
     title: 'Ph.D. Candidate',
     description:
@@ -42,7 +56,7 @@ module.exports = [
     createdAt: '2017-11-19T17:25:28.445Z',
   },
   {
-    id: 4,
+    id: 5,
     name: 'Gregory B. Pasternack',
     title: 'Associate Professor',
     description:
@@ -58,7 +72,7 @@ module.exports = [
     createdAt: '2017-11-19T17:25:28.445Z',
   },
   {
-    id: 5,
+    id: 6,
     name: 'Noelle Patterson',
     title: 'MS Hydrologic Sciences',
     description:
@@ -72,7 +86,7 @@ module.exports = [
     createdAt: '2017-11-19T17:25:28.445Z',
   },
   {
-    id: 6,
+    id: 7,
     name: 'Leo Qiu',
     title: 'Software Engineer',
     description:
@@ -86,7 +100,7 @@ module.exports = [
     createdAt: '2017-11-19T17:25:28.445Z',
   },
   {
-    id: 7,
+    id: 8,
     name: 'Samuel Sandoval-Solis',
     title: 'Associate Professor',
     description:
@@ -96,20 +110,6 @@ module.exports = [
     researchGate: 'https://www.researchgate.net/profile/Samuel_Sandoval-Solis',
     email: 'samsandoval@ucdavis.edu',
     youtube: 'https://www.youtube.com/channel/UCyBwkhlzzHjVnGnDnBV5hqw',
-    updatedAt: '2017-11-19T17:25:28.445Z',
-    createdAt: '2017-11-19T17:25:28.445Z',
-  },
-  {
-    id: 8,
-    name: 'Colin Byrne',
-    title: 'Postdoctoral Researcher',
-    description:
-      "Colin is a Postdoctoral Scholar at the University of California, Davis working under the guidance of Drs. Pasternack, Sandoval, and Lane. His research focuses on statistical classification of river forms and development of archetypical river morphologies to inform ecological flow management. Colin earned his PhD at the University of New Mexico where he studied flood wave hydrodynamics and hydrologic lateral surface connectivity between river channels and floodplains. Colin's research interests focus on interdisciplinary river science for improved ecological function of rivers and floodplains.",
-    image: 'https://s3-us-west-1.amazonaws.com/funcflow/resources/default.png',
-    location: 'University of California, Davis',
-    website: 'http://www.byrneriverscience.com',
-    researchGate: 'https://www.researchgate.net/profile/Colin_Byrne5',
-    email: 'cfbyrne@ucdavis.edu',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
