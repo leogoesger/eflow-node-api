@@ -1,50 +1,38 @@
 'use strict';
 module.exports = {
   up: (queryInterface, Sequelize) => {
-    return queryInterface.createTable('Hydrographs', {
+    return queryInterface.createTable('GeoClasses', {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER,
       },
-      data: {
-        type: Sequelize.ARRAY(Sequelize.DECIMAL(10, 2)), // eslint-disable-line
+      name: {
+        type: Sequelize.TEXT,
         allowNull: true,
       },
-      percentille: {
-        type: Sequelize.ENUM,
-        values: [
-          'MIN',
-          'MAX',
-          'TEN',
-          'TWENTYFIVE',
-          'FIFTY',
-          'SEVENTYFIVE',
-          'NINTY',
-        ],
-      },
-      type: {
-        type: Sequelize.ENUM,
-        values: ['GAUGE', 'CLASS'],
+      description: {
+        type: Sequelize.TEXT,
+        allowNull: true,
       },
       createdAt: {
-        type: Sequelize.DATE,
         allowNull: false,
+        type: Sequelize.DATE,
       },
       updatedAt: {
-        type: Sequelize.DATE,
         allowNull: false,
+        type: Sequelize.DATE,
       },
-      gaugeId: {
+      geoRegionId: {
         type: Sequelize.INTEGER,
         onDelete: 'CASCADE',
         references: {
-          model: 'Gauges',
+          model: 'GeoRegions',
           key: 'id',
         },
       },
-      classId: {
+      hydroClassId: {
         type: Sequelize.INTEGER,
         onDelete: 'CASCADE',
         references: {
@@ -55,6 +43,6 @@ module.exports = {
     });
   },
   down: queryInterface => {
-    return queryInterface.dropTable('Hydrographs');
+    return queryInterface.dropTable('GeoClasses');
   },
 };

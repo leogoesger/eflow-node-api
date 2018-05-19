@@ -121,7 +121,15 @@ export const uploadResultToDatabase = async () => {
   }
 };
 
-const PERCENTILLE = ['TEN', 'TWENTYFIVE', 'FIFTY', 'SEVENTYFIVE', 'NINTY'];
+const PERCENTILLE = [
+  'TEN',
+  'TWENTYFIVE',
+  'FIFTY',
+  'SEVENTYFIVE',
+  'NINTY',
+  'MIN',
+  'MAX',
+];
 export const uploadClassHydrographToDatabase = async () => {
   console.log('Class Hydrograph Data updating...'); // eslint-disable-line
   const new_url = `${process.env.S3_BUCKET}DRH_Class/`;
