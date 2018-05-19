@@ -9,4 +9,5 @@ module.exports = {
   geoClasses: require('./geoClasses'),
   geoRegions: require('./geoRegions'),
   geoSites: require('./geoSites'),
+  releases: require('./releases'),
 };
