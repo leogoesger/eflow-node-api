@@ -15,6 +15,7 @@ const papersController = require('../controllers').papers;
 const membersController = require('../controllers').members;
 const annualFlowsController = require('../controllers').annualFlows;
 const usersController = require('../controllers').users;
+const releasesController = require('../controllers').releases;
 
 module.exports = app => {
   app.post('/api/years', yearsController.show);
@@ -85,4 +86,7 @@ module.exports = app => {
   app.post('/api/bugReport', (req, res) => {
     usersController.emailReport(req, res);
   });
+
+  app.get('/api/releases', releasesController.getReleases);
+  app.post('/api/releases', releasesController.createRelease);
 };

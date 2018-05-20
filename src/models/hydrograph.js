@@ -14,7 +14,15 @@ module.exports = (sequelizeClient, DataTypes) => {
     },
     percentille: {
       type: DataTypes.ENUM,
-      values: ['TEN', 'TWENTYFIVE', 'FIFTY', 'SEVENTYFIVE', 'NINTY'],
+      values: [
+        'TEN',
+        'TWENTYFIVE',
+        'FIFTY',
+        'SEVENTYFIVE',
+        'NINTY',
+        'MIN',
+        'MAX',
+      ],
     },
     type: {
       type: DataTypes.ENUM,
