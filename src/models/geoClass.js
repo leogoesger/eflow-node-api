@@ -22,11 +22,13 @@ module.exports = (sequelizeClient, DataTypes) => {
       foreignKey: 'geoRegionId',
       as: 'geoRegions',
     });
-  };
-  geoClass.associate = models => {
     geoClass.belongsTo(models.Classification, {
       foreignKey: 'hydroClassId',
       as: 'hydroClasses',
+    });
+    geoClass.hasMany(models.GeoSite, {
+      foreignKey: 'geoClassId',
+      as: 'geoSites',
     });
   };
   return geoClass;

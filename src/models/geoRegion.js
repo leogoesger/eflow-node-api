@@ -21,5 +21,11 @@ module.exports = (sequelizeClient, DataTypes) => {
       allowNull: true,
     },
   });
+  geoRegion.associate = models => {
+    geoRegion.hasMany(models.GeoClass, {
+      foreignKey: 'geoRegionId',
+      as: 'geoClasses',
+    });
+  };
   return geoRegion;
 };

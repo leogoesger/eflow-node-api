@@ -16,6 +16,7 @@ const membersController = require('../controllers').members;
 const annualFlowsController = require('../controllers').annualFlows;
 const usersController = require('../controllers').users;
 const releasesController = require('../controllers').releases;
+const geoSitesController = require('../controllers').geoSites;
 
 module.exports = app => {
   app.post('/api/years', yearsController.show);
@@ -89,4 +90,6 @@ module.exports = app => {
 
   app.get('/api/releases', releasesController.getReleases);
   app.post('/api/releases', releasesController.createRelease);
+
+  app.get('/api/geoSites', geoSitesController.index);
 };

@@ -15,8 +15,12 @@ const allowed_header = [
   'http://localhost:3000',
   'http://eflows.ucdavis.edu/',
   'https://eflows.ucdavis.edu/',
+  'http://eflow.ucdavis.edu/',
+  'https://eflow.ucdavis.edu/',
   'http://environmentalflows.ucdavis.edu',
   'https://environmentalflows.ucdavis.edu',
+  'http://environmentalflow.ucdavis.edu',
+  'https://environmentalflow.ucdavis.edu',
 ];
 
 const app = express();

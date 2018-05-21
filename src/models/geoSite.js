@@ -28,7 +28,7 @@ module.exports = (sequelizeClient, DataTypes) => {
   geoSite.associate = models => {
     geoSite.belongsTo(models.GeoClass, {
       foreignKey: 'geoClassId',
-      as: 'geoClasss',
+      as: 'geoClass',
     });
   };
   return geoSite;
