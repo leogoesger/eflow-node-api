@@ -24,6 +24,10 @@ module.exports = {
         type: Sequelize.JSONB, // eslint-disable-line
         allowNull: true,
       },
+      imageUrl: {
+        type: Sequelize.TEXT,
+        allowNull: true,
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE,

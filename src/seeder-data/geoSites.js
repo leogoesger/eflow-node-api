@@ -3,6 +3,8 @@ module.exports = [
     id: 1,
     identity: 902,
     description: '',
+    imageUrl:
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/south_fork_eel/902.JPG',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [39.84227249, -123.7049989],
@@ -15,6 +17,8 @@ module.exports = [
     id: 2,
     identity: 900,
     description: '',
+    imageUrl:
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/south_fork_eel/900.JPG',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [40.35721815, -123.9634846],
@@ -27,6 +31,8 @@ module.exports = [
     id: 3,
     identity: 270,
     description: '',
+    imageUrl:
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/south_fork_eel/270.JPG',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [39.81795588, -123.7590704],
@@ -39,6 +45,8 @@ module.exports = [
     id: 4,
     identity: 265,
     description: '',
+    imageUrl:
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/south_fork_eel/265.JPG',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [39.68662674, -123.6895334],
@@ -51,6 +59,8 @@ module.exports = [
     id: 5,
     identity: 215,
     description: '',
+    imageUrl:
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/south_fork_eel/215.JPG',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [39.67974062, -123.6573082],
@@ -63,6 +73,8 @@ module.exports = [
     id: 6,
     identity: 148,
     description: '',
+    imageUrl:
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/south_fork_eel/148.JPG',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [39.78947452, -123.7382545],
@@ -75,6 +87,8 @@ module.exports = [
     id: 7,
     identity: 139,
     description: '',
+    imageUrl:
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/south_fork_eel/139.JPG',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [40.30885307, -124.0312548],
@@ -87,6 +101,8 @@ module.exports = [
     id: 8,
     identity: 127,
     description: '',
+    imageUrl:
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/south_fork_eel/127.JPG',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [39.68848346, -123.6848601],
@@ -99,6 +115,8 @@ module.exports = [
     id: 9,
     identity: 125,
     description: '',
+    imageUrl:
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/south_fork_eel/125.JPG',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [40.10017667, -123.9057265],
@@ -111,6 +129,8 @@ module.exports = [
     id: 10,
     identity: 80,
     description: '',
+    imageUrl:
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/south_fork_eel/080.JPG',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [40.13818286, -123.778772],
@@ -123,6 +143,8 @@ module.exports = [
     id: 11,
     identity: 71,
     description: '',
+    imageUrl:
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/south_fork_eel/071.JPG',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [39.83343806, -123.6138906],
@@ -135,6 +157,8 @@ module.exports = [
     id: 12,
     identity: 64,
     description: '',
+    imageUrl:
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/south_fork_eel/064.JPG',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [39.80877491, -123.5401719],
@@ -147,6 +171,8 @@ module.exports = [
     id: 13,
     identity: 63,
     description: '',
+    imageUrl:
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/south_fork_eel/063.JPG',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [39.67071244, -123.6683525],
@@ -159,6 +185,8 @@ module.exports = [
     id: 14,
     identity: 25,
     description: '',
+    imageUrl:
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/south_fork_eel/025.JPG',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [40.13878729, -123.8075928],
@@ -171,6 +199,8 @@ module.exports = [
     id: 15,
     identity: 18,
     description: '',
+    imageUrl:
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/south_fork_eel/018.JPG',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [40.3360353, -124.0259752],
@@ -183,6 +213,8 @@ module.exports = [
     id: 16,
     identity: 10,
     description: '',
+    imageUrl:
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/south_fork_eel/010.JPG',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [39.80924874, -123.5543291],
@@ -195,6 +227,8 @@ module.exports = [
     id: 17,
     identity: 3,
     description: '',
+    imageUrl:
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/south_fork_eel/003.JPG',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [39.68901542, -123.6740195],
@@ -207,6 +241,8 @@ module.exports = [
     id: 18,
     identity: 221,
     description: '',
+    imageUrl:
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/south_fork_eel/221.JPG',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [39.64582422, -123.6148856],
@@ -219,6 +255,8 @@ module.exports = [
     id: 19,
     identity: 24,
     description: '',
+    imageUrl:
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/south_fork_eel/024.JPG',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [39.64763308, -123.6220684],
@@ -231,6 +269,8 @@ module.exports = [
     id: 20,
     identity: 17,
     description: '',
+    imageUrl:
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/south_fork_eel/017.JPG',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [39.73622297, -123.5150031],
@@ -243,6 +283,8 @@ module.exports = [
     id: 21,
     identity: 236,
     description: '',
+    imageUrl:
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/south_fork_eel/236.JPG',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [39.89589396, -123.7545313],
@@ -255,6 +297,8 @@ module.exports = [
     id: 22,
     identity: 234,
     description: '',
+    imageUrl:
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/south_fork_eel/234.JPG',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [40.03124355, -123.7848889],
@@ -267,6 +311,8 @@ module.exports = [
     id: 23,
     identity: 95,
     description: '',
+    imageUrl:
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/south_fork_eel/095.JPG',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [39.86631833, -123.719928],
@@ -279,6 +325,8 @@ module.exports = [
     id: 24,
     identity: 92,
     description: '',
+    imageUrl:
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/south_fork_eel/092.JPG',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [39.82736406, -123.678811],
@@ -291,6 +339,8 @@ module.exports = [
     id: 25,
     identity: 55,
     description: '',
+    imageUrl:
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/south_fork_eel/055.JPG',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [40.1710865, -123.7825972],
@@ -303,6 +353,8 @@ module.exports = [
     id: 26,
     identity: 52,
     description: '',
+    imageUrl:
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/south_fork_eel/052.JPG',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [40.28032707, -123.8894522],
@@ -315,6 +367,8 @@ module.exports = [
     id: 27,
     identity: 47,
     description: '',
+    imageUrl:
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/south_fork_eel/047.JPG',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [40.35035643, -123.9304983],
@@ -327,6 +381,8 @@ module.exports = [
     id: 28,
     identity: 46,
     description: '',
+    imageUrl:
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/south_fork_eel/046.JPG',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [40.12706999, -123.8236566],
@@ -339,6 +395,8 @@ module.exports = [
     id: 29,
     identity: 44,
     description: '',
+    imageUrl:
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/south_fork_eel/044.JPG',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [39.82136237, -123.6696893],
@@ -351,6 +409,8 @@ module.exports = [
     id: 30,
     identity: 34,
     description: '',
+    imageUrl:
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/south_fork_eel/034.JPG',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [39.87562748, -123.729709],
@@ -363,6 +423,8 @@ module.exports = [
     id: 31,
     identity: 26,
     description: '',
+    imageUrl:
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/south_fork_eel/026.JPG',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [40.06043075, -123.7374818],
@@ -375,6 +437,8 @@ module.exports = [
     id: 32,
     identity: 910,
     description: '',
+    imageUrl:
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/south_fork_eel/910.JPG',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [39.72653555, -123.6270511],
@@ -387,6 +451,8 @@ module.exports = [
     id: 33,
     identity: 349,
     description: '',
+    imageUrl:
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/south_fork_eel/349.JPG',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [40.31294174, -124.0334353],
@@ -399,6 +465,8 @@ module.exports = [
     id: 34,
     identity: 344,
     description: '',
+    imageUrl:
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/south_fork_eel/344.JPG',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [39.93128302, -123.75475],
@@ -411,6 +479,8 @@ module.exports = [
     id: 35,
     identity: 327,
     description: '',
+    imageUrl:
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/south_fork_eel/327.JPG',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [39.8215096, -123.6549471],
@@ -423,6 +493,8 @@ module.exports = [
     id: 36,
     identity: 301,
     description: '',
+    imageUrl:
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/south_fork_eel/301.JPG',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [39.81340219, -123.5926462],
@@ -435,6 +507,8 @@ module.exports = [
     id: 37,
     identity: 205,
     description: '',
+    imageUrl:
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/south_fork_eel/205.JPG',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [40.36147292, -123.9614202],
@@ -447,6 +521,8 @@ module.exports = [
     id: 38,
     identity: 186,
     description: '',
+    imageUrl:
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/south_fork_eel/186.JPG',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [39.95082998, -123.6433894],
@@ -459,6 +535,8 @@ module.exports = [
     id: 39,
     identity: 171,
     description: '',
+    imageUrl:
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/south_fork_eel/171.JPG',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [39.95933182, -123.7668846],
@@ -471,6 +549,8 @@ module.exports = [
     id: 40,
     identity: 81,
     description: '',
+    imageUrl:
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/south_fork_eel/081.JPG',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [39.84303194, -123.7030828],
@@ -483,6 +563,8 @@ module.exports = [
     id: 41,
     identity: 78,
     description: '',
+    imageUrl:
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/south_fork_eel/078.JPG',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [39.82599629, -123.6517949],
@@ -495,6 +577,8 @@ module.exports = [
     id: 42,
     identity: 66,
     description: '',
+    imageUrl:
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/south_fork_eel/066.JPG',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [39.72351539, -123.6567039],
@@ -507,6 +591,8 @@ module.exports = [
     id: 43,
     identity: 911,
     description: '',
+    imageUrl:
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/south_fork_eel/911.JPG',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [39.7306839, -123.6412202],
@@ -519,6 +605,8 @@ module.exports = [
     id: 44,
     identity: 330,
     description: '',
+    imageUrl:
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/south_fork_eel/330.JPG',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [39.77254696, -123.6456987],
@@ -531,6 +619,8 @@ module.exports = [
     id: 45,
     identity: 324,
     description: '',
+    imageUrl:
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/south_fork_eel/324.JPG',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [39.76612551, -123.648442],
@@ -543,6 +633,8 @@ module.exports = [
     id: 46,
     identity: 322,
     description: '',
+    imageUrl:
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/south_fork_eel/322.JPG',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [39.82230723, -123.6651964],
@@ -555,6 +647,8 @@ module.exports = [
     id: 47,
     identity: 183,
     description: '',
+    imageUrl:
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/south_fork_eel/183.JPG',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [39.95370226, -123.6469577],
@@ -567,6 +661,8 @@ module.exports = [
     id: 48,
     identity: 143,
     description: '',
+    imageUrl:
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/south_fork_eel/143.JPG',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [39.83141866, -123.6440198],
@@ -579,6 +675,8 @@ module.exports = [
     id: 49,
     identity: 99,
     description: '',
+    imageUrl:
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/south_fork_eel/099.JPG',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [39.75781226, -123.6364987],
@@ -591,6 +689,8 @@ module.exports = [
     id: 50,
     identity: 355,
     description: '',
+    imageUrl:
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/south_fork_eel/355.JPG',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [40.19305158, -123.763678],
@@ -603,6 +703,8 @@ module.exports = [
     id: 51,
     identity: 209,
     description: '',
+    imageUrl:
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/south_fork_eel/209.JPG',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [40.32008936, -124.0400896],
@@ -615,6 +717,8 @@ module.exports = [
     id: 52,
     identity: 201,
     description: '',
+    imageUrl:
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/south_fork_eel/201.JPG',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [40.2891689, -123.9346797],
@@ -627,6 +731,8 @@ module.exports = [
     id: 53,
     identity: 168,
     description: '',
+    imageUrl:
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/south_fork_eel/168.JPG',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [39.78892506, -123.7311162],
@@ -639,6 +745,8 @@ module.exports = [
     id: 54,
     identity: 140,
     description: '',
+    imageUrl:
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/south_fork_eel/140.JPG',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [39.95980966, -123.6503965],
@@ -651,6 +759,7 @@ module.exports = [
     id: 55,
     identity: '526PS0764',
     description: '',
+    imageUrl: '',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [40.89409477, -121.9459864],
@@ -663,6 +772,7 @@ module.exports = [
     id: 56,
     identity: '524SHA907',
     description: '',
+    imageUrl: '',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [40.61309484, -122.4579864],
@@ -675,6 +785,7 @@ module.exports = [
     id: 57,
     identity: '506PS0003',
     description: '',
+    imageUrl: '',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [40.9436948, -122.3349864],
@@ -687,6 +798,7 @@ module.exports = [
     id: 58,
     identity: '505PS0174',
     description: '',
+    imageUrl: '',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [40.99919478, -122.0599864],
@@ -699,6 +811,7 @@ module.exports = [
     id: 59,
     identity: '505PS0110',
     description: '',
+    imageUrl: '',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [41.09679478, -122.2009864],
@@ -711,6 +824,8 @@ module.exports = [
     id: 60,
     identity: 11,
     description: '',
+    imageUrl:
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/sacramento/WS/11.jpg',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [40.66664185, -122.6463614],
@@ -723,6 +838,8 @@ module.exports = [
     id: 61,
     identity: 9,
     description: '',
+    imageUrl:
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/sacramento/WS/09.jpg',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [39.21836085, -121.3204538],
@@ -735,6 +852,8 @@ module.exports = [
     id: 62,
     identity: 0,
     description: '',
+    imageUrl:
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/sacramento/WS/00.jpg',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [40.20762384, -122.1267055],
@@ -747,6 +866,7 @@ module.exports = [
     id: 63,
     identity: '514CE0171',
     description: '',
+    imageUrl: '',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [38.90029487, -121.1979868],
@@ -759,6 +879,7 @@ module.exports = [
     id: 64,
     identity: '511CE0663',
     description: '',
+    imageUrl: '',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [38.35829498, -121.9879868],
@@ -771,6 +892,8 @@ module.exports = [
     id: 65,
     identity: 14,
     description: '',
+    imageUrl:
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/sacramento/WS/14.jpg',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [39.14341494, -122.3410466],
@@ -783,6 +906,8 @@ module.exports = [
     id: 66,
     identity: 13,
     description: '',
+    imageUrl:
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/sacramento/WS/13.jpg',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [39.53884791, -122.3827296],
@@ -795,6 +920,8 @@ module.exports = [
     id: 67,
     identity: 10,
     description: '',
+    imageUrl:
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/sacramento/WS/10.jpg',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [39.54491992, -122.4491346],
@@ -807,6 +934,8 @@ module.exports = [
     id: 68,
     identity: 7,
     description: '',
+    imageUrl:
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/sacramento/WS/07.jpg',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [41.0609258, -122.3646224],
@@ -819,6 +948,8 @@ module.exports = [
     id: 69,
     identity: 5,
     description: '',
+    imageUrl:
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/sacramento/WS/05.jpg',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [39.54492092, -122.4481546],
@@ -831,6 +962,8 @@ module.exports = [
     id: 70,
     identity: 4,
     description: '',
+    imageUrl:
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/sacramento/WS/04.jpg',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [39.54213791, -122.3899676],
@@ -843,6 +976,8 @@ module.exports = [
     id: 71,
     identity: 1,
     description: '',
+    imageUrl:
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/sacramento/WS/01.jpg',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [39.30617493, -122.3217946],
@@ -855,6 +990,7 @@ module.exports = [
     id: 72,
     identity: '519CE0531',
     description: '',
+    imageUrl: '',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [38.7085949, -121.4059868],
@@ -867,6 +1003,7 @@ module.exports = [
     id: 73,
     identity: '511PS0401',
     description: '',
+    imageUrl: '',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [38.34009498, -121.9699868],
@@ -879,6 +1016,7 @@ module.exports = [
     id: 74,
     identity: '508SHA912',
     description: '',
+    imageUrl: '',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [40.53209483, -122.2909864],
@@ -891,6 +1029,7 @@ module.exports = [
     id: 75,
     identity: '508SHA911',
     description: '',
+    imageUrl: '',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [40.62409482, -122.3049864],
@@ -903,6 +1042,7 @@ module.exports = [
     id: 76,
     identity: '508SHA910',
     description: '',
+    imageUrl: '',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [40.54569483, -122.3409864],
@@ -915,6 +1055,7 @@ module.exports = [
     id: 77,
     identity: 20,
     description: '',
+    imageUrl: '',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [38.6545229, -121.3399308],
@@ -927,6 +1068,7 @@ module.exports = [
     id: 78,
     identity: '520PS0202',
     description: '',
+    imageUrl: '',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [39.40269491, -122.1649866],
@@ -939,6 +1081,7 @@ module.exports = [
     id: 79,
     identity: '519PS0340',
     description: '',
+    imageUrl: '',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [38.75469489, -121.2359868],
@@ -951,6 +1094,7 @@ module.exports = [
     id: 80,
     identity: '519CE0211',
     description: '',
+    imageUrl: '',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [38.63569491, -121.4039868],
@@ -963,6 +1107,7 @@ module.exports = [
     id: 81,
     identity: '519CE0019',
     description: '',
+    imageUrl: '',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [38.6838949, -121.3159868],
@@ -975,6 +1120,7 @@ module.exports = [
     id: 82,
     identity: '515PS0490',
     description: '',
+    imageUrl: '',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [39.32009486, -121.5189867],
@@ -987,6 +1133,7 @@ module.exports = [
     id: 83,
     identity: '514PS0084',
     description: '',
+    imageUrl: '',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [38.78449488, -121.2309868],
@@ -999,6 +1146,7 @@ module.exports = [
     id: 84,
     identity: '514CE0523',
     description: '',
+    imageUrl: '',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [38.82029488, -121.2309868],
@@ -1011,6 +1159,7 @@ module.exports = [
     id: 85,
     identity: '521LCCBSR',
     description: '',
+    imageUrl: '',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [39.88529483, -121.6509866],
@@ -1023,6 +1172,7 @@ module.exports = [
     id: 86,
     identity: '519CE0363',
     description: '',
+    imageUrl: '',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [38.80399488, -121.2429868],
@@ -1035,6 +1185,7 @@ module.exports = [
     id: 87,
     identity: '506PS0062',
     description: '',
+    imageUrl: '',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [40.86159482, -122.4629864],
@@ -1047,6 +1198,8 @@ module.exports = [
     id: 88,
     identity: 18,
     description: '',
+    imageUrl:
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/sacramento/WS/18.jpg',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [39.64838484, -121.6103767],
@@ -1059,6 +1212,8 @@ module.exports = [
     id: 89,
     identity: 17,
     description: '',
+    imageUrl:
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/sacramento/WS/17.jpg',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [39.05701931, -122.2712173],
@@ -1071,6 +1226,8 @@ module.exports = [
     id: 90,
     identity: 16,
     description: '',
+    imageUrl:
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/sacramento/WS/16.jpg',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [39.04781494, -122.2928166],
@@ -1083,6 +1240,8 @@ module.exports = [
     id: 91,
     identity: 12,
     description: '',
+    imageUrl:
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/sacramento/WS/12.jpg',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [38.72416188, -121.0710979],
@@ -1095,6 +1254,8 @@ module.exports = [
     id: 92,
     identity: 3,
     description: '',
+    imageUrl:
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/sacramento/WS/03.jpg',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [39.9147349, -122.5319865],
@@ -1107,6 +1268,7 @@ module.exports = [
     id: 93,
     identity: 45,
     description: '',
+    imageUrl: '',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [39.15450898, -122.9151735],
@@ -1119,6 +1281,8 @@ module.exports = [
     id: 94,
     identity: 43,
     description: '',
+    imageUrl:
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/sacramento/PGR/43.jpg',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [38.75455057, -122.2838478],
@@ -1131,6 +1295,7 @@ module.exports = [
     id: 95,
     identity: 42,
     description: '',
+    imageUrl: '',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [39.63457305, -122.6056277],
@@ -1143,6 +1308,8 @@ module.exports = [
     id: 96,
     identity: 38,
     description: '',
+    imageUrl:
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/sacramento/PGR/38.jpg',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [38.93249485, -120.9269869],
@@ -1155,6 +1322,8 @@ module.exports = [
     id: 97,
     identity: 36,
     description: '',
+    imageUrl:
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/sacramento/PGR/36.jpg',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [38.50151551, -122.2580016],
@@ -1167,6 +1336,8 @@ module.exports = [
     id: 98,
     identity: 35,
     description: '',
+    imageUrl:
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/sacramento/PGR/35.jpg',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [38.70401496, -122.1113067],
@@ -1179,6 +1350,8 @@ module.exports = [
     id: 99,
     identity: 33,
     description: '',
+    imageUrl:
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/sacramento/PGR/33.jpg',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [38.79828955, -122.3131062],
@@ -1191,6 +1364,8 @@ module.exports = [
     id: 100,
     identity: 32,
     description: '',
+    imageUrl:
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/sacramento/PGR/32.jpg',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [38.82229499, -122.7191366],
@@ -1203,6 +1378,8 @@ module.exports = [
     id: 101,
     identity: 29,
     description: '',
+    imageUrl:
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/sacramento/PGR/29.jpg',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [39.13819494, -122.3520866],
@@ -1215,6 +1392,8 @@ module.exports = [
     id: 102,
     identity: 27,
     description: '',
+    imageUrl:
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/sacramento/PGR/27.jpg',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [39.09853783, -120.9290479],
@@ -1227,6 +1406,7 @@ module.exports = [
     id: 103,
     identity: 24,
     description: '',
+    imageUrl: '',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [39.17694497, -122.7286356],
@@ -1239,6 +1419,7 @@ module.exports = [
     id: 104,
     identity: 10,
     description: '',
+    imageUrl: '',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [38.74724497, -122.2801067],
@@ -1251,6 +1432,8 @@ module.exports = [
     id: 105,
     identity: 5,
     description: '',
+    imageUrl:
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/sacramento/PGR/5.jpg',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [38.65941169, -122.4597645],
@@ -1263,6 +1446,8 @@ module.exports = [
     id: 106,
     identity: 4,
     description: '',
+    imageUrl:
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/sacramento/PGR/4.jpg',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [38.75901497, -122.2768807],
@@ -1275,6 +1460,8 @@ module.exports = [
     id: 107,
     identity: 0,
     description: '',
+    imageUrl:
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/sacramento/PGR/0.jpg',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [39.18008399, -122.9647995],
@@ -1287,6 +1474,7 @@ module.exports = [
     id: 108,
     identity: '524PS0202',
     description: '',
+    imageUrl: '',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [40.69049485, -122.6399864],
@@ -1299,6 +1487,7 @@ module.exports = [
     id: 109,
     identity: '513PS0248',
     description: '',
+    imageUrl: '',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [39.21679496, -122.7289866],
@@ -1311,6 +1500,7 @@ module.exports = [
     id: 110,
     identity: '513PS0200',
     description: '',
+    imageUrl: '',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [39.17999496, -122.6669866],
@@ -1323,6 +1513,7 @@ module.exports = [
     id: 111,
     identity: '513PS0088',
     description: '',
+    imageUrl: '',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [38.98619497, -122.5159866],
@@ -1335,6 +1526,7 @@ module.exports = [
     id: 112,
     identity: '509BCCBPW',
     description: '',
+    imageUrl: '',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [39.86969483, -121.7069866],
@@ -1347,6 +1539,7 @@ module.exports = [
     id: 113,
     identity: '508PS0458',
     description: '',
+    imageUrl: '',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [40.49389485, -122.4479864],
@@ -1359,6 +1552,7 @@ module.exports = [
     id: 114,
     identity: 22,
     description: '',
+    imageUrl: '',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [39.16211496, -122.6746366],
@@ -1371,6 +1565,7 @@ module.exports = [
     id: 115,
     identity: 16,
     description: '',
+    imageUrl: '',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [40.23286482, -121.8782466],
@@ -1383,6 +1578,8 @@ module.exports = [
     id: 116,
     identity: 12,
     description: '',
+    imageUrl:
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/sacramento/PGR/12.jpg',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [39.64337992, -122.6158005],
@@ -1395,6 +1592,8 @@ module.exports = [
     id: 117,
     identity: 11,
     description: '',
+    imageUrl:
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/sacramento/PGR/11.jpg',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [40.3489349, -122.9656864],
@@ -1407,6 +1606,8 @@ module.exports = [
     id: 118,
     identity: 9,
     description: '',
+    imageUrl:
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/sacramento/PGR/9.jpg',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [38.75538497, -122.2810767],
@@ -1419,6 +1620,8 @@ module.exports = [
     id: 119,
     identity: 7,
     description: '',
+    imageUrl:
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/sacramento/PGR/7.jpg',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [38.75528497, -122.2805467],
@@ -1431,6 +1634,7 @@ module.exports = [
     id: 120,
     identity: '524SHA916',
     description: '',
+    imageUrl: '',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [40.70859485, -122.6369864],
@@ -1443,6 +1647,7 @@ module.exports = [
     id: 121,
     identity: '513PS0024',
     description: '',
+    imageUrl: '',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [39.03779495, -122.4129866],
@@ -1455,6 +1660,7 @@ module.exports = [
     id: 122,
     identity: '513BTCACC',
     description: '',
+    imageUrl: '',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [39.16639496, -122.6409866],
@@ -1467,6 +1673,7 @@ module.exports = [
     id: 123,
     identity: 41,
     description: '',
+    imageUrl: '',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [39.16716496, -122.6409066],
@@ -1479,6 +1686,7 @@ module.exports = [
     id: 124,
     identity: 37,
     description: '',
+    imageUrl: '',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [38.84771499, -122.6655266],
@@ -1491,6 +1699,8 @@ module.exports = [
     id: 125,
     identity: 31,
     description: '',
+    imageUrl:
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/sacramento/PGR/31.jpg',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [39.70647392, -122.6928645],
@@ -1503,6 +1713,7 @@ module.exports = [
     id: 126,
     identity: 18,
     description: '',
+    imageUrl: '',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [39.50087281, -121.0094998],
@@ -1515,6 +1726,7 @@ module.exports = [
     id: 127,
     identity: 15,
     description: '',
+    imageUrl: '',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [39.02181282, -120.7366189],
@@ -1527,6 +1739,8 @@ module.exports = [
     id: 128,
     identity: 13,
     description: '',
+    imageUrl:
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/sacramento/PGR/13.jpg',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [39.51731083, -121.3336567],
@@ -1539,6 +1753,8 @@ module.exports = [
     id: 129,
     identity: 8,
     description: '',
+    imageUrl:
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/sacramento/PGR/8.jpg',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [40.40452488, -122.7802664],
@@ -1551,6 +1767,7 @@ module.exports = [
     id: 130,
     identity: 47,
     description: '',
+    imageUrl: '',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [40.36699485, -122.3349865],
@@ -1563,6 +1780,7 @@ module.exports = [
     id: 131,
     identity: 28,
     description: '',
+    imageUrl: '',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [40.36011485, -122.3448965],
@@ -1575,6 +1793,8 @@ module.exports = [
     id: 132,
     identity: 25,
     description: '',
+    imageUrl:
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/sacramento/PGR/25.jpg',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [40.33478785, -122.4096155],
@@ -1587,6 +1807,7 @@ module.exports = [
     id: 133,
     identity: '504CE0210',
     description: '',
+    imageUrl: '',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [39.74889485, -121.8009866],
@@ -1599,6 +1820,8 @@ module.exports = [
     id: 134,
     identity: 30,
     description: '',
+    imageUrl:
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/sacramento/PGR/30.jpg',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [38.65480055, -122.0124034],
@@ -1611,6 +1834,7 @@ module.exports = [
     id: 135,
     identity: 44,
     description: '',
+    imageUrl: '',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [39.06999499, -122.9437775],
@@ -1623,6 +1847,8 @@ module.exports = [
     id: 136,
     identity: 34,
     description: '',
+    imageUrl:
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/sacramento/PGR/34.jpg',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [38.65590946, -122.4682824],
@@ -1635,6 +1861,8 @@ module.exports = [
     id: 137,
     identity: 26,
     description: '',
+    imageUrl:
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/sacramento/PGR/26.jpg',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [39.16520399, -122.9696685],
@@ -1647,6 +1875,7 @@ module.exports = [
     id: 138,
     identity: 23,
     description: '',
+    imageUrl: '',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [39.08367299, -122.9625045],
@@ -1659,6 +1888,7 @@ module.exports = [
     id: 139,
     identity: 21,
     description: '',
+    imageUrl: '',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [38.50830397, -122.0976557],
@@ -1671,6 +1901,7 @@ module.exports = [
     id: 140,
     identity: 20,
     description: '',
+    imageUrl: '',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [39.22068096, -122.7328346],
@@ -1683,6 +1914,7 @@ module.exports = [
     id: 141,
     identity: 19,
     description: '',
+    imageUrl: '',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [40.65812085, -122.6250994],
@@ -1695,6 +1927,7 @@ module.exports = [
     id: 142,
     identity: 17,
     description: '',
+    imageUrl: '',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [39.10094899, -122.9622135],
@@ -1707,6 +1940,7 @@ module.exports = [
     id: 143,
     identity: 14,
     description: '',
+    imageUrl: '',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [39.17179496, -122.6519866],
@@ -1719,6 +1953,8 @@ module.exports = [
     id: 144,
     identity: 6,
     description: '',
+    imageUrl:
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/sacramento/PGR/6.jpg',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [40.74165284, -122.6243364],
@@ -1731,6 +1967,8 @@ module.exports = [
     id: 145,
     identity: 3,
     description: '',
+    imageUrl:
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/sacramento/PGR/3.jpg',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [38.916935, -122.8527266],
@@ -1743,6 +1981,8 @@ module.exports = [
     id: 146,
     identity: 2,
     description: '',
+    imageUrl:
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/sacramento/PGR/2.jpg',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [39.16351499, -122.9662365],
@@ -1755,6 +1995,7 @@ module.exports = [
     id: 147,
     identity: '508BERPRK',
     description: '',
+    imageUrl: '',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [40.44809483, -122.1969865],
@@ -1767,6 +2008,7 @@ module.exports = [
     id: 148,
     identity: '504WE0527',
     description: '',
+    imageUrl: '',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [40.10749484, -122.0299865],
@@ -1779,6 +2021,7 @@ module.exports = [
     id: 149,
     identity: '504DCFRxx',
     description: '',
+    imageUrl: '',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [40.10559484, -122.0379865],
@@ -1791,6 +2034,7 @@ module.exports = [
     id: 150,
     identity: 51,
     description: '',
+    imageUrl: '',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [40.43564482, -122.1281765],
@@ -1803,6 +2047,8 @@ module.exports = [
     id: 151,
     identity: 44,
     description: '',
+    imageUrl:
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/sacramento/RGW/44.jpg',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [39.37950882, -121.0907008],
@@ -1815,6 +2061,8 @@ module.exports = [
     id: 152,
     identity: 43,
     description: '',
+    imageUrl:
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/sacramento/RGW/43.jpg',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [39.42083585, -121.4241327],
@@ -1827,6 +2075,8 @@ module.exports = [
     id: 153,
     identity: 41,
     description: '',
+    imageUrl:
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/sacramento/RGW/41.jpg',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [40.55532618, -121.9091788],
@@ -1839,6 +2089,8 @@ module.exports = [
     id: 154,
     identity: 29,
     description: '',
+    imageUrl:
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/sacramento/RGW/29.jpg',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [40.52715681, -122.1031595],
@@ -1851,6 +2103,7 @@ module.exports = [
     id: 155,
     identity: 23,
     description: '',
+    imageUrl: '',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [39.36446085, -121.3737357],
@@ -1863,6 +2116,8 @@ module.exports = [
     id: 156,
     identity: 18,
     description: '',
+    imageUrl:
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/sacramento/RGW/18.jpg',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [39.42268067, -121.3415024],
@@ -1875,6 +2130,8 @@ module.exports = [
     id: 157,
     identity: 9,
     description: '',
+    imageUrl:
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/sacramento/RGW/09.jpg',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [38.93799396, -122.3414547],
@@ -1887,6 +2144,8 @@ module.exports = [
     id: 158,
     identity: 3,
     description: '',
+    imageUrl:
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/sacramento/RGW/03.jpg',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [40.77552279, -122.0045985],
@@ -1899,6 +2158,8 @@ module.exports = [
     id: 159,
     identity: 0,
     description: '',
+    imageUrl:
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/sacramento/RGW/00.jpg',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [39.29490084, -121.1825838],
@@ -1911,6 +2172,7 @@ module.exports = [
     id: 160,
     identity: '517PS0078',
     description: '',
+    imageUrl: '',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [39.30139482, -120.9979868],
@@ -1923,6 +2185,7 @@ module.exports = [
     id: 161,
     identity: '514CE0555',
     description: '',
+    imageUrl: '',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [38.72719487, -120.9489869],
@@ -1935,6 +2198,7 @@ module.exports = [
     id: 162,
     identity: '514CE0139',
     description: '',
+    imageUrl: '',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [38.97039486, -121.1339868],
@@ -1947,6 +2211,7 @@ module.exports = [
     id: 163,
     identity: '513STCAIV',
     description: '',
+    imageUrl: '',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [39.18459495, -122.5359866],
@@ -1959,6 +2224,7 @@ module.exports = [
     id: 164,
     identity: '513PS0008',
     description: '',
+    imageUrl: '',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [38.932795, -122.9329866],
@@ -1971,6 +2237,7 @@ module.exports = [
     id: 165,
     identity: 45,
     description: '',
+    imageUrl: '',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [38.88558297, -122.5085386],
@@ -1983,6 +2250,8 @@ module.exports = [
     id: 166,
     identity: 1,
     description: '',
+    imageUrl:
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/sacramento/RGW/01.jpg',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [38.77776684, -120.6259189],
@@ -1995,6 +2264,7 @@ module.exports = [
     id: 167,
     identity: '514PS0351',
     description: '',
+    imageUrl: '',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [38.89259487, -121.1439868],
@@ -2007,6 +2277,7 @@ module.exports = [
     id: 168,
     identity: '509PCDTWR',
     description: '',
+    imageUrl: '',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [40.31189481, -121.8859865],
@@ -2019,6 +2290,7 @@ module.exports = [
     id: 169,
     identity: '507CE0181',
     description: '',
+    imageUrl: '',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [40.6907948, -122.0429865],
@@ -2031,6 +2303,8 @@ module.exports = [
     id: 170,
     identity: 50,
     description: '',
+    imageUrl:
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/sacramento/RGW/50.jpg',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [40.68591381, -122.2456954],
@@ -2043,6 +2317,8 @@ module.exports = [
     id: 171,
     identity: 48,
     description: '',
+    imageUrl:
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/sacramento/RGW/48.jpg',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [38.80927151, -120.7176741],
@@ -2055,6 +2331,8 @@ module.exports = [
     id: 172,
     identity: 46,
     description: '',
+    imageUrl:
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/sacramento/RGW/46.jpg',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [39.81497483, -121.6140267],
@@ -2067,6 +2345,8 @@ module.exports = [
     id: 173,
     identity: 12,
     description: '',
+    imageUrl:
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/sacramento/RGW/12.jpg',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [39.01099484, -120.8900969],
@@ -2079,6 +2359,7 @@ module.exports = [
     id: 174,
     identity: 6,
     description: '',
+    imageUrl: '',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [38.88989198, -122.5975186],
@@ -2091,6 +2372,8 @@ module.exports = [
     id: 175,
     identity: 5,
     description: '',
+    imageUrl:
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/sacramento/RGW/05.jpg',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [39.21529183, -121.0402038],
@@ -2103,6 +2386,7 @@ module.exports = [
     id: 176,
     identity: 2,
     description: '',
+    imageUrl: '',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [40.77918379, -121.9993675],
@@ -2115,6 +2399,7 @@ module.exports = [
     id: 177,
     identity: '509PS0334',
     description: '',
+    imageUrl: '',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [40.22429483, -121.9889865],
@@ -2127,6 +2412,7 @@ module.exports = [
     id: 178,
     identity: '509CE0305',
     description: '',
+    imageUrl: '',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [40.23109483, -121.9789865],
@@ -2139,6 +2425,7 @@ module.exports = [
     id: 179,
     identity: '507PS0142',
     description: '',
+    imageUrl: '',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [40.67099481, -122.1399865],
@@ -2151,6 +2438,8 @@ module.exports = [
     id: 180,
     identity: 4,
     description: '',
+    imageUrl:
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/sacramento/RGW/04.jpg',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [38.78606598, -122.5510836],
@@ -2163,6 +2452,8 @@ module.exports = [
     id: 181,
     identity: 47,
     description: '',
+    imageUrl:
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/sacramento/RGW/47.jpg',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [38.9734509, -121.1373319],
@@ -2175,6 +2466,8 @@ module.exports = [
     id: 182,
     identity: 42,
     description: '',
+    imageUrl:
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/sacramento/RGW/42.jpg',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [40.77629079, -122.0046685],
@@ -2187,6 +2480,8 @@ module.exports = [
     id: 183,
     identity: 37,
     description: '',
+    imageUrl:
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/sacramento/RGW/37.jpg',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [39.08506695, -122.4135816],
@@ -2199,6 +2494,8 @@ module.exports = [
     id: 184,
     identity: 27,
     description: '',
+    imageUrl:
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/sacramento/RGW/27.jpg',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [39.18218499, -122.9584265],
@@ -2211,6 +2508,7 @@ module.exports = [
     id: 185,
     identity: 16,
     description: '',
+    imageUrl: '',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [39.06393885, -121.0912088],
@@ -2223,6 +2521,8 @@ module.exports = [
     id: 186,
     identity: 11,
     description: '',
+    imageUrl:
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/sacramento/RGW/11.jpg',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [39.7918919, -122.5263695],
@@ -2235,6 +2535,8 @@ module.exports = [
     id: 187,
     identity: 10,
     description: '',
+    imageUrl:
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/sacramento/RGW/10.jpg',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [38.97699386, -121.1337368],
@@ -2247,6 +2549,8 @@ module.exports = [
     id: 188,
     identity: 7,
     description: '',
+    imageUrl:
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/sacramento/RGW/07.jpg',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [38.84864164, -122.6131079],
@@ -2259,6 +2563,7 @@ module.exports = [
     id: 189,
     identity: '520CE0562',
     description: '',
+    imageUrl: '',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [39.72079485, -121.8379866],
@@ -2271,6 +2576,7 @@ module.exports = [
     id: 190,
     identity: '504PS0371',
     description: '',
+    imageUrl: '',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [39.97109485, -122.0809866],
@@ -2283,6 +2589,7 @@ module.exports = [
     id: 191,
     identity: '504PS0051',
     description: '',
+    imageUrl: '',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [40.09589484, -122.0659865],
@@ -2295,6 +2602,7 @@ module.exports = [
     id: 192,
     identity: '504PS0019',
     description: '',
+    imageUrl: '',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [39.72849486, -121.8809866],
@@ -2307,6 +2615,7 @@ module.exports = [
     id: 193,
     identity: '504CE0657',
     description: '',
+    imageUrl: '',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [40.16919484, -122.1459865],
@@ -2319,6 +2628,8 @@ module.exports = [
     id: 194,
     identity: 36,
     description: '',
+    imageUrl:
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/sacramento/RGW/36.jpg',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [40.17020484, -122.1332265],
@@ -2331,6 +2642,8 @@ module.exports = [
     id: 195,
     identity: 31,
     description: '',
+    imageUrl:
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/sacramento/RGW/31.jpg',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [40.10471485, -122.1158065],
@@ -2343,6 +2656,7 @@ module.exports = [
     id: 196,
     identity: 15,
     description: '',
+    imageUrl: '',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [39.69080786, -121.9054436],
@@ -2355,6 +2669,8 @@ module.exports = [
     id: 197,
     identity: 8,
     description: '',
+    imageUrl:
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/sacramento/RGW/08.jpg',
     geometry: JSON.stringify({
       type: 'Point',
       coordinates: [39.72706486, -121.8617816],

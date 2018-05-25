@@ -24,6 +24,10 @@ module.exports = (sequelizeClient, DataTypes) => {
       type: DataTypes.JSONB, // eslint-disable-line
       allowNull: true,
     },
+    imageUrl: {
+      type: DataTypes.TEXT,
+      allowNull: true,
+    },
   });
   geoSite.associate = models => {
     geoSite.belongsTo(models.GeoClass, {

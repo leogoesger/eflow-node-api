@@ -1,4 +1,4 @@
-import {GeoSite, GeoClass} from '../models';
+import {GeoSite, GeoClass, GeoRegion} from '../models';
 
 module.exports = {
   index(req, res) {
@@ -20,6 +20,7 @@ module.exports = {
             attributes: {
               exclude: ['createdAt', 'updatedAt', 'description'],
             },
+            include: [{model: GeoRegion, as: 'geoRegion'}],
           },
         ],
       }).then(geoSites => res.status(200).send(geoSites));
