@@ -20,7 +20,7 @@ module.exports = (sequelizeClient, DataTypes) => {
   geoClass.associate = models => {
     geoClass.belongsTo(models.GeoRegion, {
       foreignKey: 'geoRegionId',
-      as: 'geoRegions',
+      as: 'geoRegion',
     });
     geoClass.belongsTo(models.Classification, {
       foreignKey: 'hydroClassId',

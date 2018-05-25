@@ -14,6 +14,7 @@ const annualFlows = require('./annualFlows');
 const users = require('./users');
 const releases = require('./releases');
 const geoSites = require('./geoSites');
+const geoRegions = require('./geoRegions');
 
 module.exports = {
   allYears,
@@ -32,4 +33,5 @@ module.exports = {
   users,
   releases,
   geoSites,
+  geoRegions,
 };

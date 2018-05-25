@@ -22,7 +22,9 @@
       "NODE_ENV=test yarn run test-prepare ; NODE_ENV=test nyc --reporter=text --reporter=lcov npm run mocha",
     "test-coverage": "nyc report --reporter=lcov",
     "migrate": "sequelize db:migrate",
+    "prod-migrate": "NODE_ENV=production yarn run migrate;",
     "seed": "sequelize db:seed:all",
+    "prod-seed": "NODE_ENV=production sequelize db:seed:all",
     "prod-prepare":
       "NODE_ENV=production sequelize db:migrate:undo:all ; NODE_ENV=production yarn run migrate ; NODE_ENV=production yarn run seed",
     "test-prepare": "sequelize db:migrate:undo:all ; yarn run migrate",
