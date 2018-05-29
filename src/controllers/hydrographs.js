@@ -1,4 +1,4 @@
-import * as d3 from 'd3';
+import {quantile} from 'd3';
 import {sortBy} from 'lodash';
 
 import {Hydrograph, AnnualFlow} from '../models';
@@ -44,23 +44,23 @@ module.exports = {
         currentHydrograph = sortBy(currentHydrograph);
         hydrograph.TEN.push({
           date: index,
-          flow: d3.quantile(currentHydrograph, 0.1),
+          flow: quantile(currentHydrograph, 0.1),
         });
         hydrograph.TWENTYFIVE.push({
           date: index,
-          flow: d3.quantile(currentHydrograph, 0.25),
+          flow: quantile(currentHydrograph, 0.25),
         });
         hydrograph.FIFTY.push({
           date: index,
-          flow: d3.quantile(currentHydrograph, 0.5),
+          flow: quantile(currentHydrograph, 0.5),
         });
         hydrograph.SEVENTYFIVE.push({
           date: index,
-          flow: d3.quantile(currentHydrograph, 0.75),
+          flow: quantile(currentHydrograph, 0.75),
         });
         hydrograph.NINTY.push({
           date: index,
-          flow: d3.quantile(currentHydrograph, 0.9),
+          flow: quantile(currentHydrograph, 0.9),
         });
       });
       res.status(200).send(hydrograph);
