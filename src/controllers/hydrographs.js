@@ -16,7 +16,7 @@ module.exports = {
   },
 
   async getDimHydrograph(req, res) {
-    if (!req.params.gaugeId) {
+    if (!req.body.gaugeId) {
       return res.status(404).send({message: 'Missing Params!'});
     }
     const hydrograph = {
@@ -28,7 +28,7 @@ module.exports = {
     };
     // Add average annual flow data
     const result = await AnnualFlow.findAll({
-      where: {gaugeId: req.params.gaugeId},
+      where: {gaugeId: req.body.gaugeId},
       attributes: ['year', 'flowData', 'gaugeId'],
     });
 
