@@ -14,22 +14,18 @@ const Hydrograph = require('../models').Hydrograph;
 import {metricReference} from '../static/metricReference';
 import gaugeReference from '../static/gaugeReference';
 
-const _inputFlowToDatabase = (result, file) => {
-  Year.findOne({
+const _inputFlowToDatabase = async (result, file) => {
+  const year = await Year.findOne({
     where: {
       gaugeId: file,
     },
-  }).then(year => {
-    year.update({allYears: Object.keys(result)}).then(() => {
-      Object.keys(result).forEach(key => {
-        AnnualFlow.create({
-          year: key,
-          flowData: result[key],
-          gaugeId: file,
-        }).catch(e => {
-          throw e;
-        });
-      });
+  });
+  year.update({allYears: Object.keys(result)});
+  Object.keys(result).forEach(key => {
+    AnnualFlow.create({
+      year: key,
+      flowData: result[key],
+      gaugeId: file,
     });
   });
 };
