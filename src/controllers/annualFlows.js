@@ -1,4 +1,5 @@
 import {indexOf} from 'lodash';
+import {quantile} from 'd3';
 
 import {
   AnnualFlow,
@@ -11,7 +12,7 @@ import {
   Year,
   Gauge,
 } from '../models';
-
+import {removeNaN} from '../utils/helpers';
 import {metricReferenceAs} from '../static/metricReference';
 // import {round} from '../utils/helpers';
 
@@ -27,7 +28,7 @@ const models = {
 module.exports = {
   async show(req, res) {
     if (!req.body.gaugeId) {
-      return res.status(404).send({message: 'Missing Params!'});
+      return res.status(400).send({message: 'Missing Params!'});
     }
     try {
       const annualFlowData = {},
@@ -113,6 +114,31 @@ module.exports = {
       });
     } catch (e) {
       res.status(400).send(e.toString());
+    }
+  },
+
+  async getPercentilePOR(req, res) {
+    if (!req.body.gaugeId || !req.body.percentile) {
+      return res.status(400).send({message: 'Missing Gauge Id'});
+    }
+    try {
+      const annualFlowArrays = await AnnualFlow.findAll({
+        where: {gaugeId: req.body.gaugeId},
+        attributes: ['flowData'],
+      });
+
+      let flowDataPOR = [];
+      annualFlowArrays.forEach(annualFlow => {
+        flowDataPOR = flowDataPOR.concat(annualFlow.flowData);
+      });
+
+      const percentilePOR = quantile(
+        removeNaN(flowDataPOR),
+        req.body.percentile
+      );
+      return res.status(200).send({percentilePOR});
+    } catch (e) {
+      res.status(500).send(e.toString());
     }
   },
 };

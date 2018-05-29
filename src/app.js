@@ -55,7 +55,7 @@ app.disable('etag');
 //   true,
 //   'America/Los_Angeles'
 // );
-//
+
 // new CronJob( // eslint-disable-line
 //   '30 * * * * *',
 //   () => {
@@ -75,9 +75,9 @@ app.disable('etag');
 //   true,
 //   'America/Los_Angeles'
 // );
-
+//
 // new CronJob( // eslint-disable-line
-//   '45 * * * * *',
+//   '55 * * * * *',
 //   () => {
 //     uploadGaugeHydrographToDatabase();
 //   },

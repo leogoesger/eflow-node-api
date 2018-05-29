@@ -80,6 +80,7 @@ module.exports = app => {
   );
 
   app.post('/api/annualFlows', annualFlowCache, annualFlowsController.show);
+  app.post('/api/annualFlowPOR', annualFlowsController.getPercentilePOR);
 
   app.get('/api/renewClasses', classesController.update);
   app.post('/api/downServer', (req, res) =>
