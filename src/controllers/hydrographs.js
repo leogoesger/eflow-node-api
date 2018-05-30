@@ -19,51 +19,55 @@ module.exports = {
     if (!req.body.gaugeId) {
       return res.status(404).send({message: 'Missing Params!'});
     }
-    const hydrograph = {
-      TEN: [],
-      TWENTYFIVE: [],
-      FIFTY: [],
-      SEVENTYFIVE: [],
-      NINTY: [],
-    };
-    // Add average annual flow data
-    const result = await AnnualFlow.findAll({
-      where: {gaugeId: req.body.gaugeId},
-      attributes: ['year', 'flowData', 'gaugeId'],
-    });
+    try {
+      const hydrograph = {
+        TEN: [],
+        TWENTYFIVE: [],
+        FIFTY: [],
+        SEVENTYFIVE: [],
+        NINTY: [],
+      };
+      // Add average annual flow data
+      const result = await AnnualFlow.findAll({
+        where: {gaugeId: req.body.gaugeId},
+        attributes: ['year', 'flowData', 'gaugeId'],
+      });
 
-    result[0].flowData.forEach((d, index) => {
-      let currentHydrograph = [];
-      result.forEach(f => {
-        if (
-          !isNaN(Number(f.flowData[index])) &&
-          Number(f.flowData[index]) !== 0
-        ) {
-          currentHydrograph.push(Number(f.flowData[index]));
-        }
+      result[0].flowData.forEach((d, index) => {
+        let currentHydrograph = [];
+        result.forEach(f => {
+          if (
+            !isNaN(Number(f.flowData[index])) &&
+            Number(f.flowData[index]) !== 0
+          ) {
+            currentHydrograph.push(Number(f.flowData[index]));
+          }
+        });
+        currentHydrograph = sortBy(currentHydrograph);
+        hydrograph.TEN.push({
+          date: index,
+          flow: quantile(currentHydrograph, 0.1),
+        });
+        hydrograph.TWENTYFIVE.push({
+          date: index,
+          flow: quantile(currentHydrograph, 0.25),
+        });
+        hydrograph.FIFTY.push({
+          date: index,
+          flow: quantile(currentHydrograph, 0.5),
+        });
+        hydrograph.SEVENTYFIVE.push({
+          date: index,
+          flow: quantile(currentHydrograph, 0.75),
+        });
+        hydrograph.NINTY.push({
+          date: index,
+          flow: quantile(currentHydrograph, 0.9),
+        });
       });
-      currentHydrograph = sortBy(currentHydrograph);
-      hydrograph.TEN.push({
-        date: index,
-        flow: quantile(currentHydrograph, 0.1),
-      });
-      hydrograph.TWENTYFIVE.push({
-        date: index,
-        flow: quantile(currentHydrograph, 0.25),
-      });
-      hydrograph.FIFTY.push({
-        date: index,
-        flow: quantile(currentHydrograph, 0.5),
-      });
-      hydrograph.SEVENTYFIVE.push({
-        date: index,
-        flow: quantile(currentHydrograph, 0.75),
-      });
-      hydrograph.NINTY.push({
-        date: index,
-        flow: quantile(currentHydrograph, 0.9),
-      });
-    });
-    res.status(200).send(hydrograph);
+      res.status(200).send(hydrograph);
+    } catch (e) {
+      res.status(500).send(e.toString());
+    }
   },
 };
