@@ -11,29 +11,24 @@
     "yarn": ">= 0.18.0"
   },
   "scripts": {
+    "build": "babel src -d dist",
+    "serve": "node dist/index.js",
     "coveralls": "cat ./coverage/lcov.info | ./node_modules/.bin/coveralls",
     "start": "redis-cli flushall ; nodemon ./src/index.js --exec babel-node",
-    "production":
-      "redis-cli flushall ; NODE_ENV=production nodemon ./src/index.js --exec babel-node",
-    "mocha":
-      "./node_modules/.bin/_mocha test/service --exit --require babel-register --require babel-polyfill",
+    "production": "redis-cli flushall ; NODE_ENV=production nodemon ./src/index.js --exec babel-node",
+    "mocha": "./node_modules/.bin/_mocha test/service --exit --require babel-register --require babel-polyfill",
     "test": "NODE_ENV=test yarn run test-prepare ; NODE_ENV=test npm run mocha",
-    "test-cover":
-      "NODE_ENV=test yarn run test-prepare ; NODE_ENV=test nyc --reporter=text --reporter=lcov npm run mocha",
+    "test-cover": "NODE_ENV=test yarn run test-prepare ; NODE_ENV=test nyc --reporter=text --reporter=lcov npm run mocha",
     "test-coverage": "nyc report --reporter=lcov",
     "migrate": "sequelize db:migrate",
     "prod-migrate": "NODE_ENV=production yarn run migrate;",
     "seed": "sequelize db:seed:all",
     "prod-seed": "NODE_ENV=production sequelize db:seed:all",
-    "prod-prepare":
-      "NODE_ENV=production sequelize db:migrate:undo:all ; NODE_ENV=production yarn run migrate ; NODE_ENV=production yarn run seed",
+    "prod-prepare": "NODE_ENV=production sequelize db:migrate:undo:all ; NODE_ENV=production yarn run migrate ; NODE_ENV=production yarn run seed",
     "test-prepare": "sequelize db:migrate:undo:all ; yarn run migrate",
-    "dev-prepare":
-      "sequelize db:migrate:undo:all ; yarn run migrate ; yarn run seed",
-    "lint":
-      "node_modules/.bin/eslint --fix --ext \".js\" --ignore-pattern node_modules --quiet .",
-    "prettier":
-      "prettier --single-quote --bracket-spacing false --trailing-comma es5 --write '{src,__{tests,mocks}__}/**/*.js'"
+    "dev-prepare": "sequelize db:migrate:undo:all ; yarn run migrate ; yarn run seed",
+    "lint": "node_modules/.bin/eslint --fix --ext \".js\" --ignore-pattern node_modules --quiet .",
+    "prettier": "prettier --single-quote --bracket-spacing false --trailing-comma es5 --write '{src,__{tests,mocks}__}/**/*.js'"
   },
   "dependencies": {
     "assert": "^1.4.1",
