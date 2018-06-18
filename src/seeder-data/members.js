@@ -60,7 +60,7 @@ module.exports = [
     name: 'Gregory B. Pasternack',
     title: 'Associate Professor',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+      'Greg Pasternack is a professor with two decades of interdisciplinary scientific and engineering training and experience, yielding expertise in ecogeomorphology, ecohydraulics, sediment processes, and watershed hydrology.  He leads collaborative efforts that help society manage and restore hydrogeomorphic processes in support of enhanced ecosystem functioning at local to watershed scales.  This requires a combination of basic physical and ecological science to understand how the naturally complex landscape works and then technology transfer to enable practitioners, regulators, and stakeholders to solve problems.',
     image: 'https://s3-us-west-1.amazonaws.com/funcflow/resources/greg.png',
     location: 'University of California, Davis',
     researchGate: 'https://www.researchgate.net/profile/Gregory_Pasternack',
