@@ -16,6 +16,14 @@ module.exports = (sequelizeClient, DataTypes) => {
       type: DataTypes.TEXT,
       allowNull: true,
     },
+    archetypes: {
+      type: DataTypes.JSON,
+      allowNull: true,
+    },
+    medianAttributes: {
+      type: DataTypes.JSON,
+      allowNull: true,
+    },
   });
   geoClass.associate = models => {
     geoClass.belongsTo(models.GeoRegion, {

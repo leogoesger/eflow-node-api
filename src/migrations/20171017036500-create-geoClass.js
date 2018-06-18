@@ -16,6 +16,14 @@ module.exports = {
         type: Sequelize.TEXT,
         allowNull: true,
       },
+      archetypes: {
+        type: Sequelize.JSON,
+        allowNull: true,
+      },
+      medianAttributes: {
+        type: Sequelize.JSON,
+        allowNull: true,
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE,
