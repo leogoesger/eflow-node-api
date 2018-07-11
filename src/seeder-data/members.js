@@ -58,7 +58,7 @@ module.exports = [
   {
     id: 5,
     name: 'Gregory B. Pasternack',
-    title: 'Associate Professor',
+    title: 'Professor',
     description:
       'Greg Pasternack is a professor with two decades of interdisciplinary scientific and engineering training and experience, yielding expertise in ecogeomorphology, ecohydraulics, sediment processes, and watershed hydrology.  He leads collaborative efforts that help society manage and restore hydrogeomorphic processes in support of enhanced ecosystem functioning at local to watershed scales.  This requires a combination of basic physical and ecological science to understand how the naturally complex landscape works and then technology transfer to enable practitioners, regulators, and stakeholders to solve problems.',
     image: 'https://s3-us-west-1.amazonaws.com/funcflow/resources/greg.png',

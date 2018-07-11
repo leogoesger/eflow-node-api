@@ -20,13 +20,13 @@ const regular_gauges = [
     unimpairedStartYear: 1950,
     unimpairedEndYear: 1978,
   },
-  {
-    id: 10287070,
-    classId: 1,
-    stationName: 'something river',
-    unimpairedStartYear: 1969,
-    unimpairedEndYear: 1981,
-  },
+  // {
+  //   id: 10287070,
+  //   classId: 1,
+  //   stationName: 'something river',
+  //   unimpairedStartYear: 1969,
+  //   unimpairedEndYear: 1981,
+  // },
   {
     id: 10291500,
     classId: 1,
