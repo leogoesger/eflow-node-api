@@ -99,4 +99,25 @@ module.exports = [
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
+  {
+    id: 6,
+    title:
+      'Beyond Metrics? The Role of Hydrologic Baseline Archetypes in Environmental Water Management',
+    description:
+      'Balancing ecological and human water needs often requires characterizing key aspects of the natural flow regime and then predicting ecological response to flow alterations. Flow metrics are generally relied upon to characterize long-term average statistical properties of the natural flow regime (hydrologic baseline conditions). However, some key aspects of hydrologic baseline conditions may be better understood through more complete consideration of continuous patterns of daily, seasonal, and inter-annual variability than through summary metrics. Here we propose the additional use of high-resolution dimensionless archetypes of regional stream classes to improve understanding of baseline hydrologic conditions and inform regional environmental flows assessments. In an application to California, we describe the development and analysis of hydrologic baseline archetypes to characterize patterns of flow variability within and between stream classes. We then assess the utility of archetypes to provide context for common flow metrics and improve understanding of linkages between aquatic patterns and processes and their hydrologic controls. Results indicate that these archetypes may offer a distinct and complementary tool for researching mechanistic flow–ecology relationships, assessing regional patterns for streamflow management, or understanding impacts of changing climate.',
+    type: 'HYDROLOGY',
+    authors: [
+      'Belize A. Lane',
+      'Samuel Sandoval-Solis',
+      'Eric D. Stein',
+      'Sarah M. Yarnell',
+      'Gregory B. Pasternack',
+      'Helen E. Dahlke',
+    ],
+    publishedDate: '22 June 2018',
+    journal: 'Springer',
+    paperUrl: 'https://link.springer.com/article/10.1007/s00267-018-1077-7',
+    updatedAt: '2017-11-19T17:25:28.445Z',
+    createdAt: '2017-11-19T17:25:28.445Z',
+  },
 ];
