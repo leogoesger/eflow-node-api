@@ -1,5 +1,5 @@
 import {Classification, Hydrograph, Gauge} from '../models';
-import {calculatePercentileClourse} from '../utils/helpers';
+import {calculatePercentileClourse} from '../utils/calculatePercentiles';
 
 module.exports = {
   index(req, res) {

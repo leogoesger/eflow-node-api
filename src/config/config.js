@@ -13,7 +13,7 @@ module.exports = {
     dialect: 'postgres',
     logging: false,
     pool: {
-      max: 30,
+      max: 100,
       min: 0,
       idle: 1000000,
       acquire: 1000000,

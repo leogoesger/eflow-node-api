@@ -31,6 +31,10 @@ module.exports = app => {
   app.get('/api/classes/:classId', classesController.show);
 
   app.get('/api/gauges', gaugesController.index);
+  app.get(
+    '/api/gauges/updatePercentiles/:id',
+    gaugesController.updatePercentiles
+  );
   app.get('/api/gauges/:gaugeId', gaugesController.show);
   app.post('/api/gauges/search', gaugesController.search);
 
