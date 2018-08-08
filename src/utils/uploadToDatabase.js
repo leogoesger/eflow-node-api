@@ -14,7 +14,7 @@ const Hydrograph = require('../models').Hydrograph;
 import {metricReference} from '../static/metricReference';
 import gaugeReference from '../static/gaugeReference';
 
-const _inputFlowToDatabase = async (result, file) => {
+export const inputFlowToDatabase = async (result, file) => {
   const year = await Year.findOne({
     where: {
       gaugeId: file,
@@ -58,7 +58,7 @@ export const uploadFlowDataToDatabase = async () => {
           }
         })
         .on('done', () => {
-          _inputFlowToDatabase(result, gauge.id);
+          inputFlowToDatabase(result, gauge.id);
         });
     });
   } catch (e) {

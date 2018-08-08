@@ -1,6 +1,5 @@
 const nodemailer = require('nodemailer');
 const mg = require('nodemailer-mailgun-transport');
-const bcrypt = require('bcrypt');
 
 const auth = {
   auth: {
@@ -16,18 +15,6 @@ const auth = {
 const nodeMailerMailgun = nodemailer.createTransport(mg(auth));
 
 module.exports = {
-  downServer(req, res, io) {
-    if (!req.body.secret) {
-      return res.status(400).send('Secret not found');
-    }
-    if (bcrypt.compareSync(req.body.secret, process.env.SERVER_SECRET)) {
-      io.emit('message', req.body.message);
-      res.status(200).send({msg: 'Message broadcasted!'});
-    } else {
-      return res.status(404).send('Something went wrong!');
-    }
-  },
-
   emailReport(req, res) {
     const {name, email, msg} = req.body;
     if (!name || !email || !msg) {

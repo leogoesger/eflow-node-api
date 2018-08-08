@@ -3,7 +3,6 @@ const sequelize = require('sequelize');
 
 import {Gauge} from '../models';
 import {Hydrograph} from '../models';
-import {updateGaugePercentiles} from '../utils/calculatePercentiles';
 
 module.exports = {
   index(req, res) {
@@ -46,16 +45,6 @@ module.exports = {
       });
     } catch (e) {
       res.status(404).send(e.toString());
-    }
-  },
-
-  updatePercentiles(req, res) {
-    try {
-      updateGaugePercentiles(req.params.id).then(() =>
-        res.status(200).send('Success')
-      );
-    } catch (error) {
-      throw error;
     }
   },
 };

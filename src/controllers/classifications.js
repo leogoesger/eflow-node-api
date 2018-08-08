@@ -1,5 +1,4 @@
 import {Classification, Hydrograph, Gauge} from '../models';
-import {calculatePercentileClourse} from '../utils/calculatePercentiles';
 
 module.exports = {
   index(req, res) {
@@ -33,14 +32,5 @@ module.exports = {
     })
       .then(classInfo => res.status(200).send(classInfo))
       .catch(err => res.status(400).send(err));
-  },
-
-  async update(req, res) {
-    try {
-      await calculatePercentileClourse(1);
-      res.status(200).send('success');
-    } catch (e) {
-      res.status(400).send(e.toString());
-    }
   },
 };

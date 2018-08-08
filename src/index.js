@@ -10,3 +10,5 @@ app.set('port', port);
 const server = http.createServer(app);
 app.io.attach(server);
 server.listen(port);
+
+console.log(`Server running at ${port}...`); //eslint-disable-line

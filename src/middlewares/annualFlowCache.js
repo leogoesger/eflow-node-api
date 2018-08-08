@@ -9,8 +9,10 @@ const annualFlowCache = async (req, res, next) => {
 
   client.get(cacheKey, (err, value) => {
     if (value) {
-      console.log('Cached Value!'); //eslint-disable-line
-      res.status(200).send(JSON.parse(value));
+      // console.log('Cached Value!'); //eslint-disable-line
+      // res.status(200).send(JSON.parse(value));
+      req.client = client;
+      next();
     } else {
       req.client = client;
       next();

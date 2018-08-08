@@ -15,8 +15,10 @@ const users = require('./users');
 const releases = require('./releases');
 const geoSites = require('./geoSites');
 const geoRegions = require('./geoRegions');
+const adminUpdates = require('./adminUpdates');
 
 module.exports = {
+  adminUpdates,
   allYears,
   classifications,
   falls,

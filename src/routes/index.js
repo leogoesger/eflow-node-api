@@ -1,6 +1,7 @@
 import {cache} from '../middlewares';
 import {annualFlowCache} from '../middlewares';
 
+const adminUpdates = require('../controllers').adminUpdates;
 const allYearsController = require('../controllers').allYears;
 const classesController = require('../controllers').classifications;
 const fallsController = require('../controllers').falls;
@@ -31,10 +32,6 @@ module.exports = app => {
   app.get('/api/classes/:classId', classesController.show);
 
   app.get('/api/gauges', gaugesController.index);
-  app.get(
-    '/api/gauges/updatePercentiles/:id',
-    gaugesController.updatePercentiles
-  );
   app.get('/api/gauges/:gaugeId', gaugesController.show);
   app.post('/api/gauges/search', gaugesController.search);
 
@@ -83,10 +80,6 @@ module.exports = app => {
   app.post('/api/annualFlows', annualFlowCache, annualFlowsController.show);
   app.post('/api/annualFlowPOR', annualFlowsController.getPercentilePOR);
 
-  app.get('/api/renewClasses', classesController.update);
-  app.post('/api/downServer', (req, res) =>
-    usersController.downServer(req, res, app.io)
-  );
   app.post('/api/bugReport', (req, res) => {
     usersController.emailReport(req, res);
   });
@@ -96,4 +89,26 @@ module.exports = app => {
 
   app.get('/api/geoSites', geoSitesController.index);
   app.get('/api/geoRegions', geoRegionsController.index);
+
+  app.get(
+    '/api/admin/update-class-metrics',
+    adminUpdates.updateClassMetricData
+  );
+  app.get(
+    '/api/admin/update-gauge-metrics/:id',
+    adminUpdates.updateGaugeMetricData
+  );
+  app.post('/api/admin/broadcast-message', (req, res) =>
+    adminUpdates.broadcastDownServerMsg(req, res, app.io)
+  );
+  app.get('/api/admin/upload-flow-date', adminUpdates.uploadFlowData);
+  app.get('/api/admin/upload-metric-result', adminUpdates.uploadMetricResult);
+  app.get(
+    '/api/admin/upload-class-hydrograph',
+    adminUpdates.uploadClassHydrograph
+  );
+  app.get(
+    '/api/admin/upload-gauge-hydrograph',
+    adminUpdates.uploadGaugeHydrograph
+  );
 };

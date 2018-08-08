@@ -48,15 +48,14 @@ module.exports = {
               .find({where: {gaugeId: req.body.gaugeId}})
               .then(d => {
                 annualFlowData[metric.tableName] = {};
-                const columns = metricReferenceAs.filter(
-                  m => m.tableName === metric.tableName
-                );
 
-                columns.forEach(column => {
-                  annualFlowData[metric.tableName][column.columnName] =
-                    Number(d[column.columnName][yearIndex]) === 0
-                      ? 0.01
-                      : d[column.columnName][yearIndex];
+                metricReferenceAs.forEach(column => {
+                  if (column.tableName === metric.tableName) {
+                    annualFlowData[metric.tableName][column.columnName] =
+                      Number(d[column.columnName][yearIndex]) === 0
+                        ? 0.01
+                        : d[column.columnName][yearIndex];
+                  }
                 });
               })
           );
