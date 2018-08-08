@@ -9,12 +9,6 @@ module.exports = {
           {
             model: GeoClass,
             as: 'geoClasses',
-            attributes: [
-              'name',
-              'description',
-              'archetypes',
-              'medianAttributes',
-            ],
             include: [
               {
                 model: GeoSite,
