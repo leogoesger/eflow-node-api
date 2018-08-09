@@ -1,6 +1,5 @@
 import csv from 'csvtojson';
 import request from 'request';
-const bcrypt = require('bcrypt');
 
 const Fall = require('../models').Fall;
 const AllYear = require('../models').AllYear;
@@ -212,14 +211,7 @@ module.exports = {
   },
 
   broadcastDownServerMsg(req, res, io) {
-    if (!req.body.secret) {
-      return res.status(400).send('Secret not found');
-    }
-    if (bcrypt.compareSync(req.body.secret, process.env.SERVER_SECRET)) {
-      io.emit('message', req.body.message);
-      res.status(200).send({msg: 'Message broadcasted!'});
-    } else {
-      return res.status(404).send('Something went wrong!');
-    }
+    io.emit('msg', req.body.message);
+    res.status(200).send({message: req.body.message});
   },
 };
