@@ -10,4 +10,5 @@ module.exports = {
   geoRegions: require('./geoRegions'),
   geoSites: require('./geoSites'),
   releases: require('./releases'),
+  users: require('./users'),
 };

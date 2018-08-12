@@ -1,5 +1,6 @@
 import {cache} from '../middlewares';
 import {annualFlowCache} from '../middlewares';
+const authenticate = require('../middlewares/authentication').authenticate;
 
 const adminUpdates = require('../controllers').adminUpdates;
 const allYearsController = require('../controllers').allYears;
@@ -92,23 +93,38 @@ module.exports = app => {
 
   app.get(
     '/api/admin/update-class-metrics',
+    authenticate,
     adminUpdates.updateClassMetricData
   );
   app.get(
     '/api/admin/update-gauge-metrics/:id',
+    authenticate,
     adminUpdates.updateGaugeMetricData
   );
-  app.post('/api/admin/broadcast-message', (req, res) =>
+  app.post('/api/admin/broadcast-message', authenticate, (req, res) =>
     adminUpdates.broadcastDownServerMsg(req, res, app.io)
   );
-  app.get('/api/admin/upload-flow-date', adminUpdates.uploadFlowData);
-  app.get('/api/admin/upload-metric-result', adminUpdates.uploadMetricResult);
+  app.get(
+    '/api/admin/upload-flow-date',
+    authenticate,
+    adminUpdates.uploadFlowData
+  );
+  app.get(
+    '/api/admin/upload-metric-result',
+    authenticate,
+    adminUpdates.uploadMetricResult
+  );
   app.get(
     '/api/admin/upload-class-hydrograph',
+    authenticate,
     adminUpdates.uploadClassHydrograph
   );
   app.get(
     '/api/admin/upload-gauge-hydrograph',
+    authenticate,
     adminUpdates.uploadGaugeHydrograph
   );
+
+  app.post('/api/user/signup', usersController.signUp);
+  app.post('/api/user/login', usersController.login);
 };
