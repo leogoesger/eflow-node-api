@@ -31,11 +31,11 @@ module.exports = {
         })
       )
         .then(user => {
-          const FF_JWT = jwt.sign(
+          const ff_jwt = jwt.sign(
             {firstName: user.firstName, email: body.email},
             process.env.FF_JWT_TOKEN
           );
-          res.status(200).send({FF_JWT, user});
+          res.status(200).send({ff_jwt, user});
         })
         .catch(err => res.status(400).send(err));
     }
@@ -52,11 +52,11 @@ module.exports = {
     })
       .then(user => {
         if (bcrypt.compareSync(req.body.password, user.password)) {
-          const FF_JWT = jwt.sign(
+          const ff_jwt = jwt.sign(
             {firstName: user.firstName, email: req.body.email},
             process.env.FF_JWT_TOKEN
           );
-          return res.status(200).send({FF_JWT, user});
+          return res.status(200).send({ff_jwt, user});
         }
         res.status(404).send({message: 'Wrong Password!'});
       })

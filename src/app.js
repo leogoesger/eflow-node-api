@@ -35,7 +35,7 @@ app.use((req, res, next) => {
   }
   res.header(
     'Access-Control-Allow-Headers',
-    'Origin, X-Requested-With, Content-Type, FF_JWT, Accept'
+    'Origin, X-Requested-With, Content-Type, FF_JWT, ff_jwt, Accept'
   );
   next();
 });
