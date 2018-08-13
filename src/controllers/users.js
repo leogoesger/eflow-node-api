@@ -51,6 +51,8 @@ module.exports = {
       },
     })
       .then(user => {
+        console.log(req.body.password, user.password);
+        console.log(bcrypt.compareSync(req.body.password, user.password));
         if (bcrypt.compareSync(req.body.password, user.password)) {
           const FF_JWT = jwt.sign(
             {firstName: user.firstName, email: req.body.email},
