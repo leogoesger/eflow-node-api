@@ -61,8 +61,6 @@ module.exports = (sequelize, DataTypes) => {
   User.findByToken = token => {
     let decoded;
     try {
-      console.log(token, process.env.FF_JWT_TOKEN); //eslint-disable-line
-      console.log(jwt.verify(token, process.env.FF_JWT_TOKEN));
       decoded = jwt.verify(token, process.env.FF_JWT_TOKEN);
       return User.find({where: {email: decoded.email}});
     } catch (e) {

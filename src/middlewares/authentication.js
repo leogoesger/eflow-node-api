@@ -1,7 +1,8 @@
 const User = require('../models').User;
 
 const authenticate = (req, res, next) => {
-  const token = req.header('FF_JWT');
+  const token = req.get('FF_JWT');
+  console.log(token); //eslint-disable-line
   User.findByToken(token)
     .then(user => {
       if (!user) {
