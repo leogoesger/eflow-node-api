@@ -56,7 +56,6 @@ module.exports = {
             {firstName: user.firstName, email: req.body.email},
             process.env.FF_JWT_TOKEN
           );
-          console.log(FF_JWT, user);
           return res.status(200).send({FF_JWT, user});
         }
         res.status(404).send({message: 'Wrong Password!'});
