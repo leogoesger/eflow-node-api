@@ -91,12 +91,12 @@ module.exports = app => {
   app.get('/api/geoSites', geoSitesController.index);
   app.get('/api/geoRegions', geoRegionsController.index);
 
-  app.get(
+  app.post(
     '/api/admin/update-class-metrics',
     authenticate,
     adminUpdates.updateClassMetricData
   );
-  app.get(
+  app.post(
     '/api/admin/update-gauge-metrics/:id',
     authenticate,
     adminUpdates.updateGaugeMetricData
@@ -104,22 +104,22 @@ module.exports = app => {
   app.post('/api/admin/broadcast-message', authenticate, (req, res) =>
     adminUpdates.broadcastDownServerMsg(req, res, app.io)
   );
-  app.get(
+  app.post(
     '/api/admin/upload-flow-date',
     authenticate,
     adminUpdates.uploadFlowData
   );
-  app.get(
+  app.post(
     '/api/admin/upload-metric-result',
     authenticate,
     adminUpdates.uploadMetricResult
   );
-  app.get(
+  app.post(
     '/api/admin/upload-class-hydrograph',
     authenticate,
     adminUpdates.uploadClassHydrograph
   );
-  app.get(
+  app.post(
     '/api/admin/upload-gauge-hydrograph',
     authenticate,
     adminUpdates.uploadGaugeHydrograph
