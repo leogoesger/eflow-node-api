@@ -17,7 +17,7 @@
         "start":
             "redis-cli flushall ; nodemon ./src/index.js --exec babel-node",
         "production":
-            "redis-cli flushall ; NODE_ENV=production node ./src/index.js --exec babel-node",
+            "redis-cli flushall ; NODE_ENV=production nodemon ./src/index.js --exec babel-node",
         "mocha":
             "./node_modules/.bin/_mocha test/service --exit --require babel-register --require babel-polyfill",
         "test":
