@@ -84,8 +84,9 @@ module.exports = {
           ],
         }).then(d => {
           annualFlowData.Gauge = d;
-          annualFlowData.condition =
-            d.conditions[0] && d.conditions[0].conditions[yearIndex];
+          annualFlowData.condition = d.conditions[0]
+            ? d.conditions[0].conditions[yearIndex]
+            : 'Unknown Condition';
         })
       );
 
