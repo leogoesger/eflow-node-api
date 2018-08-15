@@ -5,7 +5,7 @@ import {
   gaugeNonDimValues,
   getJulianOffsetDate,
 } from '../utils/helpers';
-import {Gauge} from '../models';
+import {Gauge, Condition} from '../models';
 
 const setRedis = (req, nonDim, type, data) => {
   const dimHolder = nonDim ? 'nonDim' : 'dim';
@@ -39,6 +39,12 @@ export const getBoxPlotHelper = async (
             model: Gauge,
             as: 'gauge',
             attributes: ['id'],
+            include: [
+              {
+                model: Condition,
+                as: 'conditions',
+              },
+            ],
           },
         ],
       });
@@ -46,6 +52,8 @@ export const getBoxPlotHelper = async (
       //Non dimensionalize all metrics except timings ones
       if (req.body.metric.includes('timing')) {
         fallMetric.forEach(metric => {
+          const gaugeConditions =
+            metric.gauge.conditions[0] && metric.gauge.conditions[0].conditions;
           const arrayWithNull = metric[req.body.metric].map(d => {
             if (!isNaN(Number(d))) {
               return getJulianOffsetDate(Number(d));
@@ -53,6 +61,14 @@ export const getBoxPlotHelper = async (
             return null;
           });
           metric[req.body.metric] = arrayWithNull.filter(d => d);
+          // removing by conditions
+          if (condition && gaugeConditions && gaugeConditions.length > 0) {
+            metric[req.body.metric] = metric[
+              req.body.metric
+            ].filter((d, index) => {
+              return gaugeConditions[index] === condition;
+            });
+          }
         });
       } else if (!req.body.metric.includes('timing') && req.body.nonDim) {
         fallMetric = await nonDimValues(req, fallMetric);

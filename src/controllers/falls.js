@@ -13,9 +13,14 @@ module.exports = {
     if (!req.body.metric && Boolean(!req.body.gaugeId || !req.body.classId)) {
       res.status(400).send({message: 'Missing attributes'});
     }
-    const {conditions} = await Condition.findOne({
+
+    const data = await Condition.findOne({
       where: {gaugeId: req.body.gaugeId},
     });
+    let conditions;
+    if (data) {
+      conditions = data.conditions;
+    }
 
     getBoxPlotHelper(req, res, Fall, 'Fall', conditions, req.body.condition);
   },
