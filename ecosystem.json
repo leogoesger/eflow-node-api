@@ -1,16 +1,16 @@
 {
-  "apps": [
-    {
-      "name": "eflow-api",
-      "exec_interpreter": "./node_modules/.bin/babel-node",
-      "script": "dist/index.js",
-      "watch": true,
-      "env": {
-        "NODE_ENV": "development"
-      },
-      "env_production": {
-        "NODE_ENV": "production"
-      }
-    }
-  ]
+    "apps": [
+        {
+            "name": "eflow-api",
+            "exec_interpreter": "./node_modules/.bin/babel-node",
+            "script": "dist/index.js",
+            "watch": true,
+            "env": {
+                "NODE_ENV": "development"
+            },
+            "env_production": {
+                "NODE_ENV": "production"
+            }
+        }
+    ]
 }
