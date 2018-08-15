@@ -1,4 +1,4 @@
-import {Fall} from '../models';
+import {Fall, Condition} from '../models';
 
 import {getBoxPlotHelper} from './shared';
 
@@ -9,10 +9,14 @@ module.exports = {
       .catch(err => res.status(400).send(err));
   },
 
-  getBoxPlotAttributes(req, res) {
+  async getBoxPlotAttributes(req, res) {
     if (!req.body.metric && Boolean(!req.body.gaugeId || !req.body.classId)) {
       res.status(400).send({message: 'Missing attributes'});
     }
-    getBoxPlotHelper(req, res, Fall, 'Fall');
+    const {conditions} = await Condition.findOne({
+      where: {gaugeId: req.body.gaugeId},
+    });
+
+    getBoxPlotHelper(req, res, Fall, 'Fall', conditions, req.body.condition);
   },
 };

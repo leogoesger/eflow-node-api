@@ -120,4 +120,19 @@ module.exports = [
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
+  {
+    id: 7,
+    title:
+      'AN EXTENSIBLE FRAMEWORK FOR INTEGRATING ECOHYDRAULICS AND ECOHYDROLOGY IN REGIONAL ENVIRONMENTAL FLOWS',
+    description:
+      'We outline an extensible approach for synthesizing ecohydraulic, ecogeomorphic, and ecohydrologic information at the regional scale to improve spatially-explicit representation of environmental water needs at management scales. Just as the ELOHA framework uses regional hydrologic classification to stratify flow – ecology relationships by natural stream class, we propose the additional use of a reach-scale regional geomorphic classification to stratify flow – hydraulic suitability relationships by river type. Traditional flow assessment approaches are combined with several emerging methods to evaluate spatially-distributed ecosystem function performance under different water management scenarios. This approach can be used to test proposed environmental flows from other studies, to generate ecologically optimal flow regimes for a single ecosystem function of interest given human management constraints, or to evaluate tradeoffs across ecosystem functions or between human and ecosystem water needs.',
+    type: 'ECOLOGY',
+    authors: ['Belize A. Lane', 'Gregory B. Pasternack'],
+    publishedDate: '22 June 2018',
+    journal: 'Springer',
+    paperUrl:
+      'https://s3-us-west-1.amazonaws.com/funcflow/resources/ISE2018_Lane+Abstract_4p.pdf',
+    updatedAt: '2017-11-19T17:25:28.445Z',
+    createdAt: '2017-11-19T17:25:28.445Z',
+  },
 ];

@@ -10,6 +10,7 @@ const Winter = require('../models').Winter;
 const Year = require('../models').Year;
 const AnnualFlow = require('../models').AnnualFlow;
 const Hydrograph = require('../models').Hydrograph;
+const Condition = require('../models').Condition;
 
 import {
   calculatePercentileClourse,
@@ -18,6 +19,7 @@ import {
 import {metricReference} from '../static/metricReference';
 import gaugeReference from '../static/gaugeReference';
 import {inputFlowToDatabase} from '../utils/uploadToDatabase';
+import S3 from '../utils/S3';
 
 const PERCENTILLE = [
   'TEN',
@@ -69,6 +71,42 @@ module.exports = {
     } catch (e) {
       res.status(400).send({message: e.toString()});
     }
+  },
+
+  async uploadAnnualCondition(req, res) {
+    // const url = `${process.env.S3_BUCKET}annual_conditions/`;
+    await Condition.destroy({where: {}});
+    const folder = encodeURIComponent('annual_conditions') + '/';
+    S3.listObjects({Prefix: folder}, (err, data) => {
+      const files = data.Contents
+        .map(f => f.Key)
+        .filter((f, i) => i !== 0)
+        .map(f => `${process.env.S3_BUCKET}${f}`);
+
+      const promises = [];
+
+      files.forEach(file => {
+        const annual_conditions = {
+          gaugeId: file.split('/')[5].split('.')[0],
+          conditions: [],
+        };
+
+        csv({
+          noheader: true,
+        })
+          .fromStream(request.get(file))
+          .on('csv', csvRow => {
+            annual_conditions.conditions.push(csvRow[1]);
+          })
+          .on('done', () => {
+            promises.push(Condition.create(annual_conditions));
+          });
+      });
+
+      Promise.all(promises)
+        .then(() => res.status(200).send({message: 'success'}))
+        .catch(e => res.status(404).send({message: e.toString()}));
+    });
   },
 
   async uploadMetricResult(req, res) {

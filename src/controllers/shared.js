@@ -18,7 +18,14 @@ const setRedis = (req, nonDim, type, data) => {
   );
 };
 
-export const getBoxPlotHelper = async (req, res, classModel, tableName) => {
+export const getBoxPlotHelper = async (
+  req,
+  res,
+  classModel,
+  tableName,
+  conditions,
+  condition
+) => {
   try {
     //Search based on classId
     if (req.body.classId) {
@@ -89,7 +96,9 @@ export const getBoxPlotHelper = async (req, res, classModel, tableName) => {
     const boxPlotAttributes = getGaugeBoxPlotObject(
       metric[0][req.body.metric],
       req.body.metric,
-      tableName
+      tableName,
+      conditions,
+      condition
     );
 
     if (process.env.NODE_ENV !== 'test') {
