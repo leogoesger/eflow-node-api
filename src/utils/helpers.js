@@ -140,33 +140,47 @@ export const nonDimValues = async (req, metrics) => {
   return nonDimArray;
 };
 
-export const getGaugeBoxPlotObject = (metricArray, metricName, category) => {
-  const filteredMetricArray = removeNaN(metricArray),
-    boxPlotAttributes = {
-      type: 'Gauge',
-      metricName: `${category.toLowerCase()}${metricName[0].toUpperCase()}${metricName.slice(
-        1
-      )}`,
-      quartile: [
-        round(d3.quantile(filteredMetricArray, 0.25), 4) === 0
-          ? 0.0001
-          : round(d3.quantile(filteredMetricArray, 0.25), 4),
-        round(d3.quantile(filteredMetricArray, 0.5), 4) === 0
-          ? 0.0001
-          : round(d3.quantile(filteredMetricArray, 0.5), 4),
-        round(d3.quantile(filteredMetricArray, 0.75), 4) === 0
-          ? 0.0001
-          : round(d3.quantile(filteredMetricArray, 0.75), 4),
-      ],
-      whiskers: [
-        round(d3.quantile(filteredMetricArray, 0.1), 4) === 0
-          ? 0.0001
-          : round(d3.quantile(filteredMetricArray, 0.1), 4),
-        round(d3.quantile(filteredMetricArray, 0.9), 4) === 0
-          ? 0.0001
-          : round(d3.quantile(filteredMetricArray, 0.9), 4),
-      ],
-    };
+export const getGaugeBoxPlotObject = (
+  metricArray,
+  metricName,
+  category,
+  conditions,
+  condition
+) => {
+  const filteredMetricArray = removeNaN(metricArray).filter((v, index) => {
+    if (!condition || !conditions || conditions.length < 0) {
+      return true;
+    }
+    if (conditions[index] === condition) {
+      return true;
+    }
+    return false;
+  });
+  const boxPlotAttributes = {
+    type: 'Gauge',
+    metricName: `${category.toLowerCase()}${metricName[0].toUpperCase()}${metricName.slice(
+      1
+    )}`,
+    quartile: [
+      round(d3.quantile(filteredMetricArray, 0.25), 4) === 0
+        ? 0.0001
+        : round(d3.quantile(filteredMetricArray, 0.25), 4),
+      round(d3.quantile(filteredMetricArray, 0.5), 4) === 0
+        ? 0.0001
+        : round(d3.quantile(filteredMetricArray, 0.5), 4),
+      round(d3.quantile(filteredMetricArray, 0.75), 4) === 0
+        ? 0.0001
+        : round(d3.quantile(filteredMetricArray, 0.75), 4),
+    ],
+    whiskers: [
+      round(d3.quantile(filteredMetricArray, 0.1), 4) === 0
+        ? 0.0001
+        : round(d3.quantile(filteredMetricArray, 0.1), 4),
+      round(d3.quantile(filteredMetricArray, 0.9), 4) === 0
+        ? 0.0001
+        : round(d3.quantile(filteredMetricArray, 0.9), 4),
+    ],
+  };
   return boxPlotAttributes;
 };
 

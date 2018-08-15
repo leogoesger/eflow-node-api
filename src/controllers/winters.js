@@ -1,4 +1,4 @@
-import {Winter} from '../models';
+import {Winter, Condition} from '../models';
 import {getBoxPlotHelper} from './shared';
 
 module.exports = {
@@ -8,10 +8,24 @@ module.exports = {
       .catch(err => res.status(400).send(err));
   },
 
-  getBoxPlotAttributes(req, res) {
+  async getBoxPlotAttributes(req, res) {
     if (!req.body.metric && Boolean(!req.body.gaugeId || !req.body.classId)) {
       res.status(400).send({message: 'Missing attributes'});
     }
-    getBoxPlotHelper(req, res, Winter, 'Winter');
+    const data = await Condition.findOne({
+      where: {gaugeId: req.body.gaugeId},
+    });
+    let conditions;
+    if (data) {
+      conditions = data.conditions;
+    }
+    getBoxPlotHelper(
+      req,
+      res,
+      Winter,
+      'Winter',
+      conditions,
+      req.body.condition
+    );
   },
 };

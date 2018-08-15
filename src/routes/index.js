@@ -124,6 +124,11 @@ module.exports = app => {
     authenticate,
     adminUpdates.uploadGaugeHydrograph
   );
+  app.post(
+    '/api/admin/upload_flow_condition',
+    authenticate,
+    adminUpdates.uploadAnnualCondition
+  );
 
   app.post('/api/user/signup', usersController.signUp);
   app.post('/api/user/login', usersController.login);

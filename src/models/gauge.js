@@ -173,6 +173,10 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: 'gaugeId',
       as: 'hydrographs',
     });
+    Gauge.hasMany(models.Condition, {
+      foreignKey: 'gaugeId',
+      as: 'conditions',
+    });
   };
   return Gauge;
 };

@@ -28,7 +28,10 @@ const cache = async (req, res, next) => {
   client.get(cacheKey, (err, value) => {
     if (value) {
       console.log('Cached Value!'); //eslint-disable-line
-      res.status(200).send(JSON.parse(value));
+      // res.status(200).send(JSON.parse(value));
+      req.client = client;
+      req.tableName = tableName;
+      next();
     } else {
       req.client = client;
       req.tableName = tableName;

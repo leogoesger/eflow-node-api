@@ -11,6 +11,7 @@ import {
   Winter,
   Year,
   Gauge,
+  Condition,
 } from '../models';
 import {removeNaN} from '../utils/helpers';
 import {metricReferenceAs} from '../static/metricReference';
@@ -75,8 +76,17 @@ module.exports = {
             'unimpairedEndYear',
             'classId',
           ],
+          include: [
+            {
+              model: Condition,
+              as: 'conditions',
+            },
+          ],
         }).then(d => {
           annualFlowData.Gauge = d;
+          annualFlowData.condition = d.conditions[0]
+            ? d.conditions[0].conditions[yearIndex]
+            : 'Unknown Condition';
         })
       );
 
