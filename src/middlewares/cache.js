@@ -13,12 +13,16 @@ const cache = async (req, res, next) => {
   let cacheKey;
   if (req.body.classId) {
     cacheKey = req.body.nonDim
-      ? `${req.body.classId}_${tableName}_${req.body.metric}_nonDim_boxplot`
-      : `${req.body.classId}_${tableName}_${req.body.metric}_dim_boxplot`;
+      ? `${req.body.classId}_${tableName}_${req.body
+          .metric}_nonDim_boxplot_${req.body.condition}`
+      : `${req.body.classId}_${tableName}_${req.body.metric}_dim_boxplot_${req
+          .body.condition}`;
   } else {
     cacheKey = req.body.nonDim
-      ? `${req.body.gaugeId}_${tableName}_${req.body.metric}_nonDim_boxplot`
-      : `${req.body.gaugeId}_${tableName}_${req.body.metric}_dim_boxplot`;
+      ? `${req.body.gaugeId}_${tableName}_${req.body
+          .metric}_nonDim_boxplot_${req.body.condition}`
+      : `${req.body.gaugeId}_${tableName}_${req.body.metric}_dim_boxplot_${req
+          .body.condition}`;
   }
   if (process.env.NODE_ENV === 'test') {
     req.client = client;
@@ -28,10 +32,7 @@ const cache = async (req, res, next) => {
   client.get(cacheKey, (err, value) => {
     if (value) {
       console.log('Cached Value!'); //eslint-disable-line
-      // res.status(200).send(JSON.parse(value));
-      req.client = client;
-      req.tableName = tableName;
-      next();
+      res.status(200).send(JSON.parse(value));
     } else {
       req.client = client;
       req.tableName = tableName;

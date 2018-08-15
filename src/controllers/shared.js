@@ -11,7 +11,7 @@ const setRedis = (req, nonDim, type, data) => {
   const dimHolder = nonDim ? 'nonDim' : 'dim';
   req.client.set(
     `${req.body[type]}_${req.tableName}_${req.body
-      .metric}_${dimHolder}_boxplot`,
+      .metric}_${dimHolder}_boxplot_${req.body.condition}`,
     JSON.stringify(data),
     'EX',
     process.env.REDIS_TIMER
