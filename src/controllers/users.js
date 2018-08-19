@@ -1,11 +1,10 @@
 const nodemailer = require('nodemailer');
 const mg = require('nodemailer-mailgun-transport');
-const User = require('../models').User;
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
 import {omit} from 'lodash';
 
-import {UploadData} from '../models';
+import {UploadData, User} from '../models';
 
 const auth = {
   auth: {
@@ -97,7 +96,20 @@ module.exports = {
         {
           model: UploadData,
           as: 'uploadData',
-          attributes: ['name', 'createdAt', 'id'],
+          attributes: [
+            'name',
+            'createdAt',
+            'yearRanges',
+            'id',
+            'flowMatrix',
+            'DRH',
+            'allYear',
+            'winter',
+            'fall',
+            'summer',
+            'spring',
+            'fallWinter',
+          ],
         },
       ],
     })
@@ -118,6 +130,7 @@ module.exports = {
             lastName: user.lastName,
             role: user.role,
             email: user.email,
+            uploadData: user.uploadData,
           });
         }
         res.status(404).send({message: 'Wrong Password!'});
@@ -133,7 +146,20 @@ module.exports = {
         {
           model: UploadData,
           as: 'uploadData',
-          attributes: ['name', 'createdAt', 'id'],
+          attributes: [
+            'name',
+            'yearRanges',
+            'createdAt',
+            'id',
+            'flowMatrix',
+            'DRH',
+            'allYear',
+            'winter',
+            'fall',
+            'summer',
+            'spring',
+            'fallWinter',
+          ],
         },
       ],
     })
@@ -166,6 +192,19 @@ module.exports = {
         throw error;
       }
       res.status(200).send({message: 'Form Submitted!'});
+    });
+  },
+
+  deleteUploadedFile(req, res) {
+    UploadData.findById(req.body.id, {
+      include: [{model: User, as: 'user', attributes: ['id']}],
+    }).then(d => {
+      if (d.user.id === req.user.id) {
+        d.destroy();
+        res.status(200).send({message: 'Deleted!'});
+      } else {
+        res.status(400).send({message: 'Not allowed!'});
+      }
     });
   },
 };
