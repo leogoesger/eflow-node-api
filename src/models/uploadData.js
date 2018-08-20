@@ -1,0 +1,63 @@
+'use strict';
+
+module.exports = (sequelizeClient, DataTypes) => {
+  const UploadData = sequelizeClient.define('UploadData', {
+    id: {
+      allowNull: false,
+      autoIncrement: true,
+      primaryKey: true,
+      type: DataTypes.INTEGER,
+    },
+    name: {
+      type: DataTypes.TEXT,
+      allowNull: false,
+    },
+    startDate: {
+      type: DataTypes.TEXT,
+      allowNull: false,
+    },
+    yearRanges: {
+      type: DataTypes.JSONB, // eslint-disable-line
+      allowNull: false,
+    },
+    flowMatrix: {
+      type: DataTypes.JSONB, // eslint-disable-line
+      allowNull: false,
+    },
+    DRH: {
+      type: DataTypes.JSONB, // eslint-disable-line
+      allowNull: false,
+    },
+    allYear: {
+      type: DataTypes.JSONB, // eslint-disable-line
+      allowNull: false,
+    },
+    winter: {
+      type: DataTypes.JSONB, // eslint-disable-line
+      allowNull: false,
+    },
+    fall: {
+      type: DataTypes.JSONB, // eslint-disable-line
+      allowNull: false,
+    },
+    summer: {
+      type: DataTypes.JSONB, // eslint-disable-line
+      allowNull: false,
+    },
+    spring: {
+      type: DataTypes.JSONB, // eslint-disable-line
+      allowNull: false,
+    },
+    fallWinter: {
+      type: DataTypes.JSONB, // eslint-disable-line
+      allowNull: false,
+    },
+  });
+  UploadData.associate = models => {
+    UploadData.belongsTo(models.User, {
+      foreignKey: 'userId',
+      as: 'user',
+    });
+  };
+  return UploadData;
+};

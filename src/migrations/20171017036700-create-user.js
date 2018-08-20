@@ -17,11 +17,6 @@ module.exports = {
         type: Sequelize.TEXT,
         allowNull: false,
       },
-      middleName: {
-        type: Sequelize.TEXT,
-        allowNull: true,
-        defaultValue: '',
-      },
       lastName: {
         type: Sequelize.TEXT,
         allowNull: false,
@@ -35,25 +30,9 @@ module.exports = {
         type: Sequelize.TEXT,
         allowNull: false,
       },
-      address1: {
+      institution: {
         type: Sequelize.TEXT,
         allowNull: true,
-        defaultValue: '',
-      },
-      address2: {
-        type: Sequelize.TEXT,
-        allowNull: true,
-        defaultValue: '',
-      },
-      city: {
-        type: Sequelize.TEXT,
-        allowNull: true,
-        defaultValue: '',
-      },
-      zip: {
-        type: Sequelize.TEXT,
-        allowNull: true,
-        defaultValue: '',
       },
       createdAt: {
         allowNull: false,

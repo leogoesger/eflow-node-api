@@ -25,11 +25,21 @@ const bodyParser = require('body-parser');
 //   'https://environmentalflow.ucdavis.edu',
 // ];
 
+// const corsOptions = {
+//   origin(origin, callback) {
+//     if (allowed_header.indexOf(origin) === -1) {
+//       callback(new Error('Not allowed by CORS'));
+//     } else {
+//       callback(null, true);
+//     }
+//   },
+// };
+
 const app = express();
 
 app.use(cors());
 app.use(logger('tiny'));
-app.use(bodyParser.json());
+app.use(bodyParser.json({limit: '1mb', extended: true}));
 
 app.io = require('socket.io')({
   origins: ['http://localhost:3000', 'http://localhost:4000', '*:*'],

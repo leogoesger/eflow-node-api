@@ -18,11 +18,6 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.TEXT,
       allowNull: false,
     },
-    middleName: {
-      type: DataTypes.TEXT,
-      allowNull: true,
-      defaultValue: '',
-    },
     lastName: {
       type: DataTypes.TEXT,
       allowNull: false,
@@ -36,32 +31,37 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.TEXT,
       allowNull: false,
     },
-    address1: {
+    institution: {
       type: DataTypes.TEXT,
       allowNull: true,
-      defaultValue: '',
-    },
-    address2: {
-      type: DataTypes.TEXT,
-      allowNull: true,
-      defaultValue: '',
-    },
-    city: {
-      type: DataTypes.TEXT,
-      allowNull: true,
-      defaultValue: '',
-    },
-    zip: {
-      type: DataTypes.TEXT,
-      allowNull: true,
-      defaultValue: '',
     },
   });
+
+  User.associate = models => {
+    User.hasMany(models.UploadData, {
+      foreignKey: 'userId',
+      as: 'uploadData',
+    });
+  };
 
   User.findByToken = token => {
     let decoded;
     try {
       decoded = jwt.verify(token, process.env.FF_JWT_TOKEN);
+      return User.find({where: {email: decoded.email}});
+    } catch (e) {
+      return Promise.reject();
+    }
+  };
+
+  User.findByTokenAdmin = token => {
+    let decoded;
+    try {
+      decoded = jwt.verify(token, process.env.FF_JWT_TOKEN);
+      const role = decoded.role;
+      if (role !== 'ADMIN') {
+        return Promise.reject();
+      }
       return User.find({where: {email: decoded.email}});
     } catch (e) {
       return Promise.reject();

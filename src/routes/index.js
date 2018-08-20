@@ -1,6 +1,8 @@
 import {cache} from '../middlewares';
 import {annualFlowCache} from '../middlewares';
 const authenticate = require('../middlewares/authentication').authenticate;
+const authenticateAdmin = require('../middlewares/authentication')
+  .authenticateAdmin;
 
 const adminUpdates = require('../controllers').adminUpdates;
 const allYearsController = require('../controllers').allYears;
@@ -20,6 +22,8 @@ const usersController = require('../controllers').users;
 const releasesController = require('../controllers').releases;
 const geoSitesController = require('../controllers').geoSites;
 const geoRegionsController = require('../controllers').geoRegions;
+
+const flaskAPIs = require('../APIs').flaskAPIs;
 
 module.exports = app => {
   app.post('/api/years', yearsController.show);
@@ -93,43 +97,51 @@ module.exports = app => {
 
   app.post(
     '/api/admin/update-class-metrics',
-    authenticate,
+    authenticateAdmin,
     adminUpdates.updateClassMetricData
   );
   app.post(
     '/api/admin/update-gauge-metrics/:id',
-    authenticate,
+    authenticateAdmin,
     adminUpdates.updateGaugeMetricData
   );
-  app.post('/api/admin/broadcast-message', authenticate, (req, res) =>
+  app.post('/api/admin/broadcast-message', authenticateAdmin, (req, res) =>
     adminUpdates.broadcastDownServerMsg(req, res, app.io)
   );
   app.post(
     '/api/admin/upload-flow-date',
-    authenticate,
+    authenticateAdmin,
     adminUpdates.uploadFlowData
   );
   app.post(
     '/api/admin/upload-metric-result',
-    authenticate,
+    authenticateAdmin,
     adminUpdates.uploadMetricResult
   );
   app.post(
     '/api/admin/upload-class-hydrograph',
-    authenticate,
+    authenticateAdmin,
     adminUpdates.uploadClassHydrograph
   );
   app.post(
     '/api/admin/upload-gauge-hydrograph',
-    authenticate,
+    authenticateAdmin,
     adminUpdates.uploadGaugeHydrograph
   );
   app.post(
     '/api/admin/upload_flow_condition',
-    authenticate,
+    authenticateAdmin,
     adminUpdates.uploadAnnualCondition
   );
 
   app.post('/api/user/signup', usersController.signUp);
   app.post('/api/user/login', usersController.login);
+  app.post('/api/user/getme', authenticate, usersController.getMe);
+  app.delete(
+    '/api/uploadData',
+    authenticate,
+    usersController.deleteUploadedFile
+  );
+
+  app.post('/api/uploadData', authenticate, flaskAPIs.calculateMetrics);
 };
