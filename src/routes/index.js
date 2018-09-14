@@ -88,6 +88,7 @@ module.exports = app => {
   app.post('/api/bugReport', (req, res) => {
     usersController.emailReport(req, res);
   });
+  app.get('/api/userInfo', authenticateAdmin, usersController.getUsersInfo);
 
   app.get('/api/releases', releasesController.getReleases);
   app.post('/api/releases', releasesController.createRelease);

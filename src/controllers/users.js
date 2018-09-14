@@ -20,6 +20,9 @@ const auth = {
 const nodeMailerMailgun = nodemailer.createTransport(mg(auth));
 
 module.exports = {
+  getUsersInfo(req, res) {
+    User.findAll().then(d => res.status(200).send(d.length));
+  },
   signUp(req, res) {
     if (!req.body.email || !req.body.password) {
       return res.status(400).send('email not found');
@@ -53,7 +56,7 @@ module.exports = {
             uploadData: [],
           });
         })
-        .catch(err => res.status(400).send(err));
+        .catch(_ => res.status(400).send({message: 'Invalide Submission'}));
     } else {
       const body = omit(req.body, ['secret', 'role']);
       User.create(
@@ -133,7 +136,7 @@ module.exports = {
             uploadData: user.uploadData,
           });
         }
-        res.status(404).send({message: 'Wrong Password!'});
+        return res.status(404).send({message: 'Wrong Password!'});
       })
       .catch(() =>
         res.status(400).send({message: 'Could not find your email!'})
@@ -172,7 +175,7 @@ module.exports = {
           uploadData: user.uploadData,
         })
       )
-      .catch(err => res.status(404).send(err));
+      .catch(_ => res.status(404).send({message: 'Invalid Submission'}));
   },
 
   emailReport(req, res) {

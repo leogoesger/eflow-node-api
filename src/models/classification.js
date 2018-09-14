@@ -27,43 +27,43 @@ module.exports = (sequelize, DataTypes) => {
     SP_Mag: {type: DataTypes.ARRAY(DataTypes.DECIMAL(10, 2)), allowNull: true}, //eslint-disable-line
     SP_Dur: {type: DataTypes.ARRAY(DataTypes.DECIMAL(10, 2)), allowNull: true}, //eslint-disable-line
     SP_ROC: {type: DataTypes.ARRAY(DataTypes.DECIMAL(10, 2)), allowNull: true}, //eslint-disable-line
-    SU_BFL_Tim: {
+    DS_Tim: {
       type: DataTypes.ARRAY(DataTypes.DECIMAL(10, 2)), //eslint-disable-line
       allowNull: true,
     },
-    SU_BFL_Mag_10: {
+    DS_Mag_10: {
       type: DataTypes.ARRAY(DataTypes.DECIMAL(10, 2)), //eslint-disable-line
       allowNull: true,
     },
-    SU_BFL_Mag_50: {
+    DS_Mag_50: {
       type: DataTypes.ARRAY(DataTypes.DECIMAL(10, 2)), //eslint-disable-line
       allowNull: true,
     },
-    SU_BFL_Dur_Fl: {
+    DS_Dur_Fl: {
       type: DataTypes.ARRAY(DataTypes.DECIMAL(10, 2)), //eslint-disable-line
       allowNull: true,
     },
-    SU_BFL_Dur_Wet: {
+    DS_Dur_Wet: {
       type: DataTypes.ARRAY(DataTypes.DECIMAL(10, 2)), //eslint-disable-line
       allowNull: true,
     },
-    SU_BFL_No_Flow: {
+    DS_No_Flow: {
       type: DataTypes.ARRAY(DataTypes.DECIMAL(10, 2)), //eslint-disable-line
       allowNull: true,
     },
-    FAFL_Tim: {
+    WSI_Tim: {
       type: DataTypes.ARRAY(DataTypes.DECIMAL(10, 2)), //eslint-disable-line
       allowNull: true,
     },
-    FAFL_Mag: {
+    WSI_Mag: {
       type: DataTypes.ARRAY(DataTypes.DECIMAL(10, 2)), //eslint-disable-line
       allowNull: true,
     },
-    FAFL_Tim_Wet: {
+    Wet_Tim: {
       type: DataTypes.ARRAY(DataTypes.DECIMAL(10, 2)), //eslint-disable-line
       allowNull: true,
     },
-    FAFL_Dur: {
+    WSI_Dur: {
       type: DataTypes.ARRAY(DataTypes.DECIMAL(10, 2)), //eslint-disable-line
       allowNull: true,
     },
@@ -71,63 +71,63 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.ARRAY(DataTypes.DECIMAL(10, 2)), //eslint-disable-line
       allowNull: true,
     },
-    WIN_Tim_2: {
+    Peak_Tim_2: {
       type: DataTypes.ARRAY(DataTypes.DECIMAL(10, 2)), //eslint-disable-line
       allowNull: true,
     },
-    WIN_Dur_2: {
+    Peak_Dur_2: {
       type: DataTypes.ARRAY(DataTypes.DECIMAL(10, 2)), //eslint-disable-line
       allowNull: true,
     },
-    WIN_Fre_2: {
+    Peak_Fre_2: {
       type: DataTypes.ARRAY(DataTypes.DECIMAL(10, 2)), //eslint-disable-line
       allowNull: true,
     },
-    WIN_Tim_5: {
+    Peak_Tim_5: {
       type: DataTypes.ARRAY(DataTypes.DECIMAL(10, 2)), //eslint-disable-line
       allowNull: true,
     },
-    WIN_Dur_5: {
+    Peak_Dur_5: {
       type: DataTypes.ARRAY(DataTypes.DECIMAL(10, 2)), //eslint-disable-line
       allowNull: true,
     },
-    WIN_Fre_5: {
+    Peak_Fre_5: {
       type: DataTypes.ARRAY(DataTypes.DECIMAL(10, 2)), //eslint-disable-line
       allowNull: true,
     },
-    WIN_Tim_10: {
+    Peak_Tim_10: {
       type: DataTypes.ARRAY(DataTypes.DECIMAL(10, 2)), //eslint-disable-line
       allowNull: true,
     },
-    WIN_Dur_10: {
+    Peak_Dur_10: {
       type: DataTypes.ARRAY(DataTypes.DECIMAL(10, 2)), //eslint-disable-line
       allowNull: true,
     },
-    WIN_Fre_10: {
+    Peak_Fre_10: {
       type: DataTypes.ARRAY(DataTypes.DECIMAL(10, 2)), //eslint-disable-line
       allowNull: true,
     },
-    WIN_Tim_20: {
+    Peak_Tim_20: {
       type: DataTypes.ARRAY(DataTypes.DECIMAL(10, 2)), //eslint-disable-line
       allowNull: true,
     },
-    WIN_Dur_20: {
+    Peak_Dur_20: {
       type: DataTypes.ARRAY(DataTypes.DECIMAL(10, 2)), //eslint-disable-line
       allowNull: true,
     },
-    WIN_Fre_20: {
+    Peak_Fre_20: {
       type: DataTypes.ARRAY(DataTypes.DECIMAL(10, 2)), //eslint-disable-line
       allowNull: true,
     },
-    WIN_Tim_50: {
+    Peak_Tim_50: {
       type: DataTypes.ARRAY(DataTypes.DECIMAL(10, 2)), //eslint-disable-line
       allowNull: true,
     },
-    WIN_Dur_50: {
+    Peak_Dur_50: {
       type: DataTypes.ARRAY(DataTypes.DECIMAL(10, 2)), //eslint-disable-line
       allowNull: true,
     },
-    WIN_Fre_50: {
+    Peak_Fre_50: {
       type: DataTypes.ARRAY(DataTypes.DECIMAL(10, 2)), //eslint-disable-line
       allowNull: true,
     },
