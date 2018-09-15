@@ -51,11 +51,11 @@ module.exports = {
         type: Sequelize.ARRAY(Sequelize.DECIMAL(10, 2)), // eslint-disable-line
         allowNull: true,
       },
-      DS_Dur_Fl: {
+      DS_Dur_WSI: {
         type: Sequelize.ARRAY(Sequelize.DECIMAL(10, 2)), // eslint-disable-line
         allowNull: true,
       },
-      DS_Dur_Wet: {
+      DS_Dur_WS: {
         type: Sequelize.ARRAY(Sequelize.DECIMAL(10, 2)), // eslint-disable-line
         allowNull: true,
       },

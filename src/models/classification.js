@@ -39,11 +39,11 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.ARRAY(DataTypes.DECIMAL(10, 2)), //eslint-disable-line
       allowNull: true,
     },
-    DS_Dur_Fl: {
+    DS_Dur_WSI: {
       type: DataTypes.ARRAY(DataTypes.DECIMAL(10, 2)), //eslint-disable-line
       allowNull: true,
     },
-    DS_Dur_Wet: {
+    DS_Dur_WS: {
       type: DataTypes.ARRAY(DataTypes.DECIMAL(10, 2)), //eslint-disable-line
       allowNull: true,
     },
