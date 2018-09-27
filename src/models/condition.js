@@ -9,7 +9,16 @@ module.exports = (sequelizeClient, DataTypes) => {
       type: DataTypes.INTEGER,
     },
     conditions: {
-      type: DataTypes.ARRAY(DataTypes.ENUM('DRY', 'WET', 'NORMAL')), // eslint-disable-line
+      type: DataTypes.ARRAY(
+        DataTypes.ENUM(
+          'DRY',
+          'WET',
+          'NORMAL',
+          'MODERATE WET',
+          'MODERATE DRY',
+          'NOT AVAILABLE'
+        )
+      ), // eslint-disable-line
       allowNull: true,
     },
   });
