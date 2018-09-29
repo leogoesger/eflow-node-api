@@ -75,6 +75,10 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.ARRAY(DataTypes.DECIMAL(10, 2)), //eslint-disable-line
       allowNull: true,
     },
+    Peak_Mag_2: {
+      type: DataTypes.ARRAY(DataTypes.DECIMAL(10, 2)), //eslint-disable-line
+      allowNull: true,
+    },
     Peak_Tim_2: {
       type: DataTypes.ARRAY(DataTypes.DECIMAL(10, 2)), //eslint-disable-line
       allowNull: true,
@@ -84,6 +88,10 @@ module.exports = (sequelize, DataTypes) => {
       allowNull: true,
     },
     Peak_Fre_2: {
+      type: DataTypes.ARRAY(DataTypes.DECIMAL(10, 2)), //eslint-disable-line
+      allowNull: true,
+    },
+    Peak_Mag_5: {
       type: DataTypes.ARRAY(DataTypes.DECIMAL(10, 2)), //eslint-disable-line
       allowNull: true,
     },
@@ -111,6 +119,10 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.ARRAY(DataTypes.DECIMAL(10, 2)), //eslint-disable-line
       allowNull: true,
     },
+    Peak_Mag_20: {
+      type: DataTypes.ARRAY(DataTypes.DECIMAL(10, 2)), //eslint-disable-line
+      allowNull: true,
+    },
     Peak_Tim_20: {
       type: DataTypes.ARRAY(DataTypes.DECIMAL(10, 2)), //eslint-disable-line
       allowNull: true,
@@ -120,6 +132,10 @@ module.exports = (sequelize, DataTypes) => {
       allowNull: true,
     },
     Peak_Fre_20: {
+      type: DataTypes.ARRAY(DataTypes.DECIMAL(10, 2)), //eslint-disable-line
+      allowNull: true,
+    },
+    Peak_Mag_50: {
       type: DataTypes.ARRAY(DataTypes.DECIMAL(10, 2)), //eslint-disable-line
       allowNull: true,
     },

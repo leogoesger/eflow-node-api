@@ -96,7 +96,11 @@ module.exports = {
         })
           .fromStream(request.get(file))
           .on('csv', csvRow => {
-            annual_conditions.conditions.push(csvRow[1]);
+            if (csvRow[1] === 'nan') {
+              annual_conditions.conditions.push('NOT AVAILABLE');
+            } else {
+              annual_conditions.conditions.push(csvRow[1]);
+            }
           })
           .on('done', () => {
             promises.push(Condition.create(annual_conditions));

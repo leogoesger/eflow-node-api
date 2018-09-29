@@ -140,7 +140,7 @@ export const calculatePercentileClourse = async id => {
 
 export const updateGaugePercentiles = async classId => {
   const gauges = await Gauge.findAll({
-    where: {id: classId},
+    where: {classId},
     include: [
       {
         model: AllYear,
@@ -220,10 +220,11 @@ export const updateGaugePercentiles = async classId => {
       }
 
       const sortedData = removeNaN(data);
+
       metrics[reference.short] = [
-        d3.quantile(sortedData, 0.1),
-        d3.quantile(sortedData, 0.5),
-        d3.quantile(sortedData, 0.9),
+        d3.quantile(sortedData, 0.1) || null,
+        d3.quantile(sortedData, 0.5) || null,
+        d3.quantile(sortedData, 0.9) || null,
       ];
     });
 
