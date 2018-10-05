@@ -33,6 +33,10 @@ module.exports = {
         attributes: ['year', 'flowData', 'gaugeId'],
       });
 
+      if (!result || !result.length) {
+        return;
+      }
+
       result[0].flowData.forEach((d, index) => {
         let currentHydrograph = [];
         result.forEach(f => {

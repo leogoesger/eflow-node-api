@@ -95,7 +95,7 @@ module.exports = {
         AnnualFlow.find({
           where: {
             gaugeId: req.body.gaugeId,
-            year: req.body.year ? req.body.year : years.allYears[0],
+            year: req.body.year ? req.body.year : years.year[0],
           },
           attributes: ['year', 'flowData', 'gaugeId'],
         }).then(result => {
