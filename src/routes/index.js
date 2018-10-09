@@ -1,5 +1,6 @@
 import {cache} from '../middlewares';
 import {annualFlowCache} from '../middlewares';
+import gitlog from 'gitlog';
 const authenticate = require('../middlewares/authentication').authenticate;
 const authenticateAdmin = require('../middlewares/authentication')
   .authenticateAdmin;
@@ -35,6 +36,15 @@ module.exports = app => {
 
   app.get('/api/classes', classesController.index);
   app.get('/api/classes/:classId', classesController.show);
+
+  //get git log and version # from package.json
+  app.get('/api/admin/env', (req, res) => {
+    const version = process.env.npm_package_version;
+    const apiEnv = gitlog({
+      repo: './',
+    });
+    res.send({gitLog: apiEnv, version});
+  });
 
   app.get('/api/gauges', gaugesController.index);
   app.get('/api/gauges/:gaugeId', gaugesController.show);
