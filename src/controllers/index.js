@@ -16,6 +16,7 @@ const releases = require('./releases');
 const geoSites = require('./geoSites');
 const geoRegions = require('./geoRegions');
 const adminUpdates = require('./adminUpdates');
+const allSeasons = require('./allSeasons');
 
 module.exports = {
   adminUpdates,
@@ -36,4 +37,5 @@ module.exports = {
   releases,
   geoSites,
   geoRegions,
+  allSeasons,
 };

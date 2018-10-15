@@ -23,6 +23,7 @@ const usersController = require('../controllers').users;
 const releasesController = require('../controllers').releases;
 const geoSitesController = require('../controllers').geoSites;
 const geoRegionsController = require('../controllers').geoRegions;
+const allSeasonsController = require('../controllers').allSeasons;
 
 const flaskAPIs = require('../APIs').flaskAPIs;
 
@@ -38,16 +39,33 @@ module.exports = app => {
   app.get('/api/classes/:classId', classesController.show);
 
   //get git log and version # from package.json
-  app.get('/api/admin/env', (req, res) => {
-    const version = process.env.npm_package_version;
-    const apiEnv = gitlog({
-      repo: './',
-    });
-    res.send({gitLog: apiEnv, version});
-  });
+  app.get(
+    '/api/admin/env',
+    /*authenticateAdmin,*/ (req, res) => {
+      const version = process.env.npm_package_version;
+      const apiCommit = gitlog({
+        repo: './',
+        branch: 'master',
+        number: 5,
+        fields: ['subject', 'authorName', 'authorDateRel'],
+      });
+      const apiEnv = {};
+      apiEnv.commit = apiCommit;
+      apiEnv.version = version;
+      res.send(apiEnv);
+    }
+  );
 
   app.get('/api/gauges', gaugesController.index);
   app.get('/api/gauges/:gaugeId', gaugesController.show);
+
+  //fetch all classes box plots
+  app.get(
+    '/api/getAllClassesBoxPlotAttributes',
+    cache,
+    allSeasonsController.getAllClassesBoxPlotAttributes
+  );
+
   app.post('/api/gauges/search', gaugesController.search);
 
   app.post('/api/allyears', allYearsController.show);
