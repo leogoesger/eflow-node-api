@@ -17,6 +17,8 @@ const cache = async (req, res, next) => {
           .metric}_nonDim_boxplot_${req.body.condition}`
       : `${req.body.classId}_${tableName}_${req.body.metric}_dim_boxplot_${req
           .body.condition}`;
+  } else if (tableName.includes('getAllClassesBoxPlotAttributes')) {
+    cacheKey = 'NON_DIM_ALL_BOXPLOTS';
   } else {
     cacheKey = req.body.nonDim
       ? `${req.body.gaugeId}_${tableName}_${req.body

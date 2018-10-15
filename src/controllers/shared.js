@@ -24,15 +24,18 @@ export const getBoxPlotHelper = async (
   classModel,
   tableName,
   conditions,
-  condition
+  condition,
+  classId,
+  classMetric
 ) => {
+  classMetric = classMetric || ''; //eslint-disable-line
   try {
     //Search based on classId
-    if (req.body.classId) {
+    if (classId || req.body.classId) {
       let fallMetric = await classModel.findAll({
-        attributes: [req.body.metric],
+        attributes: [req.body.metric || classMetric],
         where: {
-          '$gauge.classId$': req.body.classId,
+          '$gauge.classId$': classId || req.body.classId,
         },
         include: [
           {
@@ -50,40 +53,51 @@ export const getBoxPlotHelper = async (
       });
 
       //Non dimensionalize all metrics except timings ones
-      if (req.body.metric.includes('timing')) {
+      if (
+        (req.body.metric && req.body.metric.includes('timing')) ||
+        classMetric.includes('timing')
+      ) {
         fallMetric.forEach(metric => {
           const gaugeConditions =
             metric.gauge.conditions[0] && metric.gauge.conditions[0].conditions;
-          const arrayWithNull = metric[req.body.metric].map(d => {
+          const arrayWithNull = metric[
+            req.body.metric || classMetric
+          ].map(d => {
             if (!isNaN(Number(d))) {
               return getJulianOffsetDate(Number(d));
             }
             return null;
           });
-          metric[req.body.metric] = arrayWithNull.filter(d => d);
+          metric[req.body.metric || classMetric] = arrayWithNull.filter(d => d);
           // removing by conditions
           if (condition && gaugeConditions && gaugeConditions.length > 0) {
-            metric[req.body.metric] = metric[
-              req.body.metric
+            metric[req.body.metric || classMetric] = metric[
+              req.body.metric || classMetric
             ].filter((d, index) => {
               return gaugeConditions[index] === condition;
             });
           }
         });
-      } else if (!req.body.metric.includes('timing') && req.body.nonDim) {
+      } else if (
+        ((req.body.metric && !req.body.metric.includes('timing')) ||
+          !classMetric.includes('timing')) &&
+        req.body.nonDim
+      ) {
         fallMetric = await nonDimValues(req, fallMetric);
       }
-
       const boxPlotClass = new ClassBoxPlot(
         fallMetric,
-        req.body.metric,
+        req.body.metric || classMetric,
         tableName
       ).boxPlotDataGetter;
+
+      if (req.route.path.indexOf('getAllClassesBoxPlotAttributes') > -1) {
+        return boxPlotClass;
+      }
 
       if (process.env.NODE_ENV !== 'test') {
         setRedis(req, req.body.nonDim, 'classId', boxPlotClass);
       }
-
       return res.status(200).send(boxPlotClass);
     }
 
