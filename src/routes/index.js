@@ -38,7 +38,7 @@ module.exports = app => {
   app.get('/api/classes', classesController.index);
   app.get('/api/classes/:classId', classesController.show);
 
-  //get git log and version # from package.json
+  //get git commit history
   app.get('/api/admin/env', /*authenticateAdmin,*/ gitHubAPIs.gitHubCommits);
 
   app.get('/api/gauges', gaugesController.index);

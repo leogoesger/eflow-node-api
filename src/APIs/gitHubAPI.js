@@ -5,6 +5,7 @@ const getCommitInfo = data => {
   appInfo.author = data.commit.author.name;
   appInfo.date = data.commit.author.date;
   appInfo.message = data.commit.message;
+  appInfo.version = data.sha.slice(0, 10);
   const files = [];
   data.files.forEach(file => files.push(file.filename));
 
