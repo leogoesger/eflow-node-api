@@ -1,5 +1,6 @@
 import request from 'superagent';
 import {UploadData} from '../models';
+import {FailedUpload} from '../models';
 
 module.exports = {
   async calculateMetrics(req, res) {
@@ -7,6 +8,7 @@ module.exports = {
       const response = await request
         .post(`${process.env.FLASK_SERVER_ADDRESS}/api`)
         .send(req.body);
+
       const {
         flow_matrix,
         start_date,
@@ -19,6 +21,7 @@ module.exports = {
         fall_winter,
         year_ranges,
       } = response.body;
+
       UploadData.create({
         flowMatrix: flow_matrix,
         startDate: start_date,
@@ -34,7 +37,14 @@ module.exports = {
         yearRanges: year_ranges,
       }).then(d => res.status(200).send(d));
     } catch (e) {
-      res.status(400).send(e.toString());
+      FailedUpload.create({
+        flows: req.body.flows,
+        dates: req.body.dates,
+        userId: req.user.id,
+        name: req.body.name,
+      })
+        .then(d => res.status(400).send({error: e.toString(), data: d}))
+        .catch(() => res.status(400).send(e.toString()));
     }
   },
 };
