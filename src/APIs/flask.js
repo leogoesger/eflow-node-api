@@ -1,5 +1,6 @@
 import request from 'superagent';
 import {UploadData} from '../models';
+import {FailedUpload} from '../models';
 
 module.exports = {
   async calculateMetrics(req, res) {
@@ -19,7 +20,11 @@ module.exports = {
         spring,
         fall_winter,
         year_ranges,
+<<<<<<< HEAD
       } = JSON.parse(response.body);
+=======
+      } = response.body;
+>>>>>>> FF-359 upload FailedUpload on error
 
       UploadData.create({
         flowMatrix: flow_matrix,
@@ -36,7 +41,14 @@ module.exports = {
         yearRanges: year_ranges,
       }).then(d => res.status(200).send(d));
     } catch (e) {
-      res.status(400).send(e.toString());
+      FailedUpload.create({
+        flows: req.body.flows,
+        dates: req.body.dates,
+        userId: req.user.id,
+        name: req.body.name,
+      })
+        .then(d => res.status(400).send({error: e.toString(), data: d}))
+        .catch(() => res.status(400).send(e.toString()));
     }
   },
 };
