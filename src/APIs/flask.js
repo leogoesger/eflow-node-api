@@ -7,6 +7,7 @@ module.exports = {
       const response = await request
         .post(`${process.env.FLASK_SERVER_ADDRESS}/api`)
         .send(req.body);
+
       const {
         flow_matrix,
         start_date,
@@ -18,7 +19,8 @@ module.exports = {
         spring,
         fall_winter,
         year_ranges,
-      } = response.body;
+      } = JSON.parse(response.body);
+
       UploadData.create({
         flowMatrix: flow_matrix,
         startDate: start_date,
