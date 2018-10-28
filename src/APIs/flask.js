@@ -52,7 +52,7 @@ module.exports = {
         failed: true,
       })
         .then(d => res.status(400).send({error: e.toString(), data: d}))
-        .catch(err => {
+        .catch(_ => {
           res.status(400).send(e.toString());
         });
     }
