@@ -15,7 +15,7 @@
         "*.js": "javascriptreact"
     },
     "editor.tabSize": 4,
-    "window.zoomLevel": -1,
+    "window.zoomLevel": 0,
     "workbench.colorCustomizations": {
         "editor.selectionHighlightBackground": "#88a9ffd0",
         "editor.selectionBackground": "#88a9ffd0"

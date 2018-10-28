@@ -7,3 +7,4 @@ annual_result_matrix/
 classGeo.json
 .env
 dist
+runDev.sh
