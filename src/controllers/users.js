@@ -172,6 +172,7 @@ module.exports = {
           model: UploadData,
           as: 'uploadData',
           where: {failed: false},
+          required: false,
           attributes: [
             'name',
             'yearRanges',
