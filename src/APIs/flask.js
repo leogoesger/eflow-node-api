@@ -19,11 +19,7 @@ module.exports = {
         spring,
         fall_winter,
         year_ranges,
-<<<<<<< HEAD
       } = JSON.parse(response.body);
-=======
-      } = response.body;
->>>>>>> FF-359 upload FailedUpload on error
 
       UploadData.create({
         flowMatrix: flow_matrix,
