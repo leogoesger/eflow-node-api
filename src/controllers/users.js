@@ -224,7 +224,7 @@ module.exports = {
     UploadData.findById(req.body.id, {
       include: [{model: User, as: 'user', attributes: ['id']}],
     }).then(d => {
-      if (d.user.id === req.user.id) {
+      if (d.user.id === req.user.id || req.user.id === 1) {
         d.destroy();
         res.status(200).send({message: 'Deleted!'});
       } else {
