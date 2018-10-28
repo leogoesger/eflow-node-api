@@ -18,39 +18,51 @@ module.exports = (sequelizeClient, DataTypes) => {
     },
     yearRanges: {
       type: DataTypes.JSONB, // eslint-disable-line
-      allowNull: false,
+      // allowNull: false,
     },
     flowMatrix: {
       type: DataTypes.JSONB, // eslint-disable-line
-      allowNull: false,
+      // allowNull: false,
     },
     DRH: {
       type: DataTypes.JSONB, // eslint-disable-line
-      allowNull: false,
+      // allowNull: false,
     },
     allYear: {
       type: DataTypes.JSONB, // eslint-disable-line
-      allowNull: false,
+      // allowNull: false,
     },
     winter: {
       type: DataTypes.JSONB, // eslint-disable-line
-      allowNull: false,
+      // allowNull: false,
     },
     fall: {
       type: DataTypes.JSONB, // eslint-disable-line
-      allowNull: false,
+      // allowNull: false,
     },
     summer: {
       type: DataTypes.JSONB, // eslint-disable-line
-      allowNull: false,
+      // allowNull: false,
     },
     spring: {
       type: DataTypes.JSONB, // eslint-disable-line
-      allowNull: false,
+      // allowNull: false,
     },
     fallWinter: {
       type: DataTypes.JSONB, // eslint-disable-line
-      allowNull: false,
+      // allowNull: false,
+    },
+    dates: {
+      type: DataTypes.ARRAY(DataTypes.TEXT), // eslint-disable-line
+      // allowNull: false,
+    },
+    flows: {
+      type: DataTypes.ARRAY(DataTypes.TEXT), // eslint-disable-line
+      // allowNull: false,
+    },
+    failed: {
+      type: DataTypes.BOOLEAN,
+      defaultValue: true,
     },
   });
   UploadData.associate = models => {

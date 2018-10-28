@@ -18,39 +18,51 @@ module.exports = {
       },
       flowMatrix: {
         type: Sequelize.JSONB, // eslint-disable-line
-        allowNull: false,
+        // allowNull: false,
       },
       yearRanges: {
         type: Sequelize.JSONB, // eslint-disable-line
-        allowNull: false,
+        // allowNull: false,
       },
       DRH: {
         type: Sequelize.JSONB, // eslint-disable-line
-        allowNull: false,
+        // allowNull: false,
       },
       allYear: {
         type: Sequelize.JSONB, // eslint-disable-line
-        allowNull: false,
+        // allowNull: false,
       },
       winter: {
         type: Sequelize.JSONB, // eslint-disable-line
-        allowNull: false,
+        // allowNull: false,
       },
       fall: {
         type: Sequelize.JSONB, // eslint-disable-line
-        allowNull: false,
+        // allowNull: false,
       },
       summer: {
         type: Sequelize.JSONB, // eslint-disable-line
-        allowNull: false,
+        // allowNull: false,
       },
       spring: {
         type: Sequelize.JSONB, // eslint-disable-line
-        allowNull: false,
+        // allowNull: false,
       },
       fallWinter: {
         type: Sequelize.JSONB, // eslint-disable-line
-        allowNull: false,
+        // allowNull: false,
+      },
+      dates: {
+        type: Sequelize.ARRAY(Sequelize.TEXT), // eslint-disable-line
+        // allowNull: false,
+      },
+      flows: {
+        type: Sequelize.ARRAY(Sequelize.TEXT), // eslint-disable-line
+        // allowNull: false,
+      },
+      failed: {
+        type: Sequelize.BOOLEAN,
+        defaultValue: true,
       },
       createdAt: {
         type: Sequelize.DATE,
