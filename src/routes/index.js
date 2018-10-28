@@ -151,6 +151,11 @@ module.exports = app => {
   app.post('/api/user/signup', usersController.signUp);
   app.post('/api/user/login', usersController.login);
   app.post('/api/user/getme', authenticate, usersController.getMe);
+  app.post(
+    '/api/user/getFailedUploads',
+    authenticate,
+    usersController.failedUploads
+  );
   app.delete(
     '/api/uploadData',
     authenticate,

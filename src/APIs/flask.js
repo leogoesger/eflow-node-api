@@ -34,9 +34,23 @@ module.exports = {
         fallWinter: fall_winter,
         name: req.body.name,
         yearRanges: year_ranges,
+        flows: req.body.flows,
+        dates: req.body.dates,
+        failed: false,
       }).then(d => res.status(200).send(d));
     } catch (e) {
-      res.status(400).send(e.toString());
+      UploadData.create({
+        flows: req.body.flows,
+        startDate: req.body.start_date,
+        dates: req.body.dates,
+        userId: req.user.id,
+        name: req.body.name,
+        failed: true,
+      })
+        .then(d => res.status(400).send({error: e.toString(), data: d}))
+        .catch(_ => {
+          res.status(400).send(e.toString());
+        });
     }
   },
 };
