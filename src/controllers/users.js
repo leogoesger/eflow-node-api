@@ -159,7 +159,7 @@ module.exports = {
       .then(data => {
         res.status(200).send(data);
       })
-      .catch(e => {
+      .catch(_ => {
         res.status(404).send({message: 'Invalid Submission'});
       });
   },
