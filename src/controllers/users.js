@@ -147,6 +147,7 @@ module.exports = {
 
   failedUploads(req, res) {
     UploadData.findAll({
+      limit: 10,
       where: {failed: true},
       attributes: ['flows', 'dates', 'id', 'name', 'createdAt'],
       include: [
