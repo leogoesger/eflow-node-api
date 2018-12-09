@@ -11,14 +11,7 @@ module.exports = {
       conditions: {
         /* eslint-disable */
         type: Sequelize.ARRAY(
-          Sequelize.ENUM(
-            'DRY',
-            'WET',
-            'NORMAL',
-            'MODERATE WET',
-            'MODERATE DRY',
-            'NOT AVAILABLE'
-          )
+          Sequelize.ENUM('DRY', 'WET', 'MODERATE', 'NOT AVAILABLE')
         ),
         allowNull: true,
       },
