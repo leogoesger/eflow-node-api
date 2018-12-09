@@ -31,8 +31,8 @@ module.exports = {
     operatorsAliases: Op,
   },
   production: {
-    username: 'production',
-    password: 'production123',
+    username: 'postgres',
+    password: null,
     database: 'eflow_production',
     host: '127.0.0.1',
     post: 5432,
