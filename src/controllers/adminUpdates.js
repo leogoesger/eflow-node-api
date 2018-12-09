@@ -92,14 +92,14 @@ module.exports = {
         };
 
         csv({
-          noheader: true,
+          noheader: false,
         })
           .fromStream(request.get(file))
           .on('csv', csvRow => {
             if (csvRow[1] === 'nan') {
               annual_conditions.conditions.push('NOT AVAILABLE');
             } else {
-              annual_conditions.conditions.push(csvRow[1]);
+              annual_conditions.conditions.push(csvRow[1].toUpperCase());
             }
           })
           .on('done', () => {

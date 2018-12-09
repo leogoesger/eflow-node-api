@@ -11,14 +11,7 @@ module.exports = (sequelizeClient, DataTypes) => {
     conditions: {
       /* eslint-disable */
       type: DataTypes.ARRAY(
-        DataTypes.ENUM(
-          'DRY',
-          'WET',
-          'NORMAL',
-          'MODERATE WET',
-          'MODERATE DRY',
-          'NOT AVAILABLE'
-        )
+        DataTypes.ENUM('DRY', 'WET', 'MODERATE', 'NOT AVAILABLE')
       ),
       allowNull: true,
     },
