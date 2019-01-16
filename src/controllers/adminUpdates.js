@@ -19,7 +19,7 @@ import {
 import {metricReference} from '../static/metricReference';
 import gaugeReference from '../static/gaugeReference';
 import {inputFlowToDatabase} from '../utils/uploadToDatabase';
-import S3 from '../utils/S3';
+// import S3 from '../utils/S3';
 
 const PERCENTILLE = [
   'TEN',
@@ -74,44 +74,78 @@ module.exports = {
   },
 
   async uploadAnnualCondition(req, res) {
-    // const url = `${process.env.S3_BUCKET}annual_conditions/`;
+    const url = `${process.env.S3_BUCKET}annual_conditions/`;
+    const promises = [];
     await Condition.destroy({where: {}});
-    const folder = encodeURIComponent('annual_conditions') + '/';
-    S3.listObjects({Prefix: folder}, (err, data) => {
-      const files = data.Contents
-        .map(f => f.Key)
-        .filter((f, i) => i !== 0)
-        .map(f => `${process.env.S3_BUCKET}${f}`);
 
-      const promises = [];
+    const files = gaugeReference.map(d => `${url}${d.id}.csv`);
 
-      files.forEach(file => {
-        const annual_conditions = {
-          gaugeId: file.split('/')[5].split('.')[0],
-          conditions: [],
-        };
+    files.forEach(file => {
+      const annual_conditions = {
+        gaugeId: file.split('/')[5].split('.')[0],
+        conditions: [],
+      };
 
-        csv({
-          noheader: false,
+      csv({
+        noheader: false,
+      })
+        .fromStream(request.get(file))
+        .on('csv', csvRow => {
+          if (csvRow[1] === 'nan') {
+            annual_conditions.conditions.push('NOT AVAILABLE');
+          } else {
+            annual_conditions.conditions.push(csvRow[1].toUpperCase());
+          }
         })
-          .fromStream(request.get(file))
-          .on('csv', csvRow => {
-            if (csvRow[1] === 'nan') {
-              annual_conditions.conditions.push('NOT AVAILABLE');
-            } else {
-              annual_conditions.conditions.push(csvRow[1].toUpperCase());
-            }
-          })
-          .on('done', () => {
-            promises.push(Condition.create(annual_conditions));
-          });
-      });
-
-      Promise.all(promises)
-        .then(() => res.status(200).send({message: 'success'}))
-        .catch(e => res.status(404).send({message: e.toString()}));
+        .on('done', () => {
+          promises.push(Condition.create(annual_conditions));
+        });
     });
+
+    Promise.all(promises)
+      .then(() => res.status(200).send({message: 'success'}))
+      .catch(e => res.status(404).send({message: e.toString()}));
   },
+
+  // async uploadAnnualCondition(req, res) {
+  //   // const url = `${process.env.S3_BUCKET}annual_conditions/`;
+  //   await Condition.destroy({where: {}});
+  //   const folder = encodeURIComponent('annual_conditions') + '/';
+  //   S3.listObjects({Prefix: folder}, (err, data) => {
+  //     const files = data.Contents
+  //       .map(f => f.Key)
+  //       .filter((f, i) => i !== 0)
+  //       .map(f => `${process.env.S3_BUCKET}${f}`);
+
+  //     const promises = [];
+
+  //     files.forEach(file => {
+  //       const annual_conditions = {
+  //         gaugeId: file.split('/')[5].split('.')[0],
+  //         conditions: [],
+  //       };
+
+  //       csv({
+  //         noheader: false,
+  //       })
+  //         .fromStream(request.get(file))
+  //         .on('csv', csvRow => {
+  //           if (csvRow[1] === 'nan') {
+  //             annual_conditions.conditions.push('NOT AVAILABLE');
+  //           } else {
+  //             annual_conditions.conditions.push(csvRow[1].toUpperCase());
+  //           }
+  //         })
+  //         .on('done', () => {
+  //           promises.push(Condition.create(annual_conditions));
+  //         });
+  //     });
+
+  //     Promise.all(promises)
+  //       .then(() => res.status(200).send({message: 'success'}))
+  //       .catch(e => res.status(404).send({message: e.toString()}));
+  //   });
+  // },
 
   async uploadMetricResult(req, res) {
     const new_url = `${process.env.S3_BUCKET}annual_flow_result/`;
