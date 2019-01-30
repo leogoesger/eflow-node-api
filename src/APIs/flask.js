@@ -1,5 +1,6 @@
 import request from 'superagent';
 import {UploadData} from '../models';
+import {nodeMailerMailgun} from '../controllers/shared';
 
 module.exports = {
   async calculateMetrics(req, res) {
@@ -39,6 +40,18 @@ module.exports = {
         failed: false,
       }).then(d => res.status(200).send(d));
     } catch (e) {
+      const mailOptions = {
+        from: 'Leo Qiu <leoq91@gmail.com>',
+        to: 'funcflow@gmail.com',
+        subject: 'UC Davis Eflow Bug Report',
+        text: 'There is an error uploading data',
+      };
+      nodeMailerMailgun.sendMail(mailOptions, error => {
+        if (error) {
+          throw error;
+        }
+      });
+
       UploadData.create({
         flows: req.body.flows,
         startDate: req.body.start_date,

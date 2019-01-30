@@ -7,6 +7,22 @@ import {
 } from '../utils/helpers';
 import {Gauge, Condition} from '../models';
 
+const nodemailer = require('nodemailer');
+const mg = require('nodemailer-mailgun-transport');
+
+const auth = {
+  auth: {
+    api_key: process.env.MAILGUN_API_KEY
+      ? process.env.MAILGUN_API_KEY
+      : 'abcdefghi',
+    domain: process.env.MAILGUN_DOMAIN
+      ? process.env.MAILGUN_DOMAIN
+      : 'abcdefghi',
+  },
+};
+
+export const nodeMailerMailgun = nodemailer.createTransport(mg(auth));
+
 const setRedis = (req, nonDim, type, data) => {
   const dimHolder = nonDim ? 'nonDim' : 'dim';
   req.client.set(
