@@ -2,7 +2,8 @@ const nodemailer = require('nodemailer');
 const mg = require('nodemailer-mailgun-transport');
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
-import {omit} from 'lodash';
+import {omit, unzip, sortBy} from 'lodash';
+import {quantile} from 'd3';
 
 import {UploadData, User} from '../models';
 
@@ -18,6 +19,56 @@ const auth = {
 };
 
 const nodeMailerMailgun = nodemailer.createTransport(mg(auth));
+
+const insertDimHydrograph = uploadData => {
+  if (!uploadData || !uploadData.length) {
+    return;
+  }
+
+  uploadData.forEach((data, indx) => {
+    const hydrograph = {
+      TEN: [],
+      TWENTYFIVE: [],
+      FIFTY: [],
+      SEVENTYFIVE: [],
+      NINTY: [],
+    };
+    const result = unzip(data.flowMatrix);
+    result[0].forEach((d, index) => {
+      let currentHydrograph = [];
+      result.forEach(f => {
+        if (!isNaN(Number(f[index])) && Number(f[index]) !== 0) {
+          currentHydrograph.push(Number(f[index]));
+        }
+      });
+
+      currentHydrograph = sortBy(currentHydrograph);
+      hydrograph.TEN.push({
+        date: index,
+        flow: quantile(currentHydrograph, 0.1),
+      });
+      hydrograph.TWENTYFIVE.push({
+        date: index,
+        flow: quantile(currentHydrograph, 0.25),
+      });
+      hydrograph.FIFTY.push({
+        date: index,
+        flow: quantile(currentHydrograph, 0.5),
+      });
+      hydrograph.SEVENTYFIVE.push({
+        date: index,
+        flow: quantile(currentHydrograph, 0.75),
+      });
+      hydrograph.NINTY.push({
+        date: index,
+        flow: quantile(currentHydrograph, 0.9),
+      });
+    });
+    uploadData[indx].hydrograph = hydrograph;
+  });
+
+  return uploadData;
+};
 
 module.exports = {
   getUsersInfo(req, res) {
@@ -129,13 +180,16 @@ module.exports = {
             },
             process.env.FF_JWT_TOKEN
           );
+
+          const usr = user.get({plain: true});
+
           return res.status(200).send({
             ff_jwt,
-            firstName: user.firstName,
-            lastName: user.lastName,
-            role: user.role,
-            email: user.email,
-            uploadData: user.uploadData,
+            firstName: usr.firstName,
+            lastName: usr.lastName,
+            role: usr.role,
+            email: usr.email,
+            uploadData: insertDimHydrograph(usr.uploadData),
           });
         }
         return res.status(404).send({message: 'Wrong Password!'});
@@ -191,16 +245,20 @@ module.exports = {
         },
       ],
     })
-      .then(user =>
+      .then(user => {
+        const usr = user.get({plain: true});
+
         res.status(200).send({
-          firstName: user.firstName,
-          lastName: user.lastName,
-          role: user.role,
-          email: user.email,
-          uploadData: user.uploadData,
-        })
-      )
-      .catch(_ => res.status(404).send({message: 'Invalid Submission'}));
+          firstName: usr.firstName,
+          lastName: usr.lastName,
+          role: usr.role,
+          email: usr.email,
+          uploadData: insertDimHydrograph(usr.uploadData),
+        });
+      })
+      .catch(_ => {
+        res.status(404).send({message: 'Invalid Submission'});
+      });
   },
 
   emailReport(req, res) {
