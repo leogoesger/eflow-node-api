@@ -156,6 +156,7 @@ module.exports = app => {
     authenticate,
     usersController.failedUploads
   );
+  app.post('/api/user/getUploads', authenticate, usersController.getUploads);
   app.delete(
     '/api/uploadData',
     authenticate,

@@ -220,6 +220,27 @@ module.exports = {
       });
   },
 
+  getUploads(req, res) {
+    UploadData.findAll({
+      limit: 10,
+      where: {failed: false},
+      attributes: ['flows', 'dates', 'id', 'name', 'createdAt'],
+      include: [
+        {
+          model: User,
+          as: 'user',
+          attributes: ['email', 'firstName', 'lastName', 'id', 'role'],
+        },
+      ],
+    })
+      .then(data => {
+        res.status(200).send(data);
+      })
+      .catch(_ => {
+        res.status(404).send({message: 'Invalid Submission'});
+      });
+  },
+
   getMe(req, res) {
     User.findById(req.user.id, {
       include: [
