@@ -70,6 +70,10 @@ module.exports = (sequelizeClient, DataTypes) => {
       foreignKey: 'userId',
       as: 'user',
     });
+    UploadData.hasMany(models.Prediction, {
+      foreignKey: 'uploadDataId',
+      as: 'predictions',
+    });
   };
   return UploadData;
 };

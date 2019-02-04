@@ -164,4 +164,5 @@ module.exports = app => {
   );
 
   app.post('/api/uploadData', authenticate, flaskAPIs.calculateMetrics);
+  app.post('/api/class-predict', authenticate, flaskAPIs.predictClass);
 };

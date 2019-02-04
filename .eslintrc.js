@@ -24,6 +24,7 @@ module.exports = {
       { trailingComma: 'es5', singleQuote: true, bracketSpacing: false }
     ],
     'array-bracket-spacing': 2,
+    'no-return-assign': 0,
     'array-callback-return': 2,
     'arrow-body-style': 0,
     'arrow-parens': [0, 'as-needed'],

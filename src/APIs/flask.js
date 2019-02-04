@@ -1,8 +1,35 @@
 import request from 'superagent';
-import {UploadData} from '../models';
+import {UploadData, Prediction} from '../models';
 import {nodeMailerMailgun} from '../controllers/shared';
 
+import {getMetrics, getClassPredictions} from './helpers';
+
 module.exports = {
+  async predictClass(req, res) {
+    try {
+      const id = req.body.id;
+      const data = await UploadData.findByPk(id);
+      let metric = getMetrics(data);
+
+      // console.log(metric);
+      metric = metric[0].map((col, i) => metric.map(row => row[i]));
+
+      const response = await request
+        .post(`${process.env.FLASK_SERVER_ADDRESS}/api/class-predict`)
+        .send({metric});
+
+      const d = getClassPredictions(JSON.parse(response.body));
+
+      const pred_ins = await Prediction.create({
+        prediction: d.predictClass,
+        ...d.classPredictions,
+        uploadDataId: id,
+      }).catch(e => res.status(400).send(e.toString()));
+      res.status(200).send(pred_ins);
+    } catch (error) {
+      res.status(400).send(error.toString());
+    }
+  },
   async calculateMetrics(req, res) {
     try {
       const response = await request

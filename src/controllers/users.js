@@ -5,7 +5,7 @@ const bcrypt = require('bcrypt');
 import {omit, unzip, sortBy} from 'lodash';
 import {quantile} from 'd3';
 
-import {UploadData, User} from '../models';
+import {UploadData, User, Prediction} from '../models';
 
 const auth = {
   auth: {
@@ -166,6 +166,7 @@ module.exports = {
             'spring',
             'fallWinter',
           ],
+          include: [{model: Prediction, as: 'predictions', required: false}],
         },
       ],
     })
@@ -194,9 +195,9 @@ module.exports = {
         }
         return res.status(404).send({message: 'Wrong Password!'});
       })
-      .catch(() =>
-        res.status(400).send({message: 'Could not find your email!'})
-      );
+      .catch(() => {
+        res.status(400).send({message: 'Could not find your email!'});
+      });
   },
 
   failedUploads(req, res) {
@@ -263,6 +264,7 @@ module.exports = {
             'spring',
             'fallWinter',
           ],
+          include: [{model: Prediction, as: 'predictions', required: false}],
         },
       ],
     })
