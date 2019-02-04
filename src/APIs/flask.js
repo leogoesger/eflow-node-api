@@ -8,7 +8,7 @@ module.exports = {
   async predictClass(req, res) {
     try {
       const id = req.body.id;
-      const data = await UploadData.findByPk(id);
+      const data = await UploadData.findById(id);
       let metric = getMetrics(data);
 
       // console.log(metric);
