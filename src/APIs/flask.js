@@ -1,5 +1,5 @@
 import request from 'superagent';
-import {UploadData, Prediction} from '../models';
+import {UploadData, Prediction, User} from '../models';
 import {nodeMailerMailgun} from '../controllers/shared';
 
 import {getMetrics, getClassPredictions} from './helpers';
@@ -67,11 +67,15 @@ module.exports = {
         failed: false,
       }).then(d => res.status(200).send(d));
     } catch (e) {
+      const user = await User.findById(req.user.id);
       const mailOptions = {
-        from: 'Leo Qiu <leoq91@gmail.com>',
+        from:
+          'Leo Qiu <leoq91@gmail.com>, Madhav Parekh<madhavparekh@gmail.com>',
         to: 'funcflow@gmail.com',
-        subject: 'UC Davis Eflow Bug Report',
-        text: 'There is an error uploading data',
+        subject: 'UC Davis Eflow Failed Upload',
+        text: `There is an error uploading data from user ${user.firstName}, ${
+          user.lastName
+        } with ${user.email}`,
       };
       nodeMailerMailgun.sendMail(mailOptions, error => {
         if (error) {
