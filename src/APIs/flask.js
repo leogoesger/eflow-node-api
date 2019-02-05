@@ -69,9 +69,8 @@ module.exports = {
     } catch (e) {
       const user = await User.findById(req.user.id);
       const mailOptions = {
-        from:
-          'Leo Qiu <leoq91@gmail.com>, Madhav Parekh<madhavparekh@gmail.com>',
-        to: 'funcflow@gmail.com',
+        from: 'Leo Qiu <leoq91@gmail.com>',
+        to: 'funcflow@gmail.com, madhavparekh@gmail.com',
         subject: 'UC Davis Eflow Failed Upload',
         text: `There is an error uploading data from user ${user.firstName}, ${
           user.lastName
