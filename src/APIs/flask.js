@@ -72,9 +72,14 @@ module.exports = {
         from: 'Leo Qiu <leoq91@gmail.com>',
         to: 'funcflow@gmail.com',
         subject: 'UC Davis Eflow Failed Upload',
-        text: `There is an error uploading data from user ${user.firstName}, ${
+        html: `
+        <div>
+          <div>There is an error uploading data from user ${user.firstName}, ${
           user.lastName
-        } with ${user.email}`,
+        } with ${user.email}</div>
+          <div>Dates: ${JSON.stringify(req.body.dates)}</div>
+          <div>Flows: ${JSON.stringify(req.body.flows)}</div>
+        </div>`,
       };
       nodeMailerMailgun.sendMail(mailOptions, error => {
         if (error) {
