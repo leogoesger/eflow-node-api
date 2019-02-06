@@ -2,10 +2,13 @@ const nodemailer = require('nodemailer');
 const mg = require('nodemailer-mailgun-transport');
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
+const Sequelize = require('sequelize');
 import {omit, unzip, sortBy} from 'lodash';
 import {quantile} from 'd3';
 
 import {UploadData, User, Prediction} from '../models';
+
+const op = Sequelize.Op;
 
 const auth = {
   auth: {
@@ -200,42 +203,37 @@ module.exports = {
       });
   },
 
-  failedUploads(req, res) {
-    UploadData.findAll({
-      limit: 10,
-      where: {failed: true},
-      attributes: ['flows', 'dates', 'id', 'name', 'createdAt'],
+  getUploadById(req, res) {
+    UploadData.findOne({
+      where: {[op.and]: {id: req.params.id, failed: false}},
+      attributes: [
+        'name',
+        'createdAt',
+        'yearRanges',
+        'id',
+        'flowMatrix',
+        'DRH',
+        'allYear',
+        'winter',
+        'fall',
+        'summer',
+        'spring',
+        'fallWinter',
+      ],
       include: [
         {
           model: User,
           as: 'user',
-          attributes: ['email', 'firstName', 'lastName', 'id', 'role'],
+          attributes: ['email', 'firstName', 'lastName', 'id'],
         },
       ],
     })
       .then(data => {
-        res.status(200).send(data);
-      })
-      .catch(_ => {
-        res.status(404).send({message: 'Invalid Submission'});
-      });
-  },
-
-  getUploads(req, res) {
-    UploadData.findAll({
-      limit: 10,
-      where: {failed: false},
-      attributes: ['flows', 'dates', 'id', 'name', 'createdAt'],
-      include: [
-        {
-          model: User,
-          as: 'user',
-          attributes: ['email', 'firstName', 'lastName', 'id', 'role'],
-        },
-      ],
-    })
-      .then(data => {
-        res.status(200).send(data);
+        if (data) {
+          res.status(200).send(data);
+        } else {
+          res.status(404).send({message: 'Invalid Submission'});
+        }
       })
       .catch(_ => {
         res.status(404).send({message: 'Invalid Submission'});
