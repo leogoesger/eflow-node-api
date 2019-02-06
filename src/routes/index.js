@@ -152,11 +152,20 @@ module.exports = app => {
   app.post('/api/user/login', usersController.login);
   app.post('/api/user/getme', authenticate, usersController.getMe);
   app.post(
-    '/api/user/getFailedUploads',
-    authenticate,
-    usersController.failedUploads
+    '/api/admin/get-failed-uploads',
+    authenticateAdmin,
+    adminUpdates.failedUploads
   );
-  app.post('/api/user/getUploads', authenticate, usersController.getUploads);
+  app.post(
+    '/api/admin/get-uploads',
+    authenticateAdmin,
+    adminUpdates.getUploads
+  );
+  app.post(
+    '/api/user/get-upload/:id',
+    authenticate,
+    usersController.getUploadById
+  );
   app.delete(
     '/api/uploadData',
     authenticate,

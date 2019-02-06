@@ -1,16 +1,19 @@
 import csv from 'csvtojson';
 import request from 'request';
-
-const Fall = require('../models').Fall;
-const AllYear = require('../models').AllYear;
-const FallWinter = require('../models').FallWinter;
-const Spring = require('../models').Spring;
-const Summer = require('../models').Summer;
-const Winter = require('../models').Winter;
-const Year = require('../models').Year;
-const AnnualFlow = require('../models').AnnualFlow;
-const Hydrograph = require('../models').Hydrograph;
-const Condition = require('../models').Condition;
+import {
+  Fall,
+  AllYear,
+  FallWinter,
+  UploadData,
+  Spring,
+  Summer,
+  Winter,
+  Year,
+  AnnualFlow,
+  Hydrograph,
+  Condition,
+  User,
+} from '../models';
 
 import {
   calculatePercentileClourse,
@@ -289,5 +292,49 @@ module.exports = {
   broadcastDownServerMsg(req, res, io) {
     io.emit('msg', req.body.message);
     res.status(200).send({message: req.body.message});
+  },
+
+  getUploads(req, res) {
+    UploadData.findAll({
+      limit: 10,
+      where: {failed: false},
+      attributes: ['flows', 'dates', 'id', 'name', 'createdAt'],
+      order: [['updatedAt', 'DESC']],
+      include: [
+        {
+          model: User,
+          as: 'user',
+          attributes: ['email', 'firstName', 'lastName', 'id', 'role'],
+        },
+      ],
+    })
+      .then(data => {
+        res.status(200).send(data);
+      })
+      .catch(_ => {
+        res.status(404).send({message: 'Invalid Submission'});
+      });
+  },
+
+  failedUploads(req, res) {
+    UploadData.findAll({
+      limit: 10,
+      where: {failed: true},
+      attributes: ['flows', 'dates', 'id', 'name', 'createdAt'],
+      order: [['updatedAt', 'DESC']],
+      include: [
+        {
+          model: User,
+          as: 'user',
+          attributes: ['email', 'firstName', 'lastName', 'id', 'role'],
+        },
+      ],
+    })
+      .then(data => {
+        res.status(200).send(data);
+      })
+      .catch(_ => {
+        res.status(404).send({message: 'Invalid Submission'});
+      });
   },
 };

@@ -81,11 +81,14 @@ module.exports = {
           <div>Flows: ${JSON.stringify(req.body.flows)}</div>
         </div>`,
       };
-      nodeMailerMailgun.sendMail(mailOptions, error => {
-        if (error) {
-          throw error;
-        }
-      });
+
+      if (process.env.NODE_ENV) {
+        nodeMailerMailgun.sendMail(mailOptions, error => {
+          if (error) {
+            throw error;
+          }
+        });
+      }
 
       UploadData.create({
         flows: req.body.flows,
