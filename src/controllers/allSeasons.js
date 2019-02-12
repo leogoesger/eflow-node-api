@@ -24,9 +24,10 @@ const getClassData = async (req, res, tableName, columnName) => {
 };
 
 const setRedis = (req, data) => {
-  const cacheKey = req.body.condition
-    ? `NON_DIM_ALL_BOXPLOTS_COND_${req.body.condition}`
-    : 'NON_DIM_ALL_BOXPLOTS';
+  const cacheKey =
+    req.body.condition === 'ALL'
+      ? 'NON_DIM_ALL_BOXPLOTS'
+      : `NON_DIM_ALL_BOXPLOTS_COND_${req.body.condition}`;
   req.client.set(cacheKey, JSON.stringify(data), 'EX', process.env.REDIS_TIMER);
 };
 
