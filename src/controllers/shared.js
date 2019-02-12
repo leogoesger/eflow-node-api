@@ -40,18 +40,15 @@ export const getBoxPlotHelper = async (
   classModel,
   tableName,
   conditions,
-  condition,
-  classId,
-  classMetric
+  condition
 ) => {
-  classMetric = classMetric || ''; //eslint-disable-line
   try {
     //Search based on classId
-    if (classId || req.body.classId) {
+    if (req.body.classId) {
       let fallMetric = await classModel.findAll({
-        attributes: [req.body.metric || classMetric],
+        attributes: [req.body.metric],
         where: {
-          '$gauge.classId$': classId || req.body.classId,
+          '$gauge.classId$': req.body.classId,
         },
         include: [
           {
@@ -69,47 +66,38 @@ export const getBoxPlotHelper = async (
       });
 
       //Non dimensionalize all metrics except timings ones
-      if (
-        (req.body.metric && req.body.metric.includes('timing')) ||
-        classMetric.includes('timing')
-      ) {
+      if (req.body.metric && req.body.metric.includes('timing')) {
         fallMetric.forEach(metric => {
           const gaugeConditions =
             metric.gauge.conditions[0] && metric.gauge.conditions[0].conditions;
-          const arrayWithNull = metric[
-            req.body.metric || classMetric
-          ].map(d => {
+          const arrayWithNull = metric[req.body.metric].map(d => {
             if (!isNaN(Number(d))) {
               return getJulianOffsetDate(Number(d));
             }
             return null;
           });
-          metric[req.body.metric || classMetric] = arrayWithNull.filter(d => d);
+          metric[req.body.metric] = arrayWithNull.filter(d => d);
           // removing by conditions
           if (condition && gaugeConditions && gaugeConditions.length > 0) {
-            metric[req.body.metric || classMetric] = metric[
-              req.body.metric || classMetric
+            metric[req.body.metric] = metric[
+              req.body.metric
             ].filter((d, index) => {
               return gaugeConditions[index] === condition;
             });
           }
         });
       } else if (
-        ((req.body.metric && !req.body.metric.includes('timing')) ||
-          !classMetric.includes('timing')) &&
+        req.body.metric &&
+        !req.body.metric.includes('timing') &&
         req.body.nonDim
       ) {
         fallMetric = await nonDimValues(req, fallMetric);
       }
       const boxPlotClass = new ClassBoxPlot(
         fallMetric,
-        req.body.metric || classMetric,
+        req.body.metric,
         tableName
       ).boxPlotDataGetter;
-
-      if (req.route.path.indexOf('getAllClassesBoxPlotAttributes') > -1) {
-        return boxPlotClass;
-      }
 
       if (process.env.NODE_ENV !== 'test') {
         setRedis(req, req.body.nonDim, 'classId', boxPlotClass);
@@ -154,5 +142,67 @@ export const getBoxPlotHelper = async (
     return res.status(200).send(boxPlotAttributes);
   } catch (e) {
     res.status(400).send(e.toString());
+  }
+};
+
+export const getAllBoxPlotHelper = async (
+  req,
+  res,
+  condition,
+  classModel,
+  tableName,
+  classId,
+  classMetric
+) => {
+  try {
+    const metrics = await classModel.findAll({
+      attributes: [classMetric],
+      where: {
+        '$gauge.classId$': classId,
+      },
+      include: [
+        {
+          model: Gauge,
+          as: 'gauge',
+          attributes: ['id'],
+          include: [
+            {
+              model: Condition,
+              as: 'conditions',
+            },
+          ],
+        },
+      ],
+    });
+
+    metrics.forEach((metric, idx) => {
+      const gaugeConditions =
+        metric.gauge.conditions[0] && metric.gauge.conditions[0].conditions;
+      const arrayWithNull = metric[classMetric].map(d => {
+        if (!isNaN(Number(d))) {
+          return getJulianOffsetDate(Number(d));
+        }
+        return null;
+      });
+      metric[classMetric] = arrayWithNull.filter(d => d);
+      // removing by conditions
+      if (
+        condition !== 'ALL' &&
+        gaugeConditions &&
+        gaugeConditions.length > 0
+      ) {
+        metric[classMetric] = metric[classMetric].filter((d, index) => {
+          return gaugeConditions[index] === condition;
+        });
+      }
+      metrics[idx] = metric;
+    });
+
+    const boxPlotClass = new ClassBoxPlot(metrics, classMetric, tableName)
+      .boxPlotDataGetter;
+
+    return boxPlotClass;
+  } catch (err) {
+    return res.status(400).send(err);
   }
 };

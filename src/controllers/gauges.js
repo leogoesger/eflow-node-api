@@ -29,11 +29,9 @@ module.exports = {
       ],
     })
       .then(gauge => {
-        console.log(gauge.get({plain: true}));
         res.status(200).send(gauge);
       })
       .catch(err => {
-        console.log(err);
         res.status(400).send(err);
       });
   },

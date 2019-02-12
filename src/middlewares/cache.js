@@ -18,7 +18,19 @@ const cache = async (req, res, next) => {
       : `${req.body.classId}_${tableName}_${req.body.metric}_dim_boxplot_${req
           .body.condition}`;
   } else if (tableName.includes('getAllClassesBoxPlotAttributes')) {
-    cacheKey = 'NON_DIM_ALL_BOXPLOTS';
+    switch (req.body.condition) {
+      case 'DRY':
+        cacheKey = 'NON_DIM_ALL_BOXPLOTS_COND_DRY';
+        break;
+      case 'WET':
+        cacheKey = 'NON_DIM_ALL_BOXPLOTS_COND_WET';
+        break;
+      case 'MODERATE':
+        cacheKey = 'NON_DIM_ALL_BOXPLOTS_COND_MODERATE';
+        break;
+      default:
+        cacheKey = 'NON_DIM_ALL_BOXPLOTS';
+    }
   } else {
     cacheKey = req.body.nonDim
       ? `${req.body.gaugeId}_${tableName}_${req.body

@@ -1,5 +1,5 @@
 import * as models from '../models';
-import {getBoxPlotHelper} from './shared';
+import {getAllBoxPlotHelper} from './shared';
 import {metricReferenceAs} from '../static/metricReference';
 
 const getClassData = async (req, res, tableName, columnName) => {
@@ -7,16 +7,15 @@ const getClassData = async (req, res, tableName, columnName) => {
   const classModel = models[tableName.slice(0, tableName.length - 1)];
   req.body.nonDim = false;
 
-  for (let i = 1; i < 10; i++) {
+  for (let classId = 1; classId < 10; classId++) {
     promises.push(
-      getBoxPlotHelper(
+      getAllBoxPlotHelper(
         req,
         res,
+        req.body.condition,
         classModel,
         tableName,
-        null,
-        null,
-        i,
+        classId,
         columnName
       )
     );
@@ -25,12 +24,10 @@ const getClassData = async (req, res, tableName, columnName) => {
 };
 
 const setRedis = (req, data) => {
-  req.client.set(
-    'NON_DIM_ALL_BOXPLOTS',
-    JSON.stringify(data),
-    'EX',
-    process.env.REDIS_TIMER
-  );
+  const cacheKey = req.body.condition
+    ? `NON_DIM_ALL_BOXPLOTS_COND_${req.body.condition}`
+    : 'NON_DIM_ALL_BOXPLOTS';
+  req.client.set(cacheKey, JSON.stringify(data), 'EX', process.env.REDIS_TIMER);
 };
 
 module.exports = {
