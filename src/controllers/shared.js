@@ -26,8 +26,9 @@ export const nodeMailerMailgun = nodemailer.createTransport(mg(auth));
 const setRedis = (req, nonDim, type, data) => {
   const dimHolder = nonDim ? 'nonDim' : 'dim';
   req.client.set(
-    `${req.body[type]}_${req.tableName}_${req.body
-      .metric}_${dimHolder}_boxplot_${req.body.condition}`,
+    `${req.body[type]}_${req.tableName}_${
+      req.body.metric
+    }_${dimHolder}_boxplot_${req.body.condition}`,
     JSON.stringify(data),
     'EX',
     process.env.REDIS_TIMER
@@ -79,11 +80,11 @@ export const getBoxPlotHelper = async (
           metric[req.body.metric] = arrayWithNull.filter(d => d);
           // removing by conditions
           if (condition && gaugeConditions && gaugeConditions.length > 0) {
-            metric[req.body.metric] = metric[
-              req.body.metric
-            ].filter((d, index) => {
-              return gaugeConditions[index] === condition;
-            });
+            metric[req.body.metric] = metric[req.body.metric].filter(
+              (d, index) => {
+                return gaugeConditions[index] === condition;
+              }
+            );
           }
         });
       } else if (

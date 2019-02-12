@@ -13,10 +13,12 @@ const cache = async (req, res, next) => {
   let cacheKey;
   if (req.body.classId) {
     cacheKey = req.body.nonDim
-      ? `${req.body.classId}_${tableName}_${req.body
-          .metric}_nonDim_boxplot_${req.body.condition}`
-      : `${req.body.classId}_${tableName}_${req.body.metric}_dim_boxplot_${req
-          .body.condition}`;
+      ? `${req.body.classId}_${tableName}_${req.body.metric}_nonDim_boxplot_${
+          req.body.condition
+        }`
+      : `${req.body.classId}_${tableName}_${req.body.metric}_dim_boxplot_${
+          req.body.condition
+        }`;
   } else if (tableName.includes('getAllClassesBoxPlotAttributes')) {
     switch (req.body.condition) {
       case 'DRY':
@@ -33,10 +35,12 @@ const cache = async (req, res, next) => {
     }
   } else {
     cacheKey = req.body.nonDim
-      ? `${req.body.gaugeId}_${tableName}_${req.body
-          .metric}_nonDim_boxplot_${req.body.condition}`
-      : `${req.body.gaugeId}_${tableName}_${req.body.metric}_dim_boxplot_${req
-          .body.condition}`;
+      ? `${req.body.gaugeId}_${tableName}_${req.body.metric}_nonDim_boxplot_${
+          req.body.condition
+        }`
+      : `${req.body.gaugeId}_${tableName}_${req.body.metric}_dim_boxplot_${
+          req.body.condition
+        }`;
   }
   if (process.env.NODE_ENV === 'test') {
     req.client = client;
