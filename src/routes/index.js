@@ -45,7 +45,7 @@ module.exports = app => {
   app.get('/api/gauges/:gaugeId', gaugesController.show);
 
   //fetch all classes box plots
-  app.get(
+  app.post(
     '/api/getAllClassesBoxPlotAttributes',
     cache,
     allSeasonsController.getAllClassesBoxPlotAttributes

@@ -1,8 +1,7 @@
 const Op = require('sequelize').Op;
 const sequelize = require('sequelize');
 
-import {Gauge} from '../models';
-import {Hydrograph} from '../models';
+import {Gauge, Hydrograph, Year} from '../models';
 
 module.exports = {
   index(req, res) {
@@ -20,10 +19,21 @@ module.exports = {
       attributes: {
         exclude: ['createdAt', 'updatedAt', 'geometry'],
       },
-      include: [{model: Hydrograph, as: 'hydrographs'}],
+      include: [
+        {model: Hydrograph, as: 'hydrographs'},
+        {
+          model: Year,
+          as: 'years',
+          attributes: ['allYears'],
+        },
+      ],
     })
-      .then(gauge => res.status(200).send(gauge))
-      .catch(err => res.status(400).send(err));
+      .then(gauge => {
+        res.status(200).send(gauge);
+      })
+      .catch(err => {
+        res.status(400).send(err);
+      });
   },
 
   search(req, res) {
