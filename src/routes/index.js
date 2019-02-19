@@ -51,6 +51,12 @@ module.exports = app => {
     allSeasonsController.getAllClassesBoxPlotAttributes
   );
 
+  app.post(
+    '/api/getBoxPlotObjPercentilePOR',
+    cache,
+    allSeasonsController.getBoxPlotObjPercentilePOR
+  );
+
   app.post('/api/gauges/search', gaugesController.search);
 
   app.post('/api/allyears', allYearsController.show);

@@ -58,10 +58,73 @@ module.exports = {
       return allMetricBoxPlots;
     });
 
+    if (req.body.POR) {
+      return allMetricBoxPlots;
+    }
+
     if (process.env.NODE_ENV !== 'test') {
       setRedis(req, classes);
     }
 
     return res.status(200).send(classes);
+  },
+
+  async getBoxPlotObjPercentilePOR(req, res) {
+    // if (!req.body.percentile) {
+    //   return res.status(400).send({message: 'Missing Percentile'});
+    // }
+
+    try {
+      req.body.POR = true;
+      req.body.condition = 'ALL';
+      req.body.cacheCheck = true;
+
+      // let boxPlot = await cache(req, res, null);
+
+      // if (!boxPlot) {
+      //   console.log('getting box..');
+      //   boxPlot = await module.exports.getAllClassesBoxPlotAttributes(req, res);
+      //   if (process.env.NODE_ENV !== 'test') {
+      //     setRedis(req, boxPlot);
+      //   }
+      // }
+      const boxPlot = await module.exports.getAllClassesBoxPlotAttributes(
+        req,
+        res
+      );
+
+      const fixedYAxisObj = [];
+
+      metricReferenceAs.forEach(metric => {
+        fixedYAxisObj[metric.tableName] = {};
+        fixedYAxisObj[metric.tableName][metric.columnName] = [];
+        const combainedWishkers = [];
+        boxPlot[metric.tableName][metric.columnName].forEach(cls => {
+          combainedWishkers.push(...cls.whiskers);
+        });
+
+        fixedYAxisObj.push({
+          [metric.tableName]: {
+            [metric.columnName]: [
+              Math.min(...combainedWishkers),
+              Math.max(...combainedWishkers),
+            ],
+          },
+        });
+      });
+
+      if (process.env.NODE_ENV !== 'test') {
+        req.client.set(
+          'BP_Y_AXIS_FIXED_OBJ',
+          JSON.stringify({yMax: fixedYAxisObj}),
+          'EX',
+          process.env.REDIS_TIMER
+        );
+      }
+
+      return res.status(200).send({yMax: fixedYAxisObj});
+    } catch (e) {
+      res.status(500).send(e.toString());
+    }
   },
 };
