@@ -9,6 +9,22 @@ const cache = async (req, res, next) => {
     req.body.nonDim = true;
   }
 
+  //trying to use cache for boxplot fix Y axis
+  // if (req.body.cacheCheck) {
+  //   var obj = null; //eslint-disable-line
+
+  //   await client.get('NON_DIM_ALL_BOXPLOTS', (err, value) => {
+  //     if (value) {
+  //       console.log('Cached Value! wow');
+  //       obj = JSON.parse(value);
+  //       return obj;
+  //     }
+  //     if (err) {
+  //       return null;
+  //     }
+  //   });
+  // }
+
   const tableName = req.path.split('/')[2];
   let cacheKey;
   if (req.body.classId) {
@@ -33,6 +49,8 @@ const cache = async (req, res, next) => {
       default:
         cacheKey = 'NON_DIM_ALL_BOXPLOTS';
     }
+  } else if (tableName.includes('getBoxPlotObjPercentilePOR')) {
+    cacheKey = 'BP_Y_AXIS_FIXED_OBJ';
   } else {
     cacheKey = req.body.nonDim
       ? `${req.body.gaugeId}_${tableName}_${req.body.metric}_nonDim_boxplot_${
