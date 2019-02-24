@@ -230,7 +230,12 @@ module.exports = {
     })
       .then(data => {
         if (data) {
-          res.status(200).send(data);
+          const d = data.get({plain: true});
+          const hydrograph = insertDimHydrograph([d]);
+
+          d.hydrograph = hydrograph[0].hydrograph;
+
+          res.status(200).send(d);
         } else {
           res.status(404).send({message: 'Invalid Submission'});
         }
