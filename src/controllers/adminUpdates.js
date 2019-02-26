@@ -295,8 +295,16 @@ module.exports = {
   },
 
   getUploads(req, res) {
-    UploadData.findAll({
-      limit: 10,
+    // let noOfRecords = 0;
+    // UploadData.count({
+    //   where: {failed: false},
+    // }).then(data => {
+    //   noOfRecords = data;
+    // });
+
+    UploadData.findAndCountAll({
+      limit: req.body.limit || 10,
+      offset: req.body.offset,
       where: {failed: false},
       attributes: ['flows', 'dates', 'id', 'name', 'createdAt'],
       order: [['updatedAt', 'DESC']],
@@ -317,8 +325,9 @@ module.exports = {
   },
 
   failedUploads(req, res) {
-    UploadData.findAll({
-      limit: 10,
+    UploadData.findAndCountAll({
+      limit: req.body.limit || 10,
+      offset: req.body.offset,
       where: {failed: true},
       attributes: ['flows', 'dates', 'id', 'name', 'createdAt'],
       order: [['updatedAt', 'DESC']],
