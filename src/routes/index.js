@@ -167,6 +167,13 @@ module.exports = app => {
     authenticateAdmin,
     adminUpdates.getUploads
   );
+
+  app.post(
+    '/api/user/get_user_uploads',
+    authenticate,
+    usersController.getUserUploads
+  );
+
   app.post(
     '/api/user/get-upload/:id',
     authenticate,
