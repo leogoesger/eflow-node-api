@@ -155,6 +155,7 @@ module.exports = {
           as: 'uploadData',
           where: {failed: false},
           required: false,
+          order: [['createdAt', 'DESC']],
           attributes: [
             'name',
             'createdAt',
@@ -193,7 +194,8 @@ module.exports = {
             lastName: usr.lastName,
             role: usr.role,
             email: usr.email,
-            uploadData: insertDimHydrograph(usr.uploadData),
+            uploadData: insertDimHydrograph(usr.uploadData.slice(0, 5)),
+            uploadCount: usr.uploadData.length,
           });
         }
         return res.status(404).send({message: 'Wrong Password!'});
@@ -253,6 +255,7 @@ module.exports = {
           as: 'uploadData',
           where: {failed: false},
           required: false,
+          order: [['createdAt', 'DESC']],
           attributes: [
             'name',
             'yearRanges',
@@ -279,8 +282,39 @@ module.exports = {
           lastName: usr.lastName,
           role: usr.role,
           email: usr.email,
-          uploadData: insertDimHydrograph(usr.uploadData),
+          uploadData: insertDimHydrograph(usr.uploadData.slice(0, 5)),
+          uploadCount: usr.uploadData.length,
         });
+      })
+      .catch(_ => {
+        res.status(404).send({message: 'Invalid Submission'});
+      });
+  },
+
+  getUserUploads(req, res) {
+    UploadData.findAndCountAll({
+      where: {failed: false, userId: req.user.id},
+      limit: req.body.limit,
+      offset: req.body.offset,
+      order: [['createdAt', 'DESC']],
+      attributes: [
+        'name',
+        'yearRanges',
+        'createdAt',
+        'id',
+        'flowMatrix',
+        'DRH',
+        'allYear',
+        'winter',
+        'fall',
+        'summer',
+        'spring',
+        'fallWinter',
+      ],
+      include: [{model: Prediction, as: 'predictions', required: false}],
+    })
+      .then(data => {
+        res.status(200).send(data);
       })
       .catch(_ => {
         res.status(404).send({message: 'Invalid Submission'});
