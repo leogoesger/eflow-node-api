@@ -306,7 +306,7 @@ module.exports = {
       limit: req.body.limit || 10,
       offset: req.body.offset,
       where: {failed: false},
-      attributes: ['flows', 'dates', 'id', 'name', 'createdAt'],
+      attributes: ['flows', 'dates', 'id', 'name', 'location', 'createdAt'],
       order: [['updatedAt', 'DESC']],
       include: [
         {
@@ -329,7 +329,7 @@ module.exports = {
       limit: req.body.limit || 10,
       offset: req.body.offset,
       where: {failed: true},
-      attributes: ['flows', 'dates', 'id', 'name', 'createdAt'],
+      attributes: ['flows', 'dates', 'id', 'name', 'location', 'createdAt'],
       order: [['updatedAt', 'DESC']],
       include: [
         {

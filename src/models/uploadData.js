@@ -12,6 +12,10 @@ module.exports = (sequelizeClient, DataTypes) => {
       type: DataTypes.TEXT,
       allowNull: false,
     },
+    location: {
+      type: DataTypes.TEXT,
+      allowNull: true,
+    },
     startDate: {
       type: DataTypes.TEXT,
       allowNull: false,
