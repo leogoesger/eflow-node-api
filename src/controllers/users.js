@@ -158,6 +158,8 @@ module.exports = {
           order: [['createdAt', 'DESC']],
           attributes: [
             'name',
+            'riverName',
+            'location',
             'createdAt',
             'yearRanges',
             'id',
@@ -200,7 +202,7 @@ module.exports = {
         }
         return res.status(404).send({message: 'Wrong Password!'});
       })
-      .catch(() => {
+      .catch(_ => {
         res.status(400).send({message: 'Could not find your email!'});
       });
   },
@@ -210,6 +212,8 @@ module.exports = {
       where: {[op.and]: {id: req.params.id, failed: false}},
       attributes: [
         'name',
+        'riverName',
+        'location',
         'createdAt',
         'yearRanges',
         'id',
@@ -258,6 +262,8 @@ module.exports = {
           order: [['createdAt', 'DESC']],
           attributes: [
             'name',
+            'riverName',
+            'location',
             'yearRanges',
             'createdAt',
             'id',
@@ -299,6 +305,8 @@ module.exports = {
       order: [['createdAt', 'DESC']],
       attributes: [
         'name',
+        'riverName',
+        'location',
         'yearRanges',
         'createdAt',
         'id',

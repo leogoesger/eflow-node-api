@@ -48,7 +48,6 @@ module.exports = {
         fall_winter,
         year_ranges,
       } = JSON.parse(response.body);
-
       UploadData.create({
         flowMatrix: flow_matrix,
         startDate: start_date,
@@ -61,6 +60,8 @@ module.exports = {
         userId: req.user.id,
         fallWinter: fall_winter,
         name: req.body.name,
+        riverName: req.body.riverName,
+        location: req.body.location,
         yearRanges: year_ranges,
         flows: req.body.flows,
         dates: req.body.dates,
@@ -96,6 +97,8 @@ module.exports = {
         dates: req.body.dates,
         userId: req.user.id,
         name: req.body.name,
+        riverName: req.body.riverName,
+        location: req.body.location,
         failed: true,
       })
         .then(d => res.status(400).send({error: e.toString(), data: d}))
