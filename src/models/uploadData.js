@@ -12,6 +12,10 @@ module.exports = (sequelizeClient, DataTypes) => {
       type: DataTypes.TEXT,
       allowNull: false,
     },
+    riverName: {
+      type: DataTypes.TEXT,
+      allowNull: true,
+    },
     location: {
       type: DataTypes.TEXT,
       allowNull: true,

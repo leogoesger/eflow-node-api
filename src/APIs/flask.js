@@ -60,6 +60,7 @@ module.exports = {
         userId: req.user.id,
         fallWinter: fall_winter,
         name: req.body.name,
+        riverName: req.body.riverName,
         location: req.body.location,
         yearRanges: year_ranges,
         flows: req.body.flows,
@@ -96,6 +97,7 @@ module.exports = {
         dates: req.body.dates,
         userId: req.user.id,
         name: req.body.name,
+        riverName: req.body.riverName,
         location: req.body.location,
         failed: true,
       })

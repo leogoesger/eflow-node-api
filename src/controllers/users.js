@@ -158,6 +158,7 @@ module.exports = {
           order: [['createdAt', 'DESC']],
           attributes: [
             'name',
+            'riverName',
             'location',
             'createdAt',
             'yearRanges',
@@ -211,6 +212,7 @@ module.exports = {
       where: {[op.and]: {id: req.params.id, failed: false}},
       attributes: [
         'name',
+        'riverName',
         'location',
         'createdAt',
         'yearRanges',
@@ -260,6 +262,7 @@ module.exports = {
           order: [['createdAt', 'DESC']],
           attributes: [
             'name',
+            'riverName',
             'location',
             'yearRanges',
             'createdAt',
@@ -302,6 +305,7 @@ module.exports = {
       order: [['createdAt', 'DESC']],
       attributes: [
         'name',
+        'riverName',
         'location',
         'yearRanges',
         'createdAt',
