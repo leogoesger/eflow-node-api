@@ -225,6 +225,7 @@ module.exports = {
         'summer',
         'spring',
         'fallWinter',
+        'startDate',
       ],
       include: [
         {
@@ -275,6 +276,7 @@ module.exports = {
             'summer',
             'spring',
             'fallWinter',
+            'startDate',
           ],
           include: [{model: Prediction, as: 'predictions', required: false}],
         },
@@ -318,6 +320,7 @@ module.exports = {
         'summer',
         'spring',
         'fallWinter',
+        'startDate',
       ],
       include: [{model: Prediction, as: 'predictions', required: false}],
     })
