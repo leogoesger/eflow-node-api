@@ -8,7 +8,8 @@ module.exports = {
   async predictClass(req, res) {
     try {
       const id = req.body.id;
-      const data = await UploadData.findById(id);
+      const uploadDataId = req.body.uploadDataId;
+      const data = await UploadData.findById(uploadDataId);
       let metric = getMetrics(data);
 
       // console.log(metric);
@@ -20,10 +21,11 @@ module.exports = {
 
       const d = getClassPredictions(JSON.parse(response.body));
 
-      const pred_ins = await Prediction.create({
+      const pred_ins = await Prediction.upsert({
+        id,
         prediction: d.predictClass,
         ...d.classPredictions,
-        uploadDataId: id,
+        uploadDataId,
       }).catch(e => res.status(400).send(e.toString()));
       res.status(200).send(pred_ins);
     } catch (error) {
