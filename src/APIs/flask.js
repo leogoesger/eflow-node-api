@@ -107,4 +107,45 @@ module.exports = {
         });
     }
   },
+
+  async reCalculateMetrics(req, res) {
+    try {
+      const response = await request
+        .post(`${process.env.FLASK_SERVER_ADDRESS}/api`)
+        .send(req.body);
+
+      const {
+        flow_matrix,
+        start_date,
+        DRH,
+        all_year,
+        winter,
+        fall,
+        summer,
+        spring,
+        fall_winter,
+        year_ranges,
+      } = JSON.parse(response.body);
+
+      UploadData.update(
+        {
+          flowMatrix: flow_matrix,
+          startDate: start_date,
+          DRH,
+          allYear: all_year,
+          winter,
+          fall,
+          summer,
+          spring,
+          fallWinter: fall_winter,
+          yearRanges: year_ranges,
+        },
+        {
+          where: {id: req.body.id},
+        }
+      ).then(d => res.status(200).send(d));
+    } catch (e) {
+      res.status(400).send(e.toString());
+    }
+  },
 };
