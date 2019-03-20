@@ -8,7 +8,7 @@ module.exports = [
     }),
     geoClassId: 4,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/south_fork_eel/SFE_2017_10.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SFE/SFE_2017_10.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -21,7 +21,7 @@ module.exports = [
     }),
     geoClassId: 5,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/south_fork_eel/SFE_2017_125.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SFE/SFE_2017_125.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -34,7 +34,7 @@ module.exports = [
     }),
     geoClassId: 5,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/south_fork_eel/SFE_2017_127.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SFE/SFE_2017_127.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -47,7 +47,7 @@ module.exports = [
     }),
     geoClassId: 5,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/south_fork_eel/SFE_2017_139.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SFE/SFE_2017_139.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -60,7 +60,7 @@ module.exports = [
     }),
     geoClassId: 5,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/south_fork_eel/SFE_2017_140.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SFE/SFE_2017_140.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -73,7 +73,7 @@ module.exports = [
     }),
     geoClassId: 4,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/south_fork_eel/SFE_2017_143.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SFE/SFE_2017_143.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -86,7 +86,7 @@ module.exports = [
     }),
     geoClassId: 3,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/south_fork_eel/SFE_2017_148.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SFE/SFE_2017_148.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -99,7 +99,7 @@ module.exports = [
     }),
     geoClassId: 5,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/south_fork_eel/SFE_2017_168.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SFE/SFE_2017_168.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -112,7 +112,7 @@ module.exports = [
     }),
     geoClassId: 6,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/south_fork_eel/SFE_2017_17.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SFE/SFE_2017_17.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -125,7 +125,7 @@ module.exports = [
     }),
     geoClassId: 4,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/south_fork_eel/SFE_2017_171.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SFE/SFE_2017_171.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -138,7 +138,7 @@ module.exports = [
     }),
     geoClassId: 4,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/south_fork_eel/SFE_2017_18.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SFE/SFE_2017_18.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -151,7 +151,7 @@ module.exports = [
     }),
     geoClassId: 4,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/south_fork_eel/SFE_2017_183.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SFE/SFE_2017_183.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -164,7 +164,7 @@ module.exports = [
     }),
     geoClassId: 4,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/south_fork_eel/SFE_2017_186.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SFE/SFE_2017_186.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -177,7 +177,7 @@ module.exports = [
     }),
     geoClassId: 7,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/south_fork_eel/SFE_2017_201.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SFE/SFE_2017_201.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -190,7 +190,7 @@ module.exports = [
     }),
     geoClassId: 4,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/south_fork_eel/SFE_2017_205.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SFE/SFE_2017_205.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -203,7 +203,7 @@ module.exports = [
     }),
     geoClassId: 7,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/south_fork_eel/SFE_2017_209.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SFE/SFE_2017_209.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -216,7 +216,7 @@ module.exports = [
     }),
     geoClassId: 5,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/south_fork_eel/SFE_2017_215.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SFE/SFE_2017_215.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -229,7 +229,7 @@ module.exports = [
     }),
     geoClassId: 6,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/south_fork_eel/SFE_2017_221.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SFE/SFE_2017_221.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -242,7 +242,7 @@ module.exports = [
     }),
     geoClassId: 1,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/south_fork_eel/SFE_2017_234.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SFE/SFE_2017_234.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -255,7 +255,7 @@ module.exports = [
     }),
     geoClassId: 1,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/south_fork_eel/SFE_2017_236.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SFE/SFE_2017_236.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -268,7 +268,7 @@ module.exports = [
     }),
     geoClassId: 4,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/south_fork_eel/SFE_2017_24.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SFE/SFE_2017_24.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -281,7 +281,7 @@ module.exports = [
     }),
     geoClassId: 4,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/south_fork_eel/SFE_2017_25.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SFE/SFE_2017_25.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -294,7 +294,7 @@ module.exports = [
     }),
     geoClassId: 4,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/south_fork_eel/SFE_2017_26.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SFE/SFE_2017_26.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -307,7 +307,7 @@ module.exports = [
     }),
     geoClassId: 5,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/south_fork_eel/SFE_2017_265.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SFE/SFE_2017_265.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -320,7 +320,7 @@ module.exports = [
     }),
     geoClassId: 3,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/south_fork_eel/SFE_2017_270.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SFE/SFE_2017_270.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -333,7 +333,7 @@ module.exports = [
     }),
     geoClassId: 5,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/south_fork_eel/SFE_2017_3.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SFE/SFE_2017_3.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -346,7 +346,7 @@ module.exports = [
     }),
     geoClassId: 5,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/south_fork_eel/SFE_2017_301.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SFE/SFE_2017_301.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -359,7 +359,7 @@ module.exports = [
     }),
     geoClassId: 1,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/south_fork_eel/SFE_2017_322.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SFE/SFE_2017_322.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -372,7 +372,7 @@ module.exports = [
     }),
     geoClassId: 3,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/south_fork_eel/SFE_2017_324.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SFE/SFE_2017_324.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -385,7 +385,7 @@ module.exports = [
     }),
     geoClassId: 4,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/south_fork_eel/SFE_2017_327.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SFE/SFE_2017_327.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -398,7 +398,7 @@ module.exports = [
     }),
     geoClassId: 3,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/south_fork_eel/SFE_2017_330.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SFE/SFE_2017_330.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -411,7 +411,7 @@ module.exports = [
     }),
     geoClassId: 1,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/south_fork_eel/SFE_2017_34.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SFE/SFE_2017_34.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -424,7 +424,7 @@ module.exports = [
     }),
     geoClassId: 4,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/south_fork_eel/SFE_2017_344.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SFE/SFE_2017_344.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -437,7 +437,7 @@ module.exports = [
     }),
     geoClassId: 5,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/south_fork_eel/SFE_2017_349.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SFE/SFE_2017_349.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -450,7 +450,7 @@ module.exports = [
     }),
     geoClassId: 7,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/south_fork_eel/SFE_2017_355.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SFE/SFE_2017_355.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -463,7 +463,7 @@ module.exports = [
     }),
     geoClassId: 1,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/south_fork_eel/SFE_2017_44.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SFE/SFE_2017_44.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -476,7 +476,7 @@ module.exports = [
     }),
     geoClassId: 1,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/south_fork_eel/SFE_2017_46.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SFE/SFE_2017_46.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -489,7 +489,7 @@ module.exports = [
     }),
     geoClassId: 1,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/south_fork_eel/SFE_2017_47.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SFE/SFE_2017_47.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -502,7 +502,7 @@ module.exports = [
     }),
     geoClassId: 1,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/south_fork_eel/SFE_2017_52.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SFE/SFE_2017_52.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -515,7 +515,7 @@ module.exports = [
     }),
     geoClassId: 1,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/south_fork_eel/SFE_2017_55.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SFE/SFE_2017_55.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -528,7 +528,7 @@ module.exports = [
     }),
     geoClassId: 5,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/south_fork_eel/SFE_2017_63.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SFE/SFE_2017_63.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -541,7 +541,7 @@ module.exports = [
     }),
     geoClassId: 4,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/south_fork_eel/SFE_2017_64.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SFE/SFE_2017_64.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -554,7 +554,7 @@ module.exports = [
     }),
     geoClassId: 5,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/south_fork_eel/SFE_2017_66.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SFE/SFE_2017_66.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -567,7 +567,7 @@ module.exports = [
     }),
     geoClassId: 5,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/south_fork_eel/SFE_2017_71.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SFE/SFE_2017_71.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -580,7 +580,7 @@ module.exports = [
     }),
     geoClassId: 4,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/south_fork_eel/SFE_2017_78.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SFE/SFE_2017_78.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -593,7 +593,7 @@ module.exports = [
     }),
     geoClassId: 5,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/south_fork_eel/SFE_2017_80.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SFE/SFE_2017_80.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -606,7 +606,7 @@ module.exports = [
     }),
     geoClassId: 3,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/south_fork_eel/SFE_2017_81.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SFE/SFE_2017_81.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -619,7 +619,7 @@ module.exports = [
     }),
     geoClassId: 5,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/south_fork_eel/SFE_2017_900.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SFE/SFE_2017_900.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -632,7 +632,7 @@ module.exports = [
     }),
     geoClassId: 4,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/south_fork_eel/SFE_2017_902.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SFE/SFE_2017_902.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -645,7 +645,7 @@ module.exports = [
     }),
     geoClassId: 5,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/south_fork_eel/SFE_2017_910.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SFE/SFE_2017_910.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -658,7 +658,7 @@ module.exports = [
     }),
     geoClassId: 3,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/south_fork_eel/SFE_2017_911.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SFE/SFE_2017_911.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -671,7 +671,7 @@ module.exports = [
     }),
     geoClassId: 1,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/south_fork_eel/SFE_2017_92.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SFE/SFE_2017_92.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -684,7 +684,7 @@ module.exports = [
     }),
     geoClassId: 1,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/south_fork_eel/SFE_2017_95.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SFE/SFE_2017_95.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -697,7 +697,7 @@ module.exports = [
     }),
     geoClassId: 4,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/south_fork_eel/SFE_2017_99.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SFE/SFE_2017_99.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -710,7 +710,7 @@ module.exports = [
     }),
     geoClassId: 5,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/south_fork_eel/SFE_2018_1277.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SFE/SFE_2018_1277.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -723,7 +723,7 @@ module.exports = [
     }),
     geoClassId: 5,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/south_fork_eel/SFE_2018_1322.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SFE/SFE_2018_1322.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -736,7 +736,7 @@ module.exports = [
     }),
     geoClassId: 7,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/south_fork_eel/SFE_2018_1324.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SFE/SFE_2018_1324.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -749,7 +749,7 @@ module.exports = [
     }),
     geoClassId: 3,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/south_fork_eel/SFE_2018_1325.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SFE/SFE_2018_1325.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -762,7 +762,7 @@ module.exports = [
     }),
     geoClassId: 3,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/south_fork_eel/SFE_2018_1394.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SFE/SFE_2018_1394.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -775,7 +775,7 @@ module.exports = [
     }),
     geoClassId: 3,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/south_fork_eel/SFE_2018_1398.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SFE/SFE_2018_1398.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -788,7 +788,7 @@ module.exports = [
     }),
     geoClassId: 7,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/south_fork_eel/SFE_2018_1419.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SFE/SFE_2018_1419.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -801,7 +801,7 @@ module.exports = [
     }),
     geoClassId: 6,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/south_fork_eel/SFE_2018_1425.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SFE/SFE_2018_1425.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -814,7 +814,7 @@ module.exports = [
     }),
     geoClassId: 5,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/south_fork_eel/SFE_2018_1603.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SFE/SFE_2018_1603.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -827,7 +827,7 @@ module.exports = [
     }),
     geoClassId: 3,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/south_fork_eel/SFE_2018_1640.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SFE/SFE_2018_1640.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -840,7 +840,7 @@ module.exports = [
     }),
     geoClassId: 5,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/south_fork_eel/SFE_2018_2070.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SFE/SFE_2018_2070.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -853,7 +853,7 @@ module.exports = [
     }),
     geoClassId: 3,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/south_fork_eel/SFE_2018_2079.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SFE/SFE_2018_2079.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -866,7 +866,7 @@ module.exports = [
     }),
     geoClassId: 4,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/south_fork_eel/SFE_2018_2080.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SFE/SFE_2018_2080.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -879,7 +879,7 @@ module.exports = [
     }),
     geoClassId: 3,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/south_fork_eel/SFE_2018_2088.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SFE/SFE_2018_2088.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -892,7 +892,7 @@ module.exports = [
     }),
     geoClassId: 5,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/south_fork_eel/SFE_2018_2099.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SFE/SFE_2018_2099.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -905,7 +905,7 @@ module.exports = [
     }),
     geoClassId: 5,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/south_fork_eel/SFE_2018_2114.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SFE/SFE_2018_2114.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -918,7 +918,7 @@ module.exports = [
     }),
     geoClassId: 5,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/south_fork_eel/SFE_2018_2132.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SFE/SFE_2018_2132.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -931,7 +931,7 @@ module.exports = [
     }),
     geoClassId: 5,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/south_fork_eel/SFE_2018_2136.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SFE/SFE_2018_2136.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -944,7 +944,7 @@ module.exports = [
     }),
     geoClassId: 6,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/south_fork_eel/SFE_2018_217.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SFE/SFE_2018_217.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -957,7 +957,7 @@ module.exports = [
     }),
     geoClassId: 5,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/south_fork_eel/SFE_2018_2180.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SFE/SFE_2018_2180.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -970,7 +970,7 @@ module.exports = [
     }),
     geoClassId: 5,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/south_fork_eel/SFE_2018_2214.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SFE/SFE_2018_2214.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -983,7 +983,7 @@ module.exports = [
     }),
     geoClassId: 5,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/south_fork_eel/SFE_2018_2248.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SFE/SFE_2018_2248.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -996,7 +996,7 @@ module.exports = [
     }),
     geoClassId: 7,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/south_fork_eel/SFE_2018_2663.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SFE/SFE_2018_2663.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -1009,7 +1009,7 @@ module.exports = [
     }),
     geoClassId: 4,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/south_fork_eel/SFE_2018_2687.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SFE/SFE_2018_2687.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -1022,7 +1022,7 @@ module.exports = [
     }),
     geoClassId: 5,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/south_fork_eel/SFE_2018_2707.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SFE/SFE_2018_2707.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -1035,7 +1035,7 @@ module.exports = [
     }),
     geoClassId: 4,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/south_fork_eel/SFE_2018_272.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SFE/SFE_2018_272.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -1048,7 +1048,7 @@ module.exports = [
     }),
     geoClassId: 4,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/south_fork_eel/SFE_2018_277.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SFE/SFE_2018_277.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -1061,7 +1061,7 @@ module.exports = [
     }),
     geoClassId: 4,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/south_fork_eel/SFE_2018_2797.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SFE/SFE_2018_2797.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -1074,7 +1074,7 @@ module.exports = [
     }),
     geoClassId: 4,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/south_fork_eel/SFE_2018_2812.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SFE/SFE_2018_2812.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -1087,7 +1087,7 @@ module.exports = [
     }),
     geoClassId: 4,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/south_fork_eel/SFE_2018_286.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SFE/SFE_2018_286.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -1100,7 +1100,7 @@ module.exports = [
     }),
     geoClassId: 4,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/south_fork_eel/SFE_2018_289.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SFE/SFE_2018_289.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -1113,7 +1113,7 @@ module.exports = [
     }),
     geoClassId: 4,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/south_fork_eel/SFE_2018_293.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SFE/SFE_2018_293.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -1126,7 +1126,7 @@ module.exports = [
     }),
     geoClassId: 4,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/south_fork_eel/SFE_2018_296.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SFE/SFE_2018_296.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -1139,7 +1139,7 @@ module.exports = [
     }),
     geoClassId: 1,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/south_fork_eel/SFE_2018_3034.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SFE/SFE_2018_3034.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -1152,7 +1152,7 @@ module.exports = [
     }),
     geoClassId: 4,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/south_fork_eel/SFE_2018_312.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SFE/SFE_2018_312.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -1165,7 +1165,7 @@ module.exports = [
     }),
     geoClassId: 4,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/south_fork_eel/SFE_2018_316.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SFE/SFE_2018_316.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -1178,7 +1178,7 @@ module.exports = [
     }),
     geoClassId: 5,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/south_fork_eel/SFE_2018_322.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SFE/SFE_2018_322.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -1191,7 +1191,7 @@ module.exports = [
     }),
     geoClassId: 2,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/south_fork_eel/SFE_2018_4523.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SFE/SFE_2018_4523.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -1204,7 +1204,7 @@ module.exports = [
     }),
     geoClassId: 5,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/south_fork_eel/SFE_2018_521.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SFE/SFE_2018_521.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -1217,7 +1217,7 @@ module.exports = [
     }),
     geoClassId: 2,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/south_fork_eel/SFE_2018_61.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SFE/SFE_2018_61.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -1230,7 +1230,7 @@ module.exports = [
     }),
     geoClassId: 2,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/south_fork_eel/SFE_2018_62.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SFE/SFE_2018_62.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -1243,7 +1243,7 @@ module.exports = [
     }),
     geoClassId: 2,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/south_fork_eel/SFE_2018_82.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SFE/SFE_2018_82.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -1256,7 +1256,7 @@ module.exports = [
     }),
     geoClassId: 10,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/sacramento/SAC_HLP_10.png',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SAC/SAC_HLP_10.png',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -1269,7 +1269,7 @@ module.exports = [
     }),
     geoClassId: 9,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/sacramento/SAC_HLP_24.png',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SAC/SAC_HLP_24.png',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -1282,7 +1282,7 @@ module.exports = [
     }),
     geoClassId: 10,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/sacramento/SAC_HLP_28.png',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SAC/SAC_HLP_28.png',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -1295,7 +1295,7 @@ module.exports = [
     }),
     geoClassId: 17,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/sacramento/SAC_HLP_3.png',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SAC/SAC_HLP_3.png',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -1308,7 +1308,7 @@ module.exports = [
     }),
     geoClassId: 10,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/sacramento/SAC_HLP_37.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SAC/SAC_HLP_37.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -1321,7 +1321,7 @@ module.exports = [
     }),
     geoClassId: 16,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/sacramento/SAC_HLP_4.png',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SAC/SAC_HLP_4.png',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -1358,7 +1358,7 @@ module.exports = [
     }),
     geoClassId: 13,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/sacramento/SAC_HLP_526CE0323.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SAC/SAC_HLP_526CE0323.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -1599,7 +1599,7 @@ module.exports = [
     }),
     geoClassId: 13,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/sacramento/SAC_LSR_1.png',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SAC/SAC_LSR_1.png',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -1612,7 +1612,7 @@ module.exports = [
     }),
     geoClassId: 10,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/sacramento/SAC_LSR_11.png',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SAC/SAC_LSR_11.png',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -1625,7 +1625,7 @@ module.exports = [
     }),
     geoClassId: 11,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/sacramento/SAC_LSR_12.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SAC/SAC_LSR_12.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -1638,7 +1638,7 @@ module.exports = [
     }),
     geoClassId: 11,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/sacramento/SAC_LSR_13.png',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SAC/SAC_LSR_13.png',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -1651,7 +1651,7 @@ module.exports = [
     }),
     geoClassId: 11,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/sacramento/SAC_LSR_14.png',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SAC/SAC_LSR_14.png',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -1664,7 +1664,7 @@ module.exports = [
     }),
     geoClassId: 11,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/sacramento/SAC_LSR_15.png',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SAC/SAC_LSR_15.png',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -1677,7 +1677,7 @@ module.exports = [
     }),
     geoClassId: 11,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/sacramento/SAC_LSR_16.png',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SAC/SAC_LSR_16.png',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -1702,7 +1702,7 @@ module.exports = [
     }),
     geoClassId: 11,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/sacramento/SAC_LSR_18.png',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SAC/SAC_LSR_18.png',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -1715,7 +1715,7 @@ module.exports = [
     }),
     geoClassId: 13,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/sacramento/SAC_LSR_2.png',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SAC/SAC_LSR_2.png',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -1728,7 +1728,7 @@ module.exports = [
     }),
     geoClassId: 11,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/sacramento/SAC_LSR_20.png',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SAC/SAC_LSR_20.png',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -1753,7 +1753,7 @@ module.exports = [
     }),
     geoClassId: 11,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/sacramento/SAC_LSR_22.png',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SAC/SAC_LSR_22.png',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -1790,7 +1790,7 @@ module.exports = [
     }),
     geoClassId: 10,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/sacramento/SAC_LSR_29.png',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SAC/SAC_LSR_29.png',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -1827,7 +1827,7 @@ module.exports = [
     }),
     geoClassId: 15,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/sacramento/SAC_LSR_36.png',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SAC/SAC_LSR_36.png',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -1840,7 +1840,7 @@ module.exports = [
     }),
     geoClassId: 13,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/sacramento/SAC_LSR_38.png',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SAC/SAC_LSR_38.png',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -1877,7 +1877,7 @@ module.exports = [
     }),
     geoClassId: 14,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/sacramento/SAC_LSR_42.png',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SAC/SAC_LSR_42.png',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -1890,7 +1890,7 @@ module.exports = [
     }),
     geoClassId: 11,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/sacramento/SAC_LSR_43.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SAC/SAC_LSR_43.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -1903,7 +1903,7 @@ module.exports = [
     }),
     geoClassId: 9,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/sacramento/SAC_LSR_44.png',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SAC/SAC_LSR_44.png',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -1916,7 +1916,7 @@ module.exports = [
     }),
     geoClassId: 10,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/sacramento/SAC_LSR_45.png',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SAC/SAC_LSR_45.png',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -1953,7 +1953,7 @@ module.exports = [
     }),
     geoClassId: 15,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/sacramento/SAC_LSR_48.png',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SAC/SAC_LSR_48.png',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -1978,7 +1978,7 @@ module.exports = [
     }),
     geoClassId: 16,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/sacramento/SAC_LSR_5.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SAC/SAC_LSR_5.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -1991,7 +1991,7 @@ module.exports = [
     }),
     geoClassId: 10,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/sacramento/SAC_LSR_50.png',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SAC/SAC_LSR_50.png',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -2052,7 +2052,7 @@ module.exports = [
     }),
     geoClassId: 14,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/sacramento/SAC_LSR_505PS0156.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SAC/SAC_LSR_505PS0156.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -2065,7 +2065,7 @@ module.exports = [
     }),
     geoClassId: 17,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/sacramento/SAC_LSR_505PS1180.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SAC/SAC_LSR_505PS1180.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -2966,7 +2966,7 @@ module.exports = [
     }),
     geoClassId: 14,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/sacramento/SAC_LSR_526PS0220.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SAC/SAC_LSR_526PS0220.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -2979,7 +2979,7 @@ module.exports = [
     }),
     geoClassId: 16,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/sacramento/SAC_LSR_526PS0356.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SAC/SAC_LSR_526PS0356.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -3004,7 +3004,7 @@ module.exports = [
     }),
     geoClassId: 16,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/sacramento/SAC_LSR_6.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SAC/SAC_LSR_6.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -3017,7 +3017,7 @@ module.exports = [
     }),
     geoClassId: 10,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/sacramento/SAC_LSR_7.png',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SAC/SAC_LSR_7.png',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -3042,7 +3042,7 @@ module.exports = [
     }),
     geoClassId: 10,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/sacramento/SAC_LSR_9.png',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SAC/SAC_LSR_9.png',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -3055,7 +3055,7 @@ module.exports = [
     }),
     geoClassId: 15,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/sacramento/SAC_PGR_0.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SAC/SAC_PGR_0.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -3080,7 +3080,7 @@ module.exports = [
     }),
     geoClassId: 13,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/sacramento/SAC_PGR_11.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SAC/SAC_PGR_11.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -3093,7 +3093,7 @@ module.exports = [
     }),
     geoClassId: 12,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/sacramento/SAC_PGR_12.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SAC/SAC_PGR_12.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -3106,7 +3106,7 @@ module.exports = [
     }),
     geoClassId: 11,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/sacramento/SAC_PGR_13.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SAC/SAC_PGR_13.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -3191,7 +3191,7 @@ module.exports = [
     }),
     geoClassId: 14,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/sacramento/SAC_PGR_2.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SAC/SAC_PGR_2.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -3264,7 +3264,7 @@ module.exports = [
     }),
     geoClassId: 17,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/sacramento/SAC_PGR_25.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SAC/SAC_PGR_25.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -3277,7 +3277,7 @@ module.exports = [
     }),
     geoClassId: 14,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/sacramento/SAC_PGR_26.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SAC/SAC_PGR_26.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -3290,7 +3290,7 @@ module.exports = [
     }),
     geoClassId: 13,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/sacramento/SAC_PGR_27.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SAC/SAC_PGR_27.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -3315,7 +3315,7 @@ module.exports = [
     }),
     geoClassId: 13,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/sacramento/SAC_PGR_29.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SAC/SAC_PGR_29.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -3328,7 +3328,7 @@ module.exports = [
     }),
     geoClassId: 14,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/sacramento/SAC_PGR_3.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SAC/SAC_PGR_3.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -3341,7 +3341,7 @@ module.exports = [
     }),
     geoClassId: 16,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/sacramento/SAC_PGR_30.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SAC/SAC_PGR_30.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -3354,7 +3354,7 @@ module.exports = [
     }),
     geoClassId: 11,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/sacramento/SAC_PGR_31.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SAC/SAC_PGR_31.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -3367,7 +3367,7 @@ module.exports = [
     }),
     geoClassId: 13,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/sacramento/SAC_PGR_32.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SAC/SAC_PGR_32.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -3380,7 +3380,7 @@ module.exports = [
     }),
     geoClassId: 13,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/sacramento/SAC_PGR_33.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SAC/SAC_PGR_33.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -3393,7 +3393,7 @@ module.exports = [
     }),
     geoClassId: 17,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/sacramento/SAC_PGR_34.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SAC/SAC_PGR_34.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -3406,7 +3406,7 @@ module.exports = [
     }),
     geoClassId: 13,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/sacramento/SAC_PGR_35.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SAC/SAC_PGR_35.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -3419,7 +3419,7 @@ module.exports = [
     }),
     geoClassId: 13,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/sacramento/SAC_PGR_36.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SAC/SAC_PGR_36.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -3444,7 +3444,7 @@ module.exports = [
     }),
     geoClassId: 15,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/sacramento/SAC_PGR_38.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SAC/SAC_PGR_38.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -3457,7 +3457,7 @@ module.exports = [
     }),
     geoClassId: 15,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/sacramento/SAC_PGR_4.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SAC/SAC_PGR_4.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -3494,7 +3494,7 @@ module.exports = [
     }),
     geoClassId: 15,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/sacramento/SAC_PGR_43.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SAC/SAC_PGR_43.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -3531,7 +3531,7 @@ module.exports = [
     }),
     geoClassId: 17,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/sacramento/SAC_PGR_47.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SAC/SAC_PGR_47.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -3544,7 +3544,7 @@ module.exports = [
     }),
     geoClassId: 13,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/sacramento/SAC_PGR_5.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SAC/SAC_PGR_5.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -3677,7 +3677,7 @@ module.exports = [
     }),
     geoClassId: 14,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/sacramento/SAC_PGR_6.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SAC/SAC_PGR_6.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -3690,7 +3690,7 @@ module.exports = [
     }),
     geoClassId: 12,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/sacramento/SAC_PGR_7.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SAC/SAC_PGR_7.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -3703,7 +3703,7 @@ module.exports = [
     }),
     geoClassId: 11,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/sacramento/SAC_PGR_8.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SAC/SAC_PGR_8.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -3716,7 +3716,7 @@ module.exports = [
     }),
     geoClassId: 12,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/sacramento/SAC_PGR_9.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SAC/SAC_PGR_9.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -3729,7 +3729,7 @@ module.exports = [
     }),
     geoClassId: 11,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/sacramento/SAC_RGW_0.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SAC/SAC_RGW_0.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -3742,7 +3742,7 @@ module.exports = [
     }),
     geoClassId: 15,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/sacramento/SAC_RGW_1.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SAC/SAC_RGW_1.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -3755,7 +3755,7 @@ module.exports = [
     }),
     geoClassId: 15,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/sacramento/SAC_RGW_10.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SAC/SAC_RGW_10.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -3768,7 +3768,7 @@ module.exports = [
     }),
     geoClassId: 14,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/sacramento/SAC_RGW_11.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SAC/SAC_RGW_11.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -3781,7 +3781,7 @@ module.exports = [
     }),
     geoClassId: 12,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/sacramento/SAC_RGW_12.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SAC/SAC_RGW_12.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -3818,7 +3818,7 @@ module.exports = [
     }),
     geoClassId: 11,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/sacramento/SAC_RGW_18.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SAC/SAC_RGW_18.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -3855,7 +3855,7 @@ module.exports = [
     }),
     geoClassId: 13,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/sacramento/SAC_RGW_27.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SAC/SAC_RGW_27.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -3868,7 +3868,7 @@ module.exports = [
     }),
     geoClassId: 10,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/sacramento/SAC_RGW_29.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SAC/SAC_RGW_29.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -3881,7 +3881,7 @@ module.exports = [
     }),
     geoClassId: 10,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/sacramento/SAC_RGW_3.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SAC/SAC_RGW_3.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -3894,7 +3894,7 @@ module.exports = [
     }),
     geoClassId: 16,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/sacramento/SAC_RGW_31.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SAC/SAC_RGW_31.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -3907,7 +3907,7 @@ module.exports = [
     }),
     geoClassId: 16,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/sacramento/SAC_RGW_36.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SAC/SAC_RGW_36.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -3920,7 +3920,7 @@ module.exports = [
     }),
     geoClassId: 13,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/sacramento/SAC_RGW_37.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SAC/SAC_RGW_37.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -3933,7 +3933,7 @@ module.exports = [
     }),
     geoClassId: 17,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/sacramento/SAC_RGW_4.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SAC/SAC_RGW_4.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -3946,7 +3946,7 @@ module.exports = [
     }),
     geoClassId: 10,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/sacramento/SAC_RGW_41.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SAC/SAC_RGW_41.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -3959,7 +3959,7 @@ module.exports = [
     }),
     geoClassId: 12,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/sacramento/SAC_RGW_42.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SAC/SAC_RGW_42.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -3972,7 +3972,7 @@ module.exports = [
     }),
     geoClassId: 10,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/sacramento/SAC_RGW_43.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SAC/SAC_RGW_43.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -3985,7 +3985,7 @@ module.exports = [
     }),
     geoClassId: 11,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/sacramento/SAC_RGW_44.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SAC/SAC_RGW_44.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -4010,7 +4010,7 @@ module.exports = [
     }),
     geoClassId: 12,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/sacramento/SAC_RGW_46.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SAC/SAC_RGW_46.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -4023,7 +4023,7 @@ module.exports = [
     }),
     geoClassId: 13,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/sacramento/SAC_RGW_47.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SAC/SAC_RGW_47.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -4036,7 +4036,7 @@ module.exports = [
     }),
     geoClassId: 12,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/sacramento/SAC_RGW_48.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SAC/SAC_RGW_48.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -4049,7 +4049,7 @@ module.exports = [
     }),
     geoClassId: 12,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/sacramento/SAC_RGW_5.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SAC/SAC_RGW_5.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -4062,7 +4062,7 @@ module.exports = [
     }),
     geoClassId: 15,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/sacramento/SAC_RGW_50.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SAC/SAC_RGW_50.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -4327,7 +4327,7 @@ module.exports = [
     }),
     geoClassId: 15,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/sacramento/SAC_RGW_7.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SAC/SAC_RGW_7.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -4340,7 +4340,7 @@ module.exports = [
     }),
     geoClassId: 16,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/sacramento/SAC_RGW_8.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SAC/SAC_RGW_8.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -4353,7 +4353,7 @@ module.exports = [
     }),
     geoClassId: 11,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/sacramento/SAC_RGW_9.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SAC/SAC_RGW_9.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -4378,7 +4378,7 @@ module.exports = [
     }),
     geoClassId: 12,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/sacramento/SAC_WS_1.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SAC/SAC_WS_1.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -4403,7 +4403,7 @@ module.exports = [
     }),
     geoClassId: 10,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/sacramento/SAC_WS_11.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SAC/SAC_WS_11.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -4416,7 +4416,7 @@ module.exports = [
     }),
     geoClassId: 12,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/sacramento/SAC_WS_12.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SAC/SAC_WS_12.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -4429,7 +4429,7 @@ module.exports = [
     }),
     geoClassId: 12,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/sacramento/SAC_WS_13.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SAC/SAC_WS_13.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -4442,7 +4442,7 @@ module.exports = [
     }),
     geoClassId: 15,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/sacramento/SAC_WS_14.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SAC/SAC_WS_14.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -4455,7 +4455,7 @@ module.exports = [
     }),
     geoClassId: 12,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/sacramento/SAC_WS_16.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SAC/SAC_WS_16.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -4468,7 +4468,7 @@ module.exports = [
     }),
     geoClassId: 13,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/sacramento/SAC_WS_17.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SAC/SAC_WS_17.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -4481,7 +4481,7 @@ module.exports = [
     }),
     geoClassId: 12,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/sacramento/SAC_WS_18.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SAC/SAC_WS_18.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -4506,7 +4506,7 @@ module.exports = [
     }),
     geoClassId: 12,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/sacramento/SAC_WS_3.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SAC/SAC_WS_3.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -4519,7 +4519,7 @@ module.exports = [
     }),
     geoClassId: 13,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/sacramento/SAC_WS_4.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SAC/SAC_WS_4.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -4532,7 +4532,7 @@ module.exports = [
     }),
     geoClassId: 15,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/sacramento/SAC_WS_5.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SAC/SAC_WS_5.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -4809,7 +4809,7 @@ module.exports = [
     }),
     geoClassId: 14,
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/sacramento/SAC_WS_7.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SAC/SAC_WS_7.JPG',
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
   },
@@ -4824,6 +4824,6 @@ module.exports = [
     updatedAt: '2017-11-19T17:25:28.445Z',
     createdAt: '2017-11-19T17:25:28.445Z',
     imageUrl:
-      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/sacramento/SAC_WS_9.jpg',
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/SAC/SAC_WS_9.JPG',
   },
 ];
