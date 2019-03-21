@@ -16,6 +16,8 @@ module.exports = [
       D84: 77,
       vcDist: 85,
     }),
+    defaultImageUrl:
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/geoClassPictures/SFE_1.JPG',
     archetypes: JSON.stringify({
       syntheticArchetype: {
         name: 'Synthetic Archetype',
@@ -65,6 +67,8 @@ module.exports = [
       D84: 32,
       vcDist: 1749,
     }),
+    defaultImageUrl:
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/geoClassPictures/SFE_2.JPG',
     archetypes: JSON.stringify({
       syntheticArchetype: {
         name: 'Synthetic Archetype',
@@ -113,6 +117,8 @@ module.exports = [
       D84: 140,
       vcDist: 11,
     }),
+    defaultImageUrl:
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/geoClassPictures/SFE_3.JPG',
     archetypes: JSON.stringify({
       syntheticArchetype: {
         name: 'Synthetic Archetype',
@@ -161,6 +167,8 @@ module.exports = [
       D84: 1000,
       vcDist: 42,
     }),
+    defaultImageUrl:
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/geoClassPictures/SFE_4.JPG',
     archetypes: JSON.stringify({
       syntheticArchetype: {
         name: 'Synthetic Archetype',
@@ -209,6 +217,8 @@ module.exports = [
       D84: 90,
       vcDist: 15,
     }),
+    defaultImageUrl:
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/geoClassPictures/SFE_5.JPG',
     archetypes: JSON.stringify({
       syntheticArchetype: {
         name: 'Synthetic Archetype',
@@ -257,6 +267,8 @@ module.exports = [
       D84: 86.5,
       vcDist: 444,
     }),
+    defaultImageUrl:
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/geoClassPictures/SFE_6.JPG',
     archetypes: JSON.stringify({
       syntheticArchetype: {
         name: 'Synthetic Archetype',
@@ -305,6 +317,8 @@ module.exports = [
       D84: 2000,
       vcDist: 9,
     }),
+    defaultImageUrl:
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/geoClassPictures/SFE_7.JPG',
     archetypes: JSON.stringify({
       syntheticArchetype: {
         name: 'Synthetic Archetype',
@@ -353,6 +367,8 @@ module.exports = [
       D84: 5000,
       vcDist: 1090,
     }),
+    defaultImageUrl:
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/geoClassPictures/SAC_1.JPG',
     archetypes: JSON.stringify({
       syntheticArchetype: {
         name: 'Synthetic Archetype',
@@ -401,6 +417,8 @@ module.exports = [
       D84: 2500,
       vcDist: 28,
     }),
+    defaultImageUrl:
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/geoClassPictures/SAC_2.JPG',
     archetypes: JSON.stringify({
       syntheticArchetype: {
         name: 'Synthetic Archetype',
@@ -449,6 +467,8 @@ module.exports = [
       D84: 5000,
       vcDist: 46,
     }),
+    defaultImageUrl:
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/geoClassPictures/SAC_3.JPG',
     archetypes: JSON.stringify({
       syntheticArchetype: {
         name: 'Synthetic Archetype',
@@ -497,6 +517,8 @@ module.exports = [
       D84: 5000,
       vcDist: 23,
     }),
+    defaultImageUrl:
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/geoClassPictures/SAC_4.JPG',
     archetypes: JSON.stringify({
       syntheticArchetype: {
         name: 'Synthetic Archetype',
@@ -545,6 +567,8 @@ module.exports = [
       D84: 200,
       vcDist: 62,
     }),
+    defaultImageUrl:
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/geoClassPictures/SAC_5.JPG',
     archetypes: JSON.stringify({
       syntheticArchetype: {
         name: 'Synthetic Archetype',
@@ -593,6 +617,8 @@ module.exports = [
       D84: 95,
       vcDist: 598,
     }),
+    defaultImageUrl:
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/geoClassPictures/SAC_6.JPG',
     archetypes: JSON.stringify({
       syntheticArchetype: {
         name: 'Synthetic Archetype',
@@ -642,6 +668,8 @@ module.exports = [
       D84: 380,
       vcDist: 114,
     }),
+    defaultImageUrl:
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/geoClassPictures/SAC_7.JPG',
     archetypes: JSON.stringify({
       syntheticArchetype: {
         name: 'Synthetic Archetype',
@@ -690,6 +718,8 @@ module.exports = [
       D84: 130,
       vcDist: 104,
     }),
+    defaultImageUrl:
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/geoClassPictures/SAC_8.JPG',
     archetypes: JSON.stringify({
       syntheticArchetype: {
         name: 'Synthetic Archetype',
@@ -739,6 +769,8 @@ module.exports = [
       D84: 45,
       vcDist: 4688,
     }),
+    defaultImageUrl:
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/geoClassPictures/SAC_9.JPG',
     archetypes: JSON.stringify({
       syntheticArchetype: {
         name: 'Synthetic Archetype',
@@ -787,6 +819,8 @@ module.exports = [
       D84: 64,
       vcDist: 2869,
     }),
+    defaultImageUrl:
+      'https://s3-us-west-1.amazonaws.com/funcflow/site_images/geoClassPictures/SAC_10.JPG',
     archetypes: JSON.stringify({
       syntheticArchetype: {
         name: 'Synthetic Archetype',

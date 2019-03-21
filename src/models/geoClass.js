@@ -16,6 +16,10 @@ module.exports = (sequelizeClient, DataTypes) => {
       type: DataTypes.TEXT,
       allowNull: true,
     },
+    defaultImageUrl: {
+      type: DataTypes.TEXT,
+      allowNull: true,
+    },
     archetypes: {
       type: DataTypes.JSON,
       allowNull: true,
