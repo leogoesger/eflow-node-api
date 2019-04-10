@@ -33,7 +33,6 @@ module.exports = {
   },
   async calculateMetrics(req, res) {
     try {
-      console.log(req.body.params);
       const response = await request
         .post(`${process.env.FLASK_SERVER_ADDRESS}/api`)
         .send(req.body);
@@ -112,18 +111,10 @@ module.exports = {
 
   async reCalculateMetrics(req, res) {
     try {
-      // const julian_start_date = getJulianDate(`${req.body.start_date}/2001`);
-      // console.log(julian_start_date);
-      // req.body.julian_start_date = julian_start_date;
-
       const flowObj = await UploadData.findOne({
         where: {id: req.body.id},
         attributes: ['dates', 'flows'],
       });
-      // const dates = flowObj.dates.map(d => {
-      //   const [mm, dd] = d.split('/');
-      //   return `${mm}/${dd}`;
-      // });
 
       req.body.dates = flowObj.dates;
       req.body.flows = flowObj.flows;
