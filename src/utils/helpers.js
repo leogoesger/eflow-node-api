@@ -2,6 +2,18 @@ import * as d3 from 'd3';
 import {sortBy, find} from 'lodash';
 import {AllYear, Gauge} from '../models';
 
+export const getJulianDate = d => {
+  const date = new Date(d);
+  return (
+    (Date.UTC(date.getFullYear(), date.getMonth(), date.getDate()) -
+      Date.UTC(date.getFullYear(), 0, 0)) /
+    24 /
+    60 /
+    60 /
+    1000
+  );
+};
+
 export const removeNaN = array => {
   const filteredArray = array.filter(ele => !isNaN(Number(ele)));
   return sortBy(filteredArray.map(Number));
