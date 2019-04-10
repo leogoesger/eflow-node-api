@@ -1,7 +1,6 @@
 import request from 'superagent';
 import {UploadData, Prediction, User} from '../models';
 import {nodeMailerMailgun} from '../controllers/shared';
-
 import {getMetrics, getClassPredictions} from './helpers';
 
 module.exports = {
@@ -112,13 +111,20 @@ module.exports = {
 
   async reCalculateMetrics(req, res) {
     try {
+      const flowObj = await UploadData.findOne({
+        where: {id: req.body.id},
+        attributes: ['dates', 'flows'],
+      });
+
+      req.body.dates = flowObj.dates;
+      req.body.flows = flowObj.flows;
+
       const response = await request
         .post(`${process.env.FLASK_SERVER_ADDRESS}/api`)
         .send(req.body);
 
       const {
         flow_matrix,
-        start_date,
         DRH,
         all_year,
         winter,
@@ -132,7 +138,7 @@ module.exports = {
       UploadData.update(
         {
           flowMatrix: flow_matrix,
-          startDate: start_date,
+          startDate: req.body.start_date,
           DRH,
           allYear: all_year,
           winter,

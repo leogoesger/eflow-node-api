@@ -186,6 +186,6 @@ module.exports = app => {
   );
 
   app.post('/api/uploadData', authenticate, flaskAPIs.calculateMetrics);
-  app.put('/api/upDateData', authenticate, flaskAPIs.reCalculateMetrics);
+  app.put('/api/updateData', authenticate, flaskAPIs.reCalculateMetrics);
   app.post('/api/class-predict', authenticate, flaskAPIs.predictClass);
 };
