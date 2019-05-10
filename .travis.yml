@@ -1,16 +1,16 @@
 language: node_js
 node_js:
-   - "8"
+  - '10'
 addons:
-    postgresql: "9.6"
+  postgresql: '9.6'
 services:
   - postgresql
   - redis-server
 before_script:
   - psql -c 'CREATE DATABASE eflow_test;' -U postgres
-  - yarn global add node-gyp
+  - npm run global add node-gyp
 script:
-  - yarn lint
-  - yarn test-cover
-  - yarn test-coverage
-after_script: yarn run coveralls
+  - npm run lint
+  - npm run test-cover
+  - npm run test-coverage
+after_script: npm run coveralls

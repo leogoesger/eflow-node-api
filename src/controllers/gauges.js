@@ -24,7 +24,7 @@ module.exports = {
         {
           model: Year,
           as: 'years',
-          attributes: ['allYears'],
+          attributes: ['year'],
         },
       ],
     })
