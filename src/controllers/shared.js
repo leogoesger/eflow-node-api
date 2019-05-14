@@ -179,13 +179,23 @@ export const getAllBoxPlotHelper = async (
     metrics.forEach((metric, idx) => {
       const gaugeConditions =
         metric.gauge.conditions[0] && metric.gauge.conditions[0].conditions;
+
       const arrayWithNull = metric[classMetric].map(d => {
         if (!isNaN(Number(d))) {
-          return getJulianOffsetDate(Number(d));
+          if (classMetric.indexOf('timing') > -1) {
+            return getJulianOffsetDate(Number(d));
+          }
+          return Number(d);
         }
         return null;
       });
-      metric[classMetric] = arrayWithNull.filter(d => d);
+
+      if (classMetric === 'noFlowCount') {
+        metric[classMetric] = arrayWithNull.filter(d => d >= 0);
+      } else {
+        metric[classMetric] = arrayWithNull.filter(d => d);
+      }
+
       // removing by conditions
       if (
         condition !== 'ALL' &&
