@@ -30,7 +30,8 @@
     "lint": "node_modules/.bin/eslint --fix --ext \".js\" --ignore-pattern node_modules --quiet .",
     "prettier": "prettier --single-quote --bracket-spacing false --trailing-comma es5 --write '{src,__{tests,mocks}__}/**/*.js'",
     "pm2:production": "NODE_ENV=production pm2 start ecosystem.json --env production",
-    "pm2:restart": "npm run build && pm2 restart eflow-api"
+    "pm2:restart": "npm run build && pm2 restart eflow-api",
+    "pm2:logs": "pm2 logs"
   },
   "dependencies": {
     "assert": "^1.4.1",
