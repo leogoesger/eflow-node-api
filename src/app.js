@@ -39,7 +39,7 @@ const app = express();
 
 app.use(cors());
 app.use(logger('tiny'));
-app.use(bodyParser.json({limit: '1mb', extended: true}));
+app.use(bodyParser.json({limit: '10mb', extended: true}));
 
 app.io = require('socket.io')({
   origins: ['http://localhost:3000', 'http://localhost:4000', '*:*'],
