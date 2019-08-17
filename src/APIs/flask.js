@@ -46,7 +46,7 @@ module.exports = {
         fall,
         summer,
         spring,
-        fall_winter,
+        wet,
         year_ranges,
       } = JSON.parse(response.body);
       UploadData.create({
@@ -59,7 +59,7 @@ module.exports = {
         summer,
         spring,
         userId: req.user.id,
-        fallWinter: fall_winter,
+        fallWinter: wet,
         name: req.body.name,
         riverName: req.body.riverName,
         location: req.body.location,
@@ -131,7 +131,7 @@ module.exports = {
         fall,
         summer,
         spring,
-        fall_winter,
+        wet,
         year_ranges,
       } = JSON.parse(response.body);
 
@@ -145,7 +145,7 @@ module.exports = {
           fall,
           summer,
           spring,
-          fallWinter: fall_winter,
+          fallWinter: wet,
           yearRanges: year_ranges,
         },
         {
