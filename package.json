@@ -35,7 +35,7 @@
   },
   "dependencies": {
     "assert": "^1.4.1",
-    "aws-sdk": "^2.292.0",
+    "aws-sdk": "^2.814.0",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
     "babel-eslint": "^7.2.3",
