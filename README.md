@@ -34,12 +34,22 @@ For more information on all the things you can do with Sequelize CLI visit [sequ
 
 ## Deployment
 
+The API, Func Flow API, and client are all deployed behind Nginx. Their Nginx configuration files are located in the sites-available and sites-enabled directories within the Nginx configuration.
+
+API and Func Flow API are running via PM2. You could check on the status via `node_PM2 list` to get a list of APIs that are running. 
+
+To deploy `node_api`
+```bash
+# cd into node_api folder
+npm run pm2:production
 ```
-/usr/local/stow/node-v8.9.4-linux-x64/lib/node_modules/pm2/bin/pm2 start eflow-api --env production
 
-\c eflow_production
-UPDATE "Members" SET image='' WHERE id=;
-
+To deploy `func flow api`
+```bash
+# not sure if this is necessary
+eflow_venv 
+# cd into the func flow folder
+func_flow_pm2 start ecosystem.json
 ```
 
 ## License
